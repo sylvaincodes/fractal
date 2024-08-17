@@ -1,14 +1,30 @@
-![Screenshot](https://github.com/sylvaincodes/screenshots_for_app/blob/main/caldera_ecoomerce.png)
+<img src="./public/assets/images/og.png" style="width: 300px"/>
+
+# Build, Test, Deploy A Front End Ecommerce With Next 15, Clerk, Redux Toolkit, Framer Motion, ShadCn.
+
+This is how it looks:
+
+<table>
+  <tr>
+    <td>
+      <a href='./public/assets/images/og.png'><img src="./public/assets/images/og.png" style="width: 300px"/></a>
+    </td>
+    <td>
+      <a href='./readme/assets/images/og.png'><img src="./public/assets/images/og.png" style="width: 300px"/></a>
+    </td>
+    <td>
+      <a href='./public/assets/images/og.png'><img src="./public/assets/images/og.png" style="width: 300px"/></a>
+    </td>
+  </tr>
+</table>
 
 
-# Build, Test, Deploy A Front End Ecommerce With Next 15, Clerk, Redux.
 
 This is a frontend Nextjs app with a beautiful and amazing design ui. 
 
 ## Our goal
 
 - Build beautiful Frontend Design UI &  High quality code 
-- Build Strong Api.
 - Test with Jest and Cypress.
 
 ## Core features 
@@ -33,10 +49,6 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 1. You will need to setup Next js  [Next Js ](https://nextjs.org)
 
-```bash
-    NEXT_PUBLIC_SERVER_URL=
-```
-
 ### Run project on local
 
 
@@ -54,20 +66,18 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 ```bash
 
-    NEXT_PUBLIC_SERVER_URL=http://localhost:3000
-    NEXT_PUBLIC_API_URL=https://caldera-theta.vercel.app
-
+    NEXT_PUBLIC_SERVER_URL=
+    NEXT_PUBLIC_API_URL=
 
     # Stripe integration 
     NEXT_PUBLIC_STRIPE_CLIENT_KEY=
     STRIPE_SECRET_KEY=
 
-    # Paypal integration 
-    NEXT_PUBLIC_PAYPAL_CLIENT_ID=
-    PAYPAL_CLIENT_SECRET=
 ```
 
-2.  Project Folder Structure
+2.  Project Folders & Files Structure
+
+2.  Setup JSdoc for Code documentation
 
 3.  Setup Eslint
    
