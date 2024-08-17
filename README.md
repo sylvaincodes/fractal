@@ -1,34 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+![Screenshot](https://github.com/sylvaincodes/screenshots_for_app/blob/main/caldera_ecoomerce.png)
 
-## Getting Started
 
-First, run the development server:
+# Build, Test, Deploy A Front End Ecommerce With Next 15, Clerk, Redux.
+
+This is a frontend Nextjs app with a beautiful and amazing design ui. 
+
+## Our goal
+
+- Build beautiful Frontend Design UI &  High quality code 
+- Build Strong Api.
+- Test with Jest and Cypress.
+
+## Core features 
+
+- Learn how to start a next js  project from scratch
+- Learn how to set SEO to Next Js Project
+- Learn how to set up Tailwind Css and Next Js Project
+- Learn how to create React components with Tailwind CSS
+- Learn how to create React components with framer motion
+- Learn how to Test your app with Jest, Cypress
+- Learn how to build consume API 
+
+## Quick start
+
+To spin up this example loccaly, follow these steps
+
+### Clone
+
+Use the ` git clone ` CLI to clone template directly  to your machine
+
+### Set up env file
+
+1. You will need to setup Next js  [Next Js ](https://nextjs.org)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+    NEXT_PUBLIC_SERVER_URL=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run project on local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Learn More
+```bash
+    npm install
+    npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Dev Steps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Environment Setup
+   
+   Create a env file on the root of project
+   PUT THIS INSIDE
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
 
-## Deploy on Vercel
+    NEXT_PUBLIC_SERVER_URL=http://localhost:3000
+    NEXT_PUBLIC_API_URL=https://caldera-theta.vercel.app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    # Stripe integration 
+    NEXT_PUBLIC_STRIPE_CLIENT_KEY=
+    STRIPE_SECRET_KEY=
+
+    # Paypal integration 
+    NEXT_PUBLIC_PAYPAL_CLIENT_ID=
+    PAYPAL_CLIENT_SECRET=
+```
+
+2.  Project Folder Structure
+
+3.  Setup Eslint
+   
+4.  Setup Jest
+
+5. Setup Cypress
+
+7. Create Pipeline CI CD
+    
+8. Setup ShadCn and Some Libraries
+
+9. Setup Frontend UI Kit ( Colors - Fonts - Container )
+
+10. Create  Home UI
+
+11. Create  Product page UI
+
+12. Create  Product Detail  UI
+
+13. Create  Cart UI
+
+14. Create  Checkout UI
+
+15. Create  Payment UI
+
+16. Create  Dashoard UI
+
+17. Fixing bug 
+
+18. Test Jest 
+
+19. Test Cypress 
+
+20. Deploy 
+
+
+
+## Questions
+
+If you have any issues or questions [Send a comment] (https://www.youtube.com/@sylvaincodes593) on Youtube or reach out me on [Discord](https://discord.com/channels/1234070993996091503/1234070994512248853)
