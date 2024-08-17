@@ -76,9 +76,42 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 2.  Setup JSdoc for Code documentation
 
-3.  Setup Eslint
+3.  Setup Eslint & typscript
    
 4.  Setup Jest
+
+```bash
+
+    # create jest config file 
+    npm init jest@latest
+
+    npm install --save-dev jest jest-environment-jsdom @testing-library/dom @testing-library/jest-dom 
+    npm install --save-dev @testing-library/react@latest --legacy-peer-deps
+
+     #Add to script in package json
+    "test": "jest",
+    "test:watch": "jest --watch"  
+
+    #setup jest with nextjs
+    npm init jest@latest
+
+    #add this to jest.config
+    import nextJest from "next/jest.js";
+   
+    # // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+    const createJestConfig = nextJest({
+     dir: './',
+    })
+
+
+    # // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+    export default createJestConfig(config)
+
+
+
+# or
+
+```
 
 5. Setup Cypress
     
