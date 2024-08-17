@@ -1,6 +1,6 @@
-<img src="./public/assets/images/og.png" style="width: 300px"/>
+<img src="./public/assets/images/og.png"/>
 
-# Build, Test, Deploy A Front End Ecommerce With Next 15, Clerk, Redux Toolkit, Framer Motion, ShadCn.
+# Build, Test, Deploy A Front End Ecommerce With Next 15, React 19 Clerk, Redux Toolkit, Framer Motion, ShadCn.
 
 This is how it looks:
 
@@ -45,9 +45,6 @@ To spin up this example loccaly, follow these steps
 
 Use the ` git clone ` CLI to clone template directly  to your machine
 
-### Set up env file
-
-1. You will need to setup Next js  [Next Js ](https://nextjs.org)
 
 ### Run project on local
 
@@ -84,8 +81,6 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 4.  Setup Jest
 
 5. Setup Cypress
-
-7. Create Pipeline CI CD
     
 8. Setup ShadCn and Some Libraries
 
