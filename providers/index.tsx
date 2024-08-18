@@ -7,21 +7,20 @@ import ToastProvider from "./ToastProvider";
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider
-      appearance={{
-        layout: {
-          socialButtonsVariant: "iconButton",
-          logoImageUrl: "/logo/logo.svg",
-        },
+    // appearance={{
+    //   layout: {
+    //     socialButtonsVariant: "iconButton",
+    //     logoImageUrl: "/logo/logo.svg",
+    //   },
 
-        // baseTheme: dark,
-        variables: {
-          colorPrimary: "#0E78F9",
-          colorText: "white",
-          colorBackground: "#1C1F2E",
-          colorInputBackground: "#252A41",
-          colorInputText: "#fff",
-        },
-      }}
+    //   variables: {
+    //     colorPrimary: "#0E78F9",
+    //     colorText: "white",
+    //     colorBackground: "#1C1F2E",
+    //     colorInputBackground: "#252A41",
+    //     colorInputText: "#fff",
+    //   },
+    // }}
     >
       <FramerMotionProvider>
         <ToastProvider />

@@ -139,7 +139,9 @@ Use the ` git clone ` CLI to clone template directly  to your machine
     #install
     npx shadcn-ui@latest init
     npm i framer-motion react-hot-toast react-icons	--legacy-peer-deps
-    npm install @clerk/nextjs
+
+    #clerk go to site
+    https://clerk.com/
 
 
 ```
