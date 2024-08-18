@@ -9,7 +9,10 @@
     "lint": "next lint",
     "docs": "jsdoc -c jsdoc.conf.json",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "start:test": "cross-env NODE_ENV=test && next build && next start",
+    "cypress:open": "cross-env NODE_ENV=test cypress open",
+    "cypress:start": "start-server-and-test 'npm run start:test' 3000 'npm run cypress:open'  "
   },
   "dependencies": {
     "next": "15.0.0-rc.0",
@@ -29,6 +32,7 @@
     "@types/react-dom": "^18.3.0",
     "babel-jest": "^29.7.0",
     "cross-env": "^7.0.3",
+    "cypress": "^13.13.3",
     "eslint": "^8.57.0",
     "eslint-config-next": "15.0.0-rc.0",
     "eslint-plugin-react": "^7.35.0",
@@ -37,6 +41,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdoc": "^4.0.3",
     "postcss": "^8",
+    "start-server-and-test": "^2.0.5",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5",

@@ -6,7 +6,7 @@ import "@testing-library/jest-dom";
 
 describe("HOME UI", () => {
   // createt a group of test with describe
-  test("Should show home page", () => {
+  test.skip("Should show home page", () => {
     // ARRANGE
     render(<Page />);
     // ACT

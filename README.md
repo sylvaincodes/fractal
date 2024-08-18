@@ -114,6 +114,11 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 ```
 
 5. Setup Cypress
+
+```bash
+    #install
+    npm install cypress --save-dev
+```
     
 8. Setup ShadCn and Some Libraries
 
