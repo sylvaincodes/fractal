@@ -1,3 +1,4 @@
+import * as React from "react";
 import Page from "@/app/(website)/(pages)/(home)/page";
 import { expect, test, describe } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
