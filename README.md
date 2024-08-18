@@ -148,7 +148,94 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 7. Setup Frontend UI Kit ( Colors - Fonts - Container )
 
+  - Setup Container screens
+
+  ```bash
+
+    screens here: https://tailwindcss.com/docs/screens
+    screens: {
+        xs: "360px",
+        // => @media (min-width: 360px) { ... }
+
+        sm: "575px",
+        // => @media (min-width: 575px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+
+        "2xl": "1440px",
+        // => @media (min-width: 1536px) { ... }
+
+        "3xl": "1680px",
+        // => @media (min-width: 1536px) { ... }
+
+        "4xl": "1920px",
+        // => @media (min-width: 1536px) { ... }
+      },
+    },
+
+  ```
+
+  - Setup layout for pages 
+  
+  ```bash
+
+  import React from "react";
+  import Container from "@/components/custom/Container";
+
+  export default function layout() {
+    return (
+      <div className="border border-black">
+        <Container>set up responsive layout</Container>
+      </div>
+    );
+  }
+  
+  ```
+  
+   - Setup padding for screens 
+  
+  ```bash
+
+  import React from "react";
+  import Container from "@/components/custom/Container";
+
+  export default function layout() {
+    return (
+      <div className="border border-black">
+        <Container>set up responsive layout</Container>
+      </div>
+    );
+  }
+  
+  ```
+  
+  
+  - Setup colors
+  
+  ```bash
+
+      https://tailwindcss.com/docs/customizing-colors
+
+      https://coolors.co
+
+      https://uicolors.app/create
+  
+  ```
+
 8. Create  Home UI
+
+  - Header component
+  
+  ```bash
+  
+  ```
 
 9. Create  Product page UI
 
