@@ -118,6 +118,19 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 ```bash
     #install
     npm install cypress --save-dev
+    
+    #add to pakage json
+    "start:test": "cross-env NODE_ENV=test && next build && next start",
+    "cypress:open": "cross-env NODE_ENV=test cypress open",
+    "cypress:start": "start-server-and-test 'npm run start:test' 3000 'npm run cypress:open'  "
+
+    #lauch 
+    npm run cypress:open
+
+    #Some files will be created;
+    #add base url localhost to cypress.config
+    baseUrl: "http://localhost:3000",
+
 ```
     
 8. Setup ShadCn and Some Libraries
