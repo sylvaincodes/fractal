@@ -133,31 +133,40 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 ```
     
-8. Setup ShadCn and Some Libraries
+6. Setup ShadCn and Some Libraries
 
-9. Setup Frontend UI Kit ( Colors - Fonts - Container )
+```bash
+    #install
+    npx shadcn-ui@latest init
+    npm i framer-motion react-hot-toast react-icons	--legacy-peer-deps
+    npm install @clerk/nextjs
 
-10. Create  Home UI
 
-11. Create  Product page UI
+```
 
-12. Create  Product Detail  UI
+7. Setup Frontend UI Kit ( Colors - Fonts - Container )
 
-13. Create  Cart UI
+8. Create  Home UI
 
-14. Create  Checkout UI
+9. Create  Product page UI
 
-15. Create  Payment UI
+10. Create  Product Detail  UI
 
-16. Create  Dashoard UI
+11. Create  Cart UI
 
-17. Fixing bug 
+12. Create  Checkout UI
 
-18. Test Jest 
+13. Create  Payment UI
 
-19. Test Cypress 
+14. Create  Dashoard UI
 
-20. Deploy 
+15. Fixing bug 
+
+16. Test Jest 
+
+17. Test Cypress 
+
+28. Deploy 
 
 
 
