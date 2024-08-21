@@ -45,10 +45,10 @@ export default function HomeSlide() {
             slides.map((item: Slide, idx: number) => (
               <SwiperSlide
                 key={idx}
-                className="relative [&>button:block] animate-heart-beating"
+                className="relative [&>button:block] hover:animate-heart-beating"
                 style={{
                   backgroundImage: `url(${item.image})`,
-                  height: "600px",
+                  height: "700px",
                   width: "100%",
                   backgroundSize: "cover",
                   backgroundPosition: "top",
@@ -56,13 +56,13 @@ export default function HomeSlide() {
               >
                 {item?.title !== "" ? (
                   item.title !== "" && (
-                    <div className="absolute drop-shadow-2xl text-white grid grid-cols-1 place-content-start justify-items-center lg:justify-items-start gap-8 capitalize m-auto top-60 lg:top-30 lg:left-10 w-fit">
+                    <div className="absolute drop-shadow-2xl text-white grid grid-cols-1 place-content-start justify-items-center lg:justify-items-start gap-8 capitalize m-auto top-100 lg:top-30 lg:left-20 w-fit">
                       <m.h1
                         initial={animation.hide}
                         whileInView={animation.show}
                         transition={{ delay: 0.3 }}
                         className={cn(
-                          "text-2xl lg:text-5xl text-slate-700 font-bold  tracking-widest"
+                          "text-2xl lg:text-6xl text-slate-700 font-bold  tracking-widest"
                         )}
                         style={{
                           color: `${item.textColor}`,
@@ -106,7 +106,7 @@ export default function HomeSlide() {
                     <Button
                       variant="default"
                       size="lg"
-                      className="hover:shadow-button px-12 py-8"
+                      className="hover:shadow-button px-12 py-8 bg-white text-black hover:text-white"
                     >
                       <Link href={item.link} className="text-xl">
                         BUY NOW

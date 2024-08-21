@@ -7,28 +7,20 @@ import "swiper/css/pagination";
 import "./style.css";
 import { m } from "framer-motion";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Slide } from "@/types";
+import { Product } from "@/types";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { topCategories } from "@/constants/index";
+import { featuresProducts } from "@/constants/index";
 import Container from "@/components/custom/Container";
 import Heading from "@/components/custom/Heading";
 import Row from "@/components/custom/Row";
 import { useRouter } from "next/navigation";
+import ProductCard from "@/components/custom/ProductCard";
 
-export default function Categories() {
-  const [slides, setSlides] = useState<Slide[]>(topCategories);
-  const animation = {
-    hide: { scale: 0, opacity: 0 },
-    show: {
-      scale: 1,
-      opacity: 1,
-    },
-  };
+export default function FeaturesProducts() {
+  const [products, setProducts] = useState<Product[]>(featuresProducts);
 
   const router = useRouter();
-
   const handleClick = (link: string) => {
     router.push(link);
   };
@@ -38,11 +30,11 @@ export default function Categories() {
       initial={{ y: 80, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: "easeIn", delay: 0.3, type: "tween" }}
-      className="mt-10"
+      className="mt-20"
     >
       <Container>
         <Row className="mb-10">
-          <Heading name="shop by top categories" />
+          <Heading name="Featured products" />
         </Row>
         <Swiper
           breakpoints={{
@@ -93,49 +85,10 @@ export default function Categories() {
           modules={[Autoplay, Navigation, Pagination]}
           className={cn("")}
         >
-          {slides &&
-            slides.map((item: Slide, idx: number) => (
-              <SwiperSlide
-                key={idx}
-                className="relative [&>button:block] hover:scale-105 duration-300 ease-linear cursor-pointer"
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                  height: "600px",
-                  width: "auto",
-                  backgroundSize: "cover",
-                  backgroundPosition: "top",
-                }}
-              >
-                {item?.title !== "" ? (
-                  item.title !== "" && (
-                    <div className="absolute bg-white rounded-lg p-4 bottom-10 w-80 shadow-xl cursor-pointer hover:bg-black hover:text-white drop-shadow-xl duration-300 ease-linear">
-                      <m.h1
-                        initial={animation.hide}
-                        whileInView={animation.show}
-                        transition={{ delay: 0.3 }}
-                        className={cn("text-xl capitalize")}
-                        style={{
-                          color: `${item.textColor}`,
-                        }}
-                        onClick={() => handleClick(item.link)}
-                      >
-                        {item.title}
-                      </m.h1>
-                    </div>
-                  )
-                ) : (
-                  <div className="flex items-center justify-center">
-                    <Button
-                      variant="default"
-                      size="lg"
-                      className="hover:shadow-button px-12 py-8"
-                    >
-                      <Link href={item.link} className="text-xl">
-                        BUY NOW
-                      </Link>
-                    </Button>
-                  </div>
-                )}
+          {products &&
+            products.map((item: Product, idx: number) => (
+              <SwiperSlide key={idx} className="relative [&>button:block]">
+                <ProductCard item={item} />
               </SwiperSlide>
             ))}
         </Swiper>

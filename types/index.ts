@@ -43,7 +43,7 @@ export type Category = {
   slug: string;
   image: string;
   createdAt?: String;
-  submenu?: SubCategory[];
+  submenu?: SubCategory[] | string[];
 };
 
 //1. types
@@ -286,12 +286,14 @@ export type Options = {
   option: string;
   images: string[];
   discount: number;
+  _id: string;
 };
 
 export type SubProduct = {
   sku: string;
   style: Style;
   options: Options[];
+  _id: string;
 };
 
 export type Brand = {
