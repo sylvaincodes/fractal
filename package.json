@@ -17,6 +17,12 @@
   "dependencies": {
     "@clerk/nextjs": "^5.3.1",
     "@clerk/themes": "^2.1.20",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@types/algoliasearch": "^4.0.0",
+    "algoliasearch": "^5.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.28",
@@ -26,8 +32,12 @@
     "react-dom": "19.0.0-rc-f994737d14-20240522",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.3.0",
+    "react-instantsearch": "^7.12.4",
+    "react-spinners": "^0.14.1",
+    "swiper": "^11.1.9",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -42,6 +52,7 @@
     "@types/node": "^20",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.4",
     "babel-jest": "^29.7.0",
     "better-docs": "^2.7.3",
     "cross-env": "^7.0.3",

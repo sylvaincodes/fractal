@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import * as React from "react";
 import "./globals.css";
 import Providers from "@/providers";
+import { cn } from "@/lib/utils";
+import { font } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={cn("", font.className)}>
         <Providers>{children}</Providers>
       </body>
     </html>

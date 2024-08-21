@@ -2,3 +2,39 @@
 @tailwind components;
 @tailwind utilities;
   
+
+/* RESET CSS  */
+html{
+    font-size: 16px; 
+}
+
+body{
+    @apply text-base text-slate-700 bg-white leading-6 tracking-wide dark:text-slate-100 
+}
+
+svg,a, button{
+    @apply cursor-pointer
+}
+
+
+/* Scrollbar style */
+
+::-webkit-scrollbar {
+    @apply w-[10px] hidden
+
+    /* Customize the scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    /* Customize the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-primary-400 rounded-md
+    /* Customize the scrollbar thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-black
+}

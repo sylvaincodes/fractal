@@ -138,7 +138,7 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 ```bash
     #install
     npx shadcn-ui@latest init
-    npm i framer-motion react-hot-toast react-icons	--legacy-peer-deps
+    npm i @radix-ui/react-slot framer-motion react-hot-toast react-icons	--legacy-peer-deps
 
     #clerk go to site
     https://clerk.com/

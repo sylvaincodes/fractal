@@ -1,9 +1,9 @@
-import React from "react";
+"use client"
 import Main from "./Main";
 
 export default function Header() {
   return (
-    <header>
+    <header className="h-[80px]">
       <Main />
     </header>
   );

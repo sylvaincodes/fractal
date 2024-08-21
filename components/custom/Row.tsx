@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-export default function Container({
+export default function Row({
   className,
   children,
 }: {
@@ -9,6 +9,6 @@ export default function Container({
   className?: string;
 }) {
   return (
-    <div className={cn("container h-full w-full", className)}>{children}</div>
+    <div className={cn("flex items-center h-full", className)}>{children}</div>
   );
 }

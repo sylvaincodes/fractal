@@ -58,6 +58,8 @@ const config = {
 
     colors: {
       // default colors
+      white: colors.white,
+      black: colors.black,
       slate: colors.slate,
       gray: colors.gray,
       neutral: colors.neutral,
@@ -68,19 +70,19 @@ const config = {
       indigo: colors.indigo,
       transparent: "transparent",
 
-      //primary color: brink-pink
+      //primary color: mauvelous
       primary: {
-        "50": "#fef2f4",
-        "100": "#fde6e9",
-        "200": "#fad1d9",
-        "300": "#f5acba",
-        "400": "#ed6b86",
-        "500": "#e44f71",
-        "600": "#d02e5b",
-        "700": "#af214d",
-        "800": "#931e45",
-        "900": "#7e1d41",
-        "950": "#460b20",
+        "50": "#fcf3f6",
+        "100": "#fbe8f0",
+        "200": "#f8d2e1",
+        "300": "#f4adc8",
+        "400": "#ef94b4",
+        "500": "#e15381",
+        "600": "#cf335d",
+        "700": "#b32346",
+        "800": "#94203b",
+        "900": "#7c1f34",
+        "950": "#4b0c1a",
       },
 
       //secondary color: matisse
@@ -100,6 +102,10 @@ const config = {
     },
 
     extend: {
+      boxShadow: {
+        button:
+          "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -109,10 +115,46 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "heart-beating": {
+          "0%, 10%": { transform: "scale(1)" },
+          "10%, 100%": { transform: "scale(1.01)" },
+          "100%, 0%": { transform: "scale(1)" },
+        },
+        radius: {
+          "0%": {
+            borderRadius: "0px",
+          },
+          "10%, 30": {
+            borderRadius: "10px",
+            transition: "1s ease",
+          },
+          "30%, 100%": {
+            borderRadius: "40px",
+            boxShadow:
+              "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
+          },
+          "100%, 70%": {
+            borderRadius: "20px",
+          },
+          "70%, 30%": {
+            borderRadius: "0px",
+            boxShadow:
+              " rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
+          },
+          "30%, 0%": {
+            borderRadius: "100px",
+            background: "#e15381",
+            transition: "1s ease",
+            boxShadow:
+              " rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "heart-beating": "heart-beating 2s infinite ease-out",
+        radius: "radius 3s infinite ease-out",
       },
     },
   },
