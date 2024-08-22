@@ -95,7 +95,7 @@ export default function ProductCard({ item }: { item: Product }) {
 
               <CurrencyFormat
                 value={bestPriceWithoutDiscount}
-                className="line-through w-16 text-slate-600 hidden lg:flex"
+                className="line-through w-18 text-slate-600 hidden lg:flex"
               />
             </div>
           ) : (
@@ -107,7 +107,7 @@ export default function ProductCard({ item }: { item: Product }) {
 
               <CurrencyFormat
                 value={bestPriceWithoutDiscount}
-                className="line-through w-10 text-sm opacity-0 hidden lg:flex"
+                className="line-through w-18 text-sm opacity-0 hidden lg:flex"
               />
             </div>
           )}

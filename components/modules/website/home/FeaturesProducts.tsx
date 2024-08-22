@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState, useTransition } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,21 +16,45 @@ import Heading from "@/components/custom/Heading";
 import Row from "@/components/custom/Row";
 import { useRouter } from "next/navigation";
 import ProductCard from "@/components/custom/ProductCard";
+import axios from "axios";
+import toast from "react-hot-toast";
+import Toast from "@/components/custom/Toast";
 
 export default function FeaturesProducts() {
-  const [products, setProducts] = useState<Product[]>(featuresProducts);
+  const [products, setProducts] = useState<Product[]>();
 
-  const router = useRouter();
-  const handleClick = (link: string) => {
-    router.push(link);
-  };
+  const [error, setError] = useState();
+  const [isPending, startTransition] = useTransition();
+
+  useEffect(() => {
+    const getProducts = () => {
+      startTransition(async () => {
+        await axios
+          .get(process.env.NEXT_PUBLIC_API_URL + "/api/products")
+          .then((response) => {
+            setProducts(
+              response.data.data.filter(
+                (item: Product) => item.featured === true
+              )
+            );
+          })
+          .catch((error) => {
+            setError(error.message);
+          });
+      });
+    };
+    getProducts();
+    if (error) {
+      toast.custom(<Toast message={error} status="error" />);
+    }
+  }, []);
 
   return (
     <m.section
       initial={{ y: 80, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: "easeIn", delay: 0.3, type: "tween" }}
-      className="mt-20"
+      className="mt-20 pb-10"
     >
       <Container>
         <Row className="mb-10">
@@ -45,7 +69,7 @@ export default function FeaturesProducts() {
             },
             // when window width is >= 768
             575: {
-              slidesPerView: 1,
+              slidesPerView: 2,
               spaceBetween: 40,
             },
 
@@ -83,7 +107,7 @@ export default function FeaturesProducts() {
             key: "slide",
           }}
           modules={[Autoplay, Navigation, Pagination]}
-          className={cn("")}
+          className={cn("py-10")}
         >
           {products &&
             products.map((item: Product, idx: number) => (

@@ -27,7 +27,6 @@ export default function MainMenu() {
           .get(process.env.NEXT_PUBLIC_API_URL + "/api/categories")
           .then((response) => {
             setCategories(response.data.data);
-            console.log(response.data.data);
           })
           .catch((error) => {
             setError(error.message);
@@ -129,7 +128,10 @@ export default function MainMenu() {
                             item.submenu.length > 0 &&
                             item.submenu.map(
                               (subCat: SubCategory, idx: number) => (
-                                <li key={idx} className="font-normal duration-100 ease-linear hover:translate-x-1">
+                                <li
+                                  key={idx}
+                                  className="font-normal duration-100 ease-linear hover:translate-x-1"
+                                >
                                   <Link
                                     href={`categories/${subCat.link}/products`}
                                     className="hover:text-primary-500"

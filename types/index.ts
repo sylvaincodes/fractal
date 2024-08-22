@@ -43,7 +43,7 @@ export type Category = {
   slug: string;
   image: string;
   createdAt?: String;
-  submenu?: SubCategory[] | string[];
+  submenu?: SubCategory[];
 };
 
 //1. types
@@ -61,6 +61,7 @@ export type SubCategory = {
   link: string;
   parent?: string;
   createdAt?: String;
+  updatedAt?: String;
 };
 
 export type SubPage = {

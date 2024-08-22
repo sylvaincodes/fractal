@@ -4,7 +4,7 @@ import { ClipLoader } from "react-spinners";
 export default function Loading({
   isLoading,
   size = 100,
-  color = "#1c1b4b",
+  color = "#b32346",
 }: {
   isLoading: boolean;
   size?: number;
@@ -14,7 +14,7 @@ export default function Loading({
     <div className="z-50">
       {isLoading && (
         <ClipLoader
-          className="absolute inset-0 m-auto z-50"
+          className="absolute inset-0 m-auto z-50 !border-8"
           size={size}
           color={color}
         />

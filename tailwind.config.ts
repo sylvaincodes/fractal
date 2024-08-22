@@ -27,7 +27,7 @@ const config = {
 
         "3xl": "2rem",
 
-        "4xl": "8rem",
+        "4xl": "2rem",
       },
       screens: {
         xs: "360px",
