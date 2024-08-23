@@ -60,7 +60,7 @@ export default function HomeSlide() {
         ) : (
           <Swiper
             autoplay={{
-              delay: 10000,
+              delay: 100000,
               disableOnInteraction: false,
             }}
             spaceBetween={50}
@@ -88,45 +88,55 @@ export default function HomeSlide() {
                 >
                   {item?.title !== "" ? (
                     item.title !== "" && (
-                      <div className="absolute drop-shadow-2xl text-white grid grid-cols-1 place-content-start justify-items-center lg:justify-items-start gap-8 capitalize m-auto top-100 lg:top-30 lg:left-20 w-fit">
+                      <div className="absolute drop-shadow-2xl  grid grid-cols-1 place-content-start justify-items-center lg:justify-items-start gap-8 capitalize m-auto top-100 lg:top-30 lg:left-20 w-fit">
+                        <m.h4
+                          initial={animation.hide}
+                          whileInView={animation.show}
+                          transition={{ delay: 0.4 }}
+                          className="max-w-60 text-2xl lg:text-h4 lg:max-w-screen-md capitalize"
+                          style={{
+                            color: `${item.textColor}`,
+                          }}
+                        >
+                          {item.subtitle.substring(0, 65)}
+                        </m.h4>
                         <m.h1
                           initial={animation.hide}
                           whileInView={animation.show}
-                          transition={{ delay: 0.3 }}
-                          className={cn(
-                            "text-2xl lg:text-6xl text-slate-700 font-bold  tracking-widest"
-                          )}
+                          transition={{ delay: 0.6 }}
+                          className={cn("text-2xl lg:text-h1")}
                           style={{
                             color: `${item.textColor}`,
                           }}
                         >
                           {item.title}
                         </m.h1>
-                        <m.h2
+
+                        <m.h6
                           initial={animation.hide}
                           whileInView={animation.show}
-                          transition={{ delay: 0.5 }}
-                          className="text-sm lg:text-2xl text-left max-w-60 lg:max-w-screen-md tracking-widest leading-8 text-slate-700 font-normal capitalize"
+                          transition={{ delay: 1 }}
+                          className={cn("lg:text-h6")}
                           style={{
                             color: `${item.textColor}`,
                           }}
                         >
-                          {item.subtitle.substring(0, 65)}
-                        </m.h2>
+                          {item.description}
+                        </m.h6>
 
                         <m.a
                           initial={animation.hide}
                           whileInView={animation.show}
                           transition={{
-                            delay: 0.7,
+                            delay: 1.2,
                             ease: "linear",
-                            duration: 0.3,
+                            duration: 0.8,
                           }}
-                          className="rounded-sm p-4 !hover:bg-primary-300"
-                          style={{
-                            background: `${item.textColor}`,
-                            color: `#000000`,
-                          }}
+                          className="rounded-sm p-4 bg-white hover:bg-black hover:text-white"
+                          // style={{
+                          //   // background: `${item.textColor}`,
+                          //   color: `#000000`,
+                          // }}
                           href={`/${item.link}`}
                         >
                           {item.btn}

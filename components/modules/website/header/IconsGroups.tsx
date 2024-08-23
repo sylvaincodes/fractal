@@ -28,7 +28,6 @@ export default function IconsGroups({
           variant="nostyle"
           size="icon"
           onClick={() => setOpenSearchBar(!openSearchBar)}
-          className=""
         >
           <CiSearch size={40} className="hover:text-primary-900" />
         </Button>

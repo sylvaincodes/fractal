@@ -60,14 +60,15 @@ export default function MainMenu() {
         ""
       ) : (
         <ul className="flex gap-32 justify-between items-center text-xl  font-medium capitalize">
+          {/* pages */}
           {pages &&
             pages.map((item: Page, idx: number) => (
               <li key={idx} className="relative">
                 <Link
                   href={item.link}
                   className={cn(
-                    "h-full duration-300 after:absolute after:bottom-0 after:left-0  after:w-0 after:h-1 after:bg-primary-400 after:duration-100 after:ease-linear hover:after:w-full",
-                    pathname == item.link && "border-b-4 border-b-primary-200"
+                    "h-full duration-300 after:absolute after:top-[26px] after:left-0  after:w-0 after:h-1 after:bg-primary-400 after:duration-100 after:ease-linear hover:after:w-full",
+                    pathname == item.link && "border-b-2 border-b-primary-500"
                   )}
                 >
                   {item.name}
@@ -75,12 +76,13 @@ export default function MainMenu() {
               </li>
             ))}
 
+          {/* Categories */}
           <li className="group">
             <button
               className="capitalize inline-flex items-center cursor-pointer"
               onMouseEnter={() => setShow(!show)}
             >
-              <span>Categories</span>
+              Categories
               <ChevronDown className="mt-1" />
             </button>
             <AnimatePresence>
@@ -108,19 +110,16 @@ export default function MainMenu() {
                     categories
                       .slice(0, 8)
                       .map((item: Category, idx: number) => (
-                        <ul
-                          className="flex flex-col gap-[16px] text-xl"
-                          key={idx}
-                        >
+                        <ul className="flex flex-col gap-4 text-xl" key={idx}>
                           <li>
                             <Link
                               href={`/categories/${item.link}/products`}
                               className="font-bold group/item w-full transitions-all flex items-center gap-2 duration-100 ease-linear hover:translate-x-1"
                             >
                               {/* <span className="hidden w-2 h-2 group-hover/item:block bg-primary-500 rounded-full "></span> */}
-                              <span className="transition ease-in-out hover:text-primary-500">
+                              <h6 className="transition ease-in-out hover:text-primary-500">
                                 {item.name}
-                              </span>
+                              </h6>
                             </Link>
                           </li>
 
@@ -133,7 +132,7 @@ export default function MainMenu() {
                                   className="font-normal duration-100 ease-linear hover:translate-x-1"
                                 >
                                   <Link
-                                    href={`categories/${subCat.link}/products`}
+                                    href={`/categories/${subCat.link}/products`}
                                     className="hover:text-primary-500"
                                   >
                                     {subCat.name}

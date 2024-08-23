@@ -37,7 +37,7 @@ export type INewsletter = {
 };
 
 export type Category = {
-  _id?: string;
+  _id: string;
   name: string;
   link: string;
   slug: string;
@@ -88,6 +88,7 @@ export type Slide = {
   link: string;
   slug: string;
   title: string;
+  description: string;
   subtitle: string;
   btn: string;
   image: string;

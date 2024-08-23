@@ -42,7 +42,7 @@ export default function CtaOne() {
   return (
     <section className="my-20">
       <Container>
-        <div className="flex justify-between items-center gap-4 flex-wrap lg:flex-nowrap w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  items-center">
           {isPending ? (
             <Skeleton className="h-[400px]" />
           ) : (
@@ -52,10 +52,10 @@ export default function CtaOne() {
               transition={{ duration: 0.3, type: "tween" }}
               className="flex flex-col items-center gap-12"
             >
-              <h1 className="inline-flex text-4xl font-bold capitalize">
+              <h3 className="inline-flex capitalize">
                 {slide?.title}
-              </h1>
-              <p className="text-center text-xl">{slide?.subtitle}</p>
+              </h3>
+              <p className="text-center">{slide?.subtitle}</p>
               <Countdown date={Date.now() + 600000} className="text-2xl" />
 
               <Button
@@ -78,7 +78,7 @@ export default function CtaOne() {
               className="flex justify-end"
             >
               <Image
-                src={slide?.image}
+                src={slide?.image ? slide?.image : ""}
                 width="800"
                 height="800"
                 alt="background cta"

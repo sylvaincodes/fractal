@@ -12,7 +12,7 @@ import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { m } from "framer-motion";
 
-export default function ProductCard({ item }: { item: Product }) {
+export default function ProductCardTwo({ item }: { item: Product }) {
   const active = 0;
   const product = item?.subProducts[active];
   const options = product?.options[active];
@@ -34,13 +34,13 @@ export default function ProductCard({ item }: { item: Product }) {
   return (
     <div className="flex flex-col gap-4 items-center cursor-pointer">
       {/* images  */}
-      <div className="flex group/image h-[500px] relative overflow-hidden">
+      <div className="flex group/image h-[400px] relative overflow-hidden">
         <Image
           src={images[0]}
           alt="image"
           width="300"
-          height="450"
-          className="duration-300 ease-linear group-hover/image:translate-x-full"
+          height="400"
+          className="duration-300 ease-linear group-hover/image:translate-x-full object-cover"
         />
         <Image
           src={images[1]}
@@ -79,9 +79,7 @@ export default function ProductCard({ item }: { item: Product }) {
 
       {/* content  */}
       <div className="flex flex-col gap-4 items-start py-4">
-        <h5 className="capitalize">
-          {item.name.substring(0, 20)}..
-        </h5>
+        <h5 className="capitalize">{item.name.substring(0, 20)}..</h5>
         <p className="capitalize text-sm">
           {item.description.substring(0, 30)}..
         </p>

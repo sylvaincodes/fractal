@@ -11,7 +11,6 @@ import { Slide } from "@/types";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { topCategories } from "@/constants/index";
 import Container from "@/components/custom/Container";
 import Heading from "@/components/custom/Heading";
 import Row from "@/components/custom/Row";
@@ -22,7 +21,6 @@ import Toast from "@/components/custom/Toast";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Categories() {
-  const [slides, setSlides] = useState<Slide[]>(topCategories);
   const animation = {
     hide: { scale: 0, opacity: 0 },
     show: {
@@ -30,6 +28,7 @@ export default function Categories() {
       opacity: 1,
     },
   };
+  const [slides, setSlides] = useState<Slide[]>();
   const router = useRouter();
   const [error, setError] = useState();
   const [isPending, startTransition] = useTransition();
@@ -192,18 +191,18 @@ export default function Categories() {
                   {item?.title !== "" ? (
                     item.title !== "" && (
                       <div className="absolute bg-white rounded-lg p-4 bottom-10 w-40 shadow-xl cursor-pointer hover:bg-black hover:text-white drop-shadow-xl duration-300 ease-linear">
-                        <m.h1
+                        <m.h6
                           initial={animation.hide}
                           whileInView={animation.show}
                           transition={{ delay: 0.3 }}
-                          className={cn("text-xl capitalize")}
+                          className={cn("capitalize")}
                           style={{
                             color: `${item.textColor}`,
                           }}
                           onClick={() => handleClick(item.link)}
                         >
                           {item.title}
-                        </m.h1>
+                        </m.h6>
                       </div>
                     )
                   ) : (

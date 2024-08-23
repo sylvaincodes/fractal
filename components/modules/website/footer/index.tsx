@@ -159,9 +159,9 @@ export default function Footer() {
                   </h1>
                 </li>
                 <li className="flex gap-4">
-                  <h1>
+                  <h6>
                     Enter your email to get apps, product and latest updates.
-                  </h1>
+                  </h6>
                 </li>
                 <li className="flex gap-4">
                   <form
@@ -210,13 +210,13 @@ export default function Footer() {
                 @2024 Fractal All rights reserved
               </div>
               <div className="inline-flex gap-4">
-                <Button className="" variant="outline" size="icon">
+                <Button className="hover:bg-primary-500 hover:text-white" variant="outline" size="icon">
                   <Facebook />
                 </Button>
-                <Button className="" variant="outline" size="icon">
+                <Button className="hover:bg-primary-500 hover:text-white" variant="outline" size="icon">
                   <Instagram />
                 </Button>
-                <Button className="" variant="outline" size="icon">
+                <Button className="hover:bg-primary-500 hover:text-white" variant="outline" size="icon">
                   <Twitter />
                 </Button>
               </div>

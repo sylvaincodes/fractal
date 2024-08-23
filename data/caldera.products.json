@@ -1,0 +1,1756 @@
+[{
+  "_id": {
+    "$oid": "66c3afd415c25b10765f70aa"
+  },
+  "featured": false,
+  "name": "levi's icon tote bag with logo in navy stripe",
+  "slug": "levis-icon-tote-bag-with-logo-in-navy-stripe",
+  "description": "levi's icon tote bag with logo in navy stripe  since creating the first ever pair of blue jeans back in 1873, american label levi's has gone on to become one of the world’s most iconic denim brands – but you already knew that. today.",
+  "category": {
+    "$oid": "66969377d0776db430386ddc"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c358a815c25b10765f696a"
+    }
+  ],
+  "brand": {
+    "$oid": "668ad963ed4b0a535cfa6014"
+  },
+  "details": [
+    {
+      "name": "Cotton",
+      "value": "lightweight, soft and strong",
+      "_id": {
+        "$oid": "66c3bbfc15c25b10765f710e"
+      }
+    },
+    {
+      "name": "Main",
+      "value": "100% Cotton.",
+      "_id": {
+        "$oid": "66c3bbfc15c25b10765f710f"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "02938NBH",
+      "style": {
+        "color": "#ffffff",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724100968/ecommerce-carrefour/product_1_z7yixi.png",
+        "name": "white"
+      },
+      "options": [
+        {
+          "qty": 4,
+          "price": 99.99,
+          "sold": 0,
+          "option": "white",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724101852/ecommerce-carrefour/product_1_white_5_uqsxnw.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724101860/ecommerce-carrefour/product_1_white_4_d1gdmv.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724101868/ecommerce-carrefour/product_1_white_3_n7iz8c.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724101878/ecommerce-carrefour/product_1_white_2_mxzn1j.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724101888/ecommerce-carrefour/product_1_white_hlcy1l.png"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c3b55315c25b10765f70e5"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c3b55315c25b10765f70e4"
+      }
+    },
+    {
+      "sku": "02938NBI",
+      "style": {
+        "color": "#000000",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724103317/ecommerce-carrefour/product_1_black_0_qb1a40.png",
+        "name": "black"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 299.99,
+          "sold": 0,
+          "option": "black",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724103329/ecommerce-carrefour/product_1_black_0_shczoi.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724103406/ecommerce-carrefour/product_4_black_hjjszw.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724103423/ecommerce-carrefour/product_2_black_ilmfxy.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724103465/ecommerce-carrefour/product_3_black_z6t92r.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724103556/ecommerce-carrefour/product_4_black_6_b0zeau.png"
+          ],
+          "discount": 25,
+          "_id": {
+            "$oid": "66c3bbda15c25b10765f70f8"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c3bbda15c25b10765f70f7"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-19T20:49:24.486Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-19T21:41:16.365Z"
+  },
+  "__v": 0,
+  "content": "Levi's icon tote bag with logo in navy stripe  Since creating the first ever pair of blue jeans back in 1873, American label Levi's has gone on to become one of the world’s most iconic denim brands – but you already knew that. Today, its collection has expanded to include jeans in a range of cuts and washes, as well as shirts, T-shirts and jackets. Look out for the brand’s 501 Original jeans, for an all-American, all-you look."
+},
+{
+  "_id": {
+    "$oid": "66c41c0615c25b10765f760d"
+  },
+  "featured": true,
+  "name": "champion men's tshirt, classic graphic tshirt soft and comfortable t-shirts for men",
+  "slug": "champion-mens-tshirt-classic-graphic-tshirt-soft-and-comfortable-t-shirts-for-men",
+  "description": "champion men's tshirt, classic graphic tshirt soft and comfortable t-shirts for men, script logo reg. or big & tall",
+  "category": {
+    "$oid": "668544f16c0c5a9794adb766"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c3900415c25b10765f706d"
+    }
+  ],
+  "brand": {
+    "$oid": "668ad963ed4b0a535cfa6014"
+  },
+  "details": [
+    {
+      "name": "Fabric type",
+      "value": "100% Cotton",
+      "_id": {
+        "$oid": "66c4204115c25b10765f7780"
+      }
+    },
+    {
+      "name": "Care instructions",
+      "value": "Machine Wash",
+      "_id": {
+        "$oid": "66c4204115c25b10765f7781"
+      }
+    },
+    {
+      "name": "Origin",
+      "value": "Imported",
+      "_id": {
+        "$oid": "66c4204115c25b10765f7782"
+      }
+    },
+    {
+      "name": "Closure type",
+      "value": "Pull On",
+      "_id": {
+        "$oid": "66c4204115c25b10765f7783"
+      }
+    },
+    {
+      "name": "Country of Origin",
+      "value": "Honduras",
+      "_id": {
+        "$oid": "66c4204115c25b10765f7784"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "TRT46TY",
+      "style": {
+        "color": "#4d4d4d",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128411/ecommerce-carrefour/men_black_xtn1hj.jpg",
+        "name": "blacks"
+      },
+      "options": [
+        {
+          "qty": 5,
+          "price": 14,
+          "sold": 0,
+          "option": "x-small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724305280/ecommerce-carrefour/con_jbrraq.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724305281/ecommerce-carrefour/con_2_xqoh1u.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128327/ecommerce-carrefour/men_black_3_tezloc.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128345/ecommerce-carrefour/men_black_4_uvg5dh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128369/ecommerce-carrefour/men_black_5_az6vbt.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c41e4315c25b10765f7667"
+          }
+        },
+        {
+          "qty": 6,
+          "price": 22,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128295/ecommerce-carrefour/men_black_lnb99x.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128308/ecommerce-carrefour/men_black_2_mdtj90.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128327/ecommerce-carrefour/men_black_3_tezloc.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128345/ecommerce-carrefour/men_black_4_uvg5dh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128369/ecommerce-carrefour/men_black_5_az6vbt.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c41e4315c25b10765f7668"
+          }
+        },
+        {
+          "qty": 6,
+          "price": 24,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128295/ecommerce-carrefour/men_black_lnb99x.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128308/ecommerce-carrefour/men_black_2_mdtj90.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128327/ecommerce-carrefour/men_black_3_tezloc.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128345/ecommerce-carrefour/men_black_4_uvg5dh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128369/ecommerce-carrefour/men_black_5_az6vbt.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c41e4315c25b10765f7669"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 30,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128295/ecommerce-carrefour/men_black_lnb99x.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128308/ecommerce-carrefour/men_black_2_mdtj90.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128327/ecommerce-carrefour/men_black_3_tezloc.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128345/ecommerce-carrefour/men_black_4_uvg5dh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128369/ecommerce-carrefour/men_black_5_az6vbt.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c41e4315c25b10765f766a"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 30,
+          "sold": 0,
+          "option": "x-large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128295/ecommerce-carrefour/men_black_lnb99x.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128308/ecommerce-carrefour/men_black_2_mdtj90.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128327/ecommerce-carrefour/men_black_3_tezloc.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128345/ecommerce-carrefour/men_black_4_uvg5dh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724128369/ecommerce-carrefour/men_black_5_az6vbt.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c41e4315c25b10765f766b"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c41e4315c25b10765f7666"
+      }
+    },
+    {
+      "sku": "02938NEA",
+      "style": {
+        "color": "#ff0000",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129153/ecommerce-carrefour/men_red_uhfnih.jpg",
+        "name": "red"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 9,
+          "sold": 0,
+          "option": "xs-small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129121/ecommerce-carrefour/men_red_uk5hbr.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129126/ecommerce-carrefour/men_red_2_wbkgrs.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129133/ecommerce-carrefour/men_red_3_hebsmf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129137/ecommerce-carrefour/men_red_4_pr0fhg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129146/ecommerce-carrefour/men_red_5_dbqqip.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c41fcf15c25b10765f767f"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 12,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129121/ecommerce-carrefour/men_red_uk5hbr.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129126/ecommerce-carrefour/men_red_2_wbkgrs.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129133/ecommerce-carrefour/men_red_3_hebsmf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129137/ecommerce-carrefour/men_red_4_pr0fhg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129146/ecommerce-carrefour/men_red_5_dbqqip.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c41fcf15c25b10765f7680"
+          }
+        },
+        {
+          "qty": 12,
+          "price": 15,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129121/ecommerce-carrefour/men_red_uk5hbr.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129126/ecommerce-carrefour/men_red_2_wbkgrs.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129133/ecommerce-carrefour/men_red_3_hebsmf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129137/ecommerce-carrefour/men_red_4_pr0fhg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129146/ecommerce-carrefour/men_red_5_dbqqip.jpg"
+          ],
+          "discount": 19,
+          "_id": {
+            "$oid": "66c41fcf15c25b10765f7681"
+          }
+        },
+        {
+          "qty": 12,
+          "price": 15,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129121/ecommerce-carrefour/men_red_uk5hbr.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129126/ecommerce-carrefour/men_red_2_wbkgrs.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129133/ecommerce-carrefour/men_red_3_hebsmf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129137/ecommerce-carrefour/men_red_4_pr0fhg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129146/ecommerce-carrefour/men_red_5_dbqqip.jpg"
+          ],
+          "discount": 25,
+          "_id": {
+            "$oid": "66c41fcf15c25b10765f7682"
+          }
+        },
+        {
+          "qty": 12,
+          "price": null,
+          "sold": 0,
+          "option": "x-large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129121/ecommerce-carrefour/men_red_uk5hbr.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129126/ecommerce-carrefour/men_red_2_wbkgrs.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129133/ecommerce-carrefour/men_red_3_hebsmf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129137/ecommerce-carrefour/men_red_4_pr0fhg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724129146/ecommerce-carrefour/men_red_5_dbqqip.jpg"
+          ],
+          "discount": 25,
+          "_id": {
+            "$oid": "66c41fcf15c25b10765f7683"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c41fcf15c25b10765f767e"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-20T04:31:02.701Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-20T04:49:05.572Z"
+  },
+  "__v": 0,
+  "content": "Champion Men'S Tshirt, Classic Graphic Tshirt Soft And Comfortable T-Shirts For Men, Script Logo Reg. Or Big & Tall"
+},
+{
+  "_id": {
+    "$oid": "66c44a7315c25b10765f7844"
+  },
+  "featured": false,
+  "name": "reebok women's court advance sneaker",
+  "slug": "reebok-womens-court-advance-sneaker",
+  "description": "classic & comfortable sneakers for women and men: these women's and men's sneakers are a classic icon; our always-comfortable shoes come equipped with a smoother leather upper, a perforated toe box, and a padded collar",
+  "category": {
+    "$oid": "668544f16c0c5a9794adb766"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c38cd015c25b10765f7040"
+    }
+  ],
+  "brand": {
+    "$oid": "66c4301715c25b10765f782f"
+  },
+  "details": [],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "02938NEZ",
+      "style": {
+        "color": "#fffffa",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140291/ecommerce-carrefour/men_shoes_2_ixfkci.jpg",
+        "name": "white shoes"
+      },
+      "options": [
+        {
+          "qty": 2,
+          "price": 33.65,
+          "sold": 0,
+          "option": "5",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140187/ecommerce-carrefour/men_shoes_jmh2q7.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140199/ecommerce-carrefour/men_shoes_2_chcnly.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140208/ecommerce-carrefour/men_shoes_3_dpytie.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140213/ecommerce-carrefour/men_shoes_4_aondzw.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140280/ecommerce-carrefour/men_shoes_5_rwy2wn.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c477c17236cf7255cbd8f6"
+          }
+        },
+        {
+          "qty": 2,
+          "price": 33.65,
+          "sold": 0,
+          "option": "6",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140187/ecommerce-carrefour/men_shoes_jmh2q7.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140199/ecommerce-carrefour/men_shoes_2_chcnly.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140208/ecommerce-carrefour/men_shoes_3_dpytie.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140213/ecommerce-carrefour/men_shoes_4_aondzw.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140280/ecommerce-carrefour/men_shoes_5_rwy2wn.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c477c17236cf7255cbd8f7"
+          }
+        },
+        {
+          "qty": 2,
+          "price": 33.65,
+          "sold": 0,
+          "option": "7",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140187/ecommerce-carrefour/men_shoes_jmh2q7.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140199/ecommerce-carrefour/men_shoes_2_chcnly.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140208/ecommerce-carrefour/men_shoes_3_dpytie.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140213/ecommerce-carrefour/men_shoes_4_aondzw.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140280/ecommerce-carrefour/men_shoes_5_rwy2wn.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c477c17236cf7255cbd8f8"
+          }
+        },
+        {
+          "qty": 2,
+          "price": 43.65,
+          "sold": 0,
+          "option": "8",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140187/ecommerce-carrefour/men_shoes_jmh2q7.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140199/ecommerce-carrefour/men_shoes_2_chcnly.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140208/ecommerce-carrefour/men_shoes_3_dpytie.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140213/ecommerce-carrefour/men_shoes_4_aondzw.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724140280/ecommerce-carrefour/men_shoes_5_rwy2wn.jpg"
+          ],
+          "discount": 12,
+          "_id": {
+            "$oid": "66c477c17236cf7255cbd8f9"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c477c17236cf7255cbd8f5"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-20T07:49:07.579Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-20T11:02:25.266Z"
+  },
+  "__v": 0,
+  "content": "here is content"
+},
+{
+  "_id": {
+    "$oid": "66c4bc60fcb58802c271f87c"
+  },
+  "featured": true,
+  "name": "wneedu women summer dresses sleeveless casual loose swing button down midi dress with pockets",
+  "slug": "wneedu-women-summer-dresses-sleeveless-casual-loose-swing-button-down-midi-dress-with-pockets",
+  "description": "fashion-simple design:swing flowy dress,sexy v neck,elastic waist,midi length,a line summer dress features ruffle sleeve and decoration buttons,the softly gathered waistline creates natural pleating let you look more slender.",
+  "category": {
+    "$oid": "66969377d0776db430386ddc"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c358bf15c25b10765f6979"
+    }
+  ],
+  "brand": {
+    "$oid": "668ad963ed4b0a535cfa6014"
+  },
+  "details": [
+    {
+      "name": "Fabric type",
+      "value": "Polyester and Spandex",
+      "_id": {
+        "$oid": "66c4bd65fcb58802c271f8e8"
+      }
+    },
+    {
+      "name": "Care instructions",
+      "value": "Hand Wash Only",
+      "_id": {
+        "$oid": "66c4bd65fcb58802c271f8e9"
+      }
+    },
+    {
+      "name": "Origin",
+      "value": "Imported",
+      "_id": {
+        "$oid": "66c4bd65fcb58802c271f8ea"
+      }
+    },
+    {
+      "name": "Closure type",
+      "value": "Pull On",
+      "_id": {
+        "$oid": "66c4bd65fcb58802c271f8eb"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "02938NBH",
+      "style": {
+        "color": "#000001",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724169940/ecommerce-carrefour/women_0_irptet.jpg",
+        "name": "black scolor"
+      },
+      "options": [
+        {
+          "qty": 2,
+          "price": 45,
+          "sold": 0,
+          "option": "x-small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724241838/ecommerce-carrefour/women___0_gxm9kz.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724242012/ecommerce-carrefour/women___1_kvm9qg.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724169986/ecommerce-carrefour/women_2_fzwn5z.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724170029/ecommerce-carrefour/women_3_lljw6k.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724170038/ecommerce-carrefour/women_4_lesret.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e3cd58a2f8a3c1c3b94a"
+          }
+        },
+        {
+          "qty": 2,
+          "price": 45,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724169952/ecommerce-carrefour/women_0_zdhd29.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724169977/ecommerce-carrefour/women_1_u9fab9.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724169986/ecommerce-carrefour/women_2_fzwn5z.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724170029/ecommerce-carrefour/women_3_lljw6k.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724170038/ecommerce-carrefour/women_4_lesret.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e3cd58a2f8a3c1c3b94b"
+          }
+        },
+        {
+          "qty": 2,
+          "price": 50,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724169952/ecommerce-carrefour/women_0_zdhd29.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724169977/ecommerce-carrefour/women_1_u9fab9.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724169986/ecommerce-carrefour/women_2_fzwn5z.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724170029/ecommerce-carrefour/women_3_lljw6k.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724170038/ecommerce-carrefour/women_4_lesret.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e3cd58a2f8a3c1c3b94c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4e3cd58a2f8a3c1c3b949"
+      }
+    },
+    {
+      "sku": "02938UETY",
+      "style": {
+        "color": "#a8ffe2",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180318/ecommerce-carrefour/women_0_green_vpfxv9.jpg",
+        "name": "green"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 34,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180340/ecommerce-carrefour/women_0_green_epmkrg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180345/ecommerce-carrefour/women_1_green_fofykf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180350/ecommerce-carrefour/women_2_green_kbp8mb.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180357/ecommerce-carrefour/women_3_green_x8j5bm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180360/ecommerce-carrefour/women_4_green_rgr3ff.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4e7abd9313339b6b6afd4"
+          }
+        },
+        {
+          "qty": 20,
+          "price": 35,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180340/ecommerce-carrefour/women_0_green_epmkrg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180345/ecommerce-carrefour/women_1_green_fofykf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180350/ecommerce-carrefour/women_2_green_kbp8mb.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180357/ecommerce-carrefour/women_3_green_x8j5bm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180360/ecommerce-carrefour/women_4_green_rgr3ff.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4e7abd9313339b6b6afd5"
+          }
+        },
+        {
+          "qty": 20,
+          "price": 39,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180340/ecommerce-carrefour/women_0_green_epmkrg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180345/ecommerce-carrefour/women_1_green_fofykf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180350/ecommerce-carrefour/women_2_green_kbp8mb.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180357/ecommerce-carrefour/women_3_green_x8j5bm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180360/ecommerce-carrefour/women_4_green_rgr3ff.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e7abd9313339b6b6afd6"
+          }
+        },
+        {
+          "qty": 20,
+          "price": 39,
+          "sold": 0,
+          "option": "x-large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180340/ecommerce-carrefour/women_0_green_epmkrg.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180345/ecommerce-carrefour/women_1_green_fofykf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180350/ecommerce-carrefour/women_2_green_kbp8mb.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180357/ecommerce-carrefour/women_3_green_x8j5bm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180360/ecommerce-carrefour/women_4_green_rgr3ff.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e7abd9313339b6b6afd7"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4e7abd9313339b6b6afd3"
+      }
+    },
+    {
+      "sku": "0293AYUZ",
+      "style": {
+        "color": "#ebebeb",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180421/ecommerce-carrefour/women_0_white_lnij1s.jpg",
+        "name": "white color "
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 34,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180451/ecommerce-carrefour/women_0_white_t4l8to.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180455/ecommerce-carrefour/women_1_white_iohgey.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180459/ecommerce-carrefour/women_2_white_tidzyh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180498/ecommerce-carrefour/women_4_vmtbhy.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180526/ecommerce-carrefour/women_4_wpsm9u.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e88dd9313339b6b6b026"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 34,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180451/ecommerce-carrefour/women_0_white_t4l8to.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180455/ecommerce-carrefour/women_1_white_iohgey.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180459/ecommerce-carrefour/women_2_white_tidzyh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180498/ecommerce-carrefour/women_4_vmtbhy.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180526/ecommerce-carrefour/women_4_wpsm9u.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e88dd9313339b6b6b027"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 50,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180451/ecommerce-carrefour/women_0_white_t4l8to.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180455/ecommerce-carrefour/women_1_white_iohgey.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180459/ecommerce-carrefour/women_2_white_tidzyh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180498/ecommerce-carrefour/women_4_vmtbhy.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180526/ecommerce-carrefour/women_4_wpsm9u.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e88dd9313339b6b6b028"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 52,
+          "sold": 0,
+          "option": "x-large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180451/ecommerce-carrefour/women_0_white_t4l8to.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180455/ecommerce-carrefour/women_1_white_iohgey.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180459/ecommerce-carrefour/women_2_white_tidzyh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180498/ecommerce-carrefour/women_4_vmtbhy.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724180526/ecommerce-carrefour/women_4_wpsm9u.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4e88dd9313339b6b6b029"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4e88dd9313339b6b6b025"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-20T15:55:12.047Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-20T19:05:01.978Z"
+  },
+  "__v": 0,
+  "content": "Fashion-simple design:Swing Flowy dress,Sexy V Neck,Elastic Waist,Midi Length,a line summer dress features Ruffle Sleeve and decoration buttons,The softly gathered waistline creates natural pleating let you look more slender and can Hide Your Bumps Area Well,sleeveless style is very trendy and cool in summer, it is easy to care on daily life or travel."
+},
+{
+  "_id": {
+    "$oid": "66c4ec59d9313339b6b6b0c6"
+  },
+  "featured": true,
+  "name": "robert graham men's damien, cotton solid-colored v-neck shirt",
+  "slug": "robert-graham-mens-damien-cotton-solid-colored-v-neck-shirt",
+  "description": "designer men’s v-neck t-shirt: this casual t-shirt for men will make a stylish addition to your wardrobe. our short-sleeve t-shirt features colorful seams and provides a comfortable fit, making it an essential piece of casual or dress wear.",
+  "category": {
+    "$oid": "668544f16c0c5a9794adb766"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c3900415c25b10765f706d"
+    }
+  ],
+  "brand": {
+    "$oid": "668ad963ed4b0a535cfa6014"
+  },
+  "details": [
+    {
+      "name": "Package Dimensions",
+      "value": "‎ 11.57 x 8.98 x 1.1 inches; 4.23 ounces",
+      "_id": {
+        "$oid": "66c4eec4d9313339b6b6b14a"
+      }
+    },
+    {
+      "name": "Item model number",
+      "value": "M0238",
+      "_id": {
+        "$oid": "66c4eec4d9313339b6b6b14b"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "02938AEO",
+      "style": {
+        "color": "#b8b8b8",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181614/ecommerce-carrefour/mens_blues_white_0_cn8zmr.jpg",
+        "name": "silver"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 23.99,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724240370/ecommerce-carrefour/men_1_gmiadc.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724241108/ecommerce-carrefour/men_4_eiavfe.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181645/ecommerce-carrefour/mens_blues_white_2_lhrd8j.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181689/ecommerce-carrefour/mens_blues_white_3_uenf36.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181718/ecommerce-carrefour/mens_blues_white_4_domfem.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4ecefd9313339b6b6b0d2"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 29.99,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181638/ecommerce-carrefour/mens_blues_white_0_hsxpk3.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181642/ecommerce-carrefour/mens_blues_white_1_qbxddn.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181645/ecommerce-carrefour/mens_blues_white_2_lhrd8j.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181689/ecommerce-carrefour/mens_blues_white_3_uenf36.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181718/ecommerce-carrefour/mens_blues_white_4_domfem.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4ecefd9313339b6b6b0d3"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 39.99,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181638/ecommerce-carrefour/mens_blues_white_0_hsxpk3.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181642/ecommerce-carrefour/mens_blues_white_1_qbxddn.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181645/ecommerce-carrefour/mens_blues_white_2_lhrd8j.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181689/ecommerce-carrefour/mens_blues_white_3_uenf36.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181718/ecommerce-carrefour/mens_blues_white_4_domfem.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4ecefd9313339b6b6b0d4"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4ecefd9313339b6b6b0d1"
+      }
+    },
+    {
+      "sku": "76276AOE",
+      "style": {
+        "color": "#4a67d9",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724182063/ecommerce-carrefour/mens_blues_white_4_flqjtg.jpg",
+        "name": "blue shirt"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 30,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181772/ecommerce-carrefour/mens_blues_q6y8aj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181777/ecommerce-carrefour/mens_blues_1_lcghma.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181799/ecommerce-carrefour/mens_blues_white_3_njhfgk.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181891/ecommerce-carrefour/mens_blues_white_5_zcjxtj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724182048/ecommerce-carrefour/mens_blues_white_6_qautao.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4ee44d9313339b6b6b0ea"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 32,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181772/ecommerce-carrefour/mens_blues_q6y8aj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181777/ecommerce-carrefour/mens_blues_1_lcghma.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181799/ecommerce-carrefour/mens_blues_white_3_njhfgk.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181891/ecommerce-carrefour/mens_blues_white_5_zcjxtj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724182048/ecommerce-carrefour/mens_blues_white_6_qautao.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4ee44d9313339b6b6b0eb"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 32,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181772/ecommerce-carrefour/mens_blues_q6y8aj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181777/ecommerce-carrefour/mens_blues_1_lcghma.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181799/ecommerce-carrefour/mens_blues_white_3_njhfgk.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724181891/ecommerce-carrefour/mens_blues_white_5_zcjxtj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724182048/ecommerce-carrefour/mens_blues_white_6_qautao.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4ee44d9313339b6b6b0ec"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4ee44d9313339b6b6b0e9"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-20T19:19:53.879Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-20T19:30:12.932Z"
+  },
+  "__v": 0,
+  "content": "SOFT & COMFY FEEL - Our best cotton, polyester and rayon come together to make this soft and comfy t-shirt for men.\nBASICS THAT ARE FAR FROM BASIC - A Stylish collection of cool, modern essentials designed for comfort, made for every body. Be yourself in Hanes Originals."
+},
+{
+  "_id": {
+    "$oid": "66c4f0dad9313339b6b6b1b5"
+  },
+  "featured": false,
+  "name": "playstation 5 digital edition - cfi-1102b",
+  "slug": "playstation-5-digital-edition---cfi-1102b",
+  "description": "lightning speed - harness the power of a custom cpu, gpu, and ssd with integrated i/o that rewrite the rules of what a playstation console can do.",
+  "category": {
+    "$oid": "668542de6c0c5a9794adb74a"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c4f0b4d9313339b6b6b19e"
+    }
+  ],
+  "brand": {
+    "$oid": "668ad9feed4b0a535cfa6025"
+  },
+  "details": [
+    {
+      "name": "Product Dimensions",
+      "value": "2 x 1 x 2 inches; 2.15 Pounds",
+      "_id": {
+        "$oid": "66c4f516d9313339b6b6b1c8"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "02923DS",
+      "style": {
+        "color": "#3b3b3b",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183992/ecommerce-carrefour/ps4_3_illo3q.jpg",
+        "name": "black ps4"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 256.99,
+          "sold": 0,
+          "option": "1024gb",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183969/ecommerce-carrefour/ps4_m8ooc5.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183974/ecommerce-carrefour/ps4_1_nnclsf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183978/ecommerce-carrefour/ps4_2_gycvng.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183982/ecommerce-carrefour/ps4_3_trbbcm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183984/ecommerce-carrefour/ps4_4_kwarsv.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4f5e5d9313339b6b6b1db"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 200.99,
+          "sold": 0,
+          "option": "512gb",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183969/ecommerce-carrefour/ps4_m8ooc5.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183974/ecommerce-carrefour/ps4_1_nnclsf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183978/ecommerce-carrefour/ps4_2_gycvng.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183982/ecommerce-carrefour/ps4_3_trbbcm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724183984/ecommerce-carrefour/ps4_4_kwarsv.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4f5e5d9313339b6b6b1dc"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4f5e5d9313339b6b6b1da"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-20T19:39:06.264Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-20T20:01:41.370Z"
+  },
+  "__v": 0,
+  "content": "The all new lighter and slimmer PlayStation4 system has a 1TB hard drive for all of the greatest games, TV, music and more. Incredible Games You've come to the right place. Exclusive games take you on incredible journeys, from critically acclaimed indies to award winning AAA hits. Endless Entertainment Something new and amazing is always in reach. Find what you're looking for and get it at the touch of a button via PlayStation entertainment options like PlayStation Vue and more. Connect your controller to your PS4 system with the USB cable: To charge your controller when in rest mode, you must first checkmark the [Supply Power to USB Ports] option in (Settings)> [Power Saving Settings] > [Set Functions Available in Rest Mode].\n\nVibrant HDR gaming\nHDR enabled PS4 games burst into life with incredible colour and clarity on an HDR TV, delivering a more vibrant, realistic spectrum of colours.\n\n500GB or 1TB models\nStore your games, apps, screenshots and videos with 500GB and 1TB models – slimmer and lighter than the original PS4 model and available in Jet Black, Glacier White and stunning Gold and Silver.\n\nAV output: HDMI out port (HDR output supported)."
+},
+{
+  "_id": {
+    "$oid": "66c4f8b2d9313339b6b6b240"
+  },
+  "featured": true,
+  "name": "hanes men's ecosmart fleece sweatshirt, cotton-blend pullover",
+  "slug": "hanes-mens-ecosmart-fleece-sweatshirt-cotton-blend-pullover",
+  "description": "hanes men's ecosmart fleece sweatshirt, cotton-blend pullover, crewneck sweatshirt for men, 1 or 2 pack available",
+  "category": {
+    "$oid": "668544f16c0c5a9794adb766"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c3900415c25b10765f706d"
+    }
+  ],
+  "brand": {
+    "$oid": "668ad963ed4b0a535cfa6014"
+  },
+  "details": [
+    {
+      "name": "Package Dimensions ‏",
+      "value": "11.65 x 9.37 x 2.2 inches; 11.11 ounces",
+      "_id": {
+        "$oid": "66c4fa98d9313339b6b6b2fc"
+      }
+    },
+    {
+      "name": "Item model number",
+      "value": "OP160",
+      "_id": {
+        "$oid": "66c4fa98d9313339b6b6b2fd"
+      }
+    },
+    {
+      "name": "ASIN ",
+      "value": "B0C3WT736B",
+      "_id": {
+        "$oid": "66c4fa98d9313339b6b6b2fe"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "02929USJI",
+      "style": {
+        "color": "#645454",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184913/ecommerce-carrefour/long_beige_1_ygdvjk.jpg",
+        "name": "Army Brown - 1 Pack"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 60,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724240744/ecommerce-carrefour/men_2_k3jbpa.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724240902/ecommerce-carrefour/men_3_mqe0pc.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184857/ecommerce-carrefour/long_beige_3_kaj86z.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184878/ecommerce-carrefour/long_beige_4_otyjyx.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184883/ecommerce-carrefour/long_beige_5_bfptnc.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4f97bd9313339b6b6b298"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 62,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184839/ecommerce-carrefour/long_beige_1_gqs4ly.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184853/ecommerce-carrefour/long_beige_2_tb0384.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184857/ecommerce-carrefour/long_beige_3_kaj86z.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184878/ecommerce-carrefour/long_beige_4_otyjyx.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184883/ecommerce-carrefour/long_beige_5_bfptnc.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4f97bd9313339b6b6b299"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 62,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184839/ecommerce-carrefour/long_beige_1_gqs4ly.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184853/ecommerce-carrefour/long_beige_2_tb0384.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184857/ecommerce-carrefour/long_beige_3_kaj86z.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184878/ecommerce-carrefour/long_beige_4_otyjyx.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184883/ecommerce-carrefour/long_beige_5_bfptnc.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4f97bd9313339b6b6b29a"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4f97bd9313339b6b6b297"
+      }
+    },
+    {
+      "sku": "02288NBH",
+      "style": {
+        "color": "#fbff00",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185053/ecommerce-carrefour/long_yellow_1_rhrsps.jpg",
+        "name": "Safety Green - 1 Pack"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 35,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184980/ecommerce-carrefour/long_yellow_1_pdn0wp.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184983/ecommerce-carrefour/long_yellow_2_cpgwms.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184989/ecommerce-carrefour/long_yellow_3_ltxkqa.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184995/ecommerce-carrefour/long_yellow_4_bh5uhz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185000/ecommerce-carrefour/long_yellow_5_usquwr.jpg"
+          ],
+          "discount": 9,
+          "_id": {
+            "$oid": "66c4f9edd9313339b6b6b2b2"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 36,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184980/ecommerce-carrefour/long_yellow_1_pdn0wp.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184983/ecommerce-carrefour/long_yellow_2_cpgwms.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184989/ecommerce-carrefour/long_yellow_3_ltxkqa.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184995/ecommerce-carrefour/long_yellow_4_bh5uhz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185000/ecommerce-carrefour/long_yellow_5_usquwr.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4f9edd9313339b6b6b2b3"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 40,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184980/ecommerce-carrefour/long_yellow_1_pdn0wp.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184983/ecommerce-carrefour/long_yellow_2_cpgwms.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184989/ecommerce-carrefour/long_yellow_3_ltxkqa.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724184995/ecommerce-carrefour/long_yellow_4_bh5uhz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185000/ecommerce-carrefour/long_yellow_5_usquwr.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c4f9edd9313339b6b6b2b4"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4f9edd9313339b6b6b2b1"
+      }
+    },
+    {
+      "sku": "762763UYT",
+      "style": {
+        "color": "#253f6a",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185096/ecommerce-carrefour/long_deeproyal_5_qtdzwm.jpg",
+        "name": "Navy - 1 Pack"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 45,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185107/ecommerce-carrefour/long_deeproyal_5_spv7yq.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185162/ecommerce-carrefour/long_deeproyal_2_y2tz8t.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185166/ecommerce-carrefour/long_deeproyal_3_ldemkb.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185170/ecommerce-carrefour/long_deeproyal_4_zffacm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185188/ecommerce-carrefour/long_deeproyal_1_f8snd3.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4fa76d9313339b6b6b2d4"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 55,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185107/ecommerce-carrefour/long_deeproyal_5_spv7yq.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185162/ecommerce-carrefour/long_deeproyal_2_y2tz8t.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185166/ecommerce-carrefour/long_deeproyal_3_ldemkb.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185170/ecommerce-carrefour/long_deeproyal_4_zffacm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185188/ecommerce-carrefour/long_deeproyal_1_f8snd3.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4fa76d9313339b6b6b2d5"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 60,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185107/ecommerce-carrefour/long_deeproyal_5_spv7yq.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185162/ecommerce-carrefour/long_deeproyal_2_y2tz8t.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185166/ecommerce-carrefour/long_deeproyal_3_ldemkb.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185170/ecommerce-carrefour/long_deeproyal_4_zffacm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724185188/ecommerce-carrefour/long_deeproyal_1_f8snd3.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c4fa76d9313339b6b6b2d6"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c4fa76d9313339b6b6b2d3"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-20T20:12:34.480Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-20T20:20:40.857Z"
+  },
+  "__v": 0,
+  "content": "Hanes® EcoSmart® men's fleece sweatshirt is sure to become your new go-to wardrobe staple. Soft and plush, this cozy pullover sweatshirt is made from a midweight blend featuring cotton sourced from American farms. A classic crewneck style, this pullover is sturdy and made to keep its plush comfort for a long time. The fleece design is built to hold its shape thanks to a ribbed crewneck, cuffs, and hem. Double-needle stitching at the neck and armholes further enhance the quality and sturdiness. Pair this Hanes crewneck sweatshirt with everything from jeans to sweats for a laid-back look."
+},
+{
+  "_id": {
+    "$oid": "66c5b04bd9313339b6b6b6a7"
+  },
+  "featured": true,
+  "name": "merokeety women's 2024 summer striped knit bodycon midi dress square neck side slit tank ribbed",
+  "slug": "merokeety-womens-2024-summer-striped-knit-bodycon-midi-dress-square-neck-side-slit-tank-ribbed",
+  "description": "merokeety women's 2024 summer striped knit bodycon midi dress square neck side slit tank ribbed sweater dresses",
+  "category": {
+    "$oid": "66969377d0776db430386ddc"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c358bf15c25b10765f6979"
+    }
+  ],
+  "brand": {
+    "$oid": "66c4301715c25b10765f782f"
+  },
+  "details": [
+    {
+      "name": "Package Dimensions",
+      "value": " 13.11 x 10.71 x 0.71 inches; 9.14 ounces",
+      "_id": {
+        "$oid": "66c5ba25d9313339b6b6b809"
+      }
+    },
+    {
+      "name": "Fabric type",
+      "value": "50% Viscose, 28% Polyamide, 22% Polyester",
+      "_id": {
+        "$oid": "66c5ba25d9313339b6b6b80a"
+      }
+    },
+    {
+      "name": "Care instructions",
+      "value": "Machine Wash",
+      "_id": {
+        "$oid": "66c5ba25d9313339b6b6b80b"
+      }
+    },
+    {
+      "name": "Closure type",
+      "value": "Pull On",
+      "_id": {
+        "$oid": "66c5ba25d9313339b6b6b80c"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "383USYZZ",
+      "style": {
+        "color": "#cabc96",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233678/ecommerce-carrefour/womenjuppe_0_vs2rux.jpg",
+        "name": "kaki "
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 37.99,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724242303/ecommerce-carrefour/women___22_ajppro.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724242457/ecommerce-carrefour/women___23_taxror.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233605/ecommerce-carrefour/womenjuppe_2_s81tv1.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233615/ecommerce-carrefour/womenjuppe_3_zhvhkm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233638/ecommerce-carrefour/womenjuppe_4_pvb6d5.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c5b816d9313339b6b6b73d"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 39.99,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233574/ecommerce-carrefour/womenjuppe_0_fqut90.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233597/ecommerce-carrefour/womenjuppe_1_wnhf0j.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233605/ecommerce-carrefour/womenjuppe_2_s81tv1.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233615/ecommerce-carrefour/womenjuppe_3_zhvhkm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233638/ecommerce-carrefour/womenjuppe_4_pvb6d5.jpg"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c5b816d9313339b6b6b73e"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 44.99,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233574/ecommerce-carrefour/womenjuppe_0_fqut90.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233597/ecommerce-carrefour/womenjuppe_1_wnhf0j.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233605/ecommerce-carrefour/womenjuppe_2_s81tv1.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233615/ecommerce-carrefour/womenjuppe_3_zhvhkm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233638/ecommerce-carrefour/womenjuppe_4_pvb6d5.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c5b816d9313339b6b6b73f"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 47.99,
+          "sold": 0,
+          "option": "x-large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233574/ecommerce-carrefour/womenjuppe_0_fqut90.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233597/ecommerce-carrefour/womenjuppe_1_wnhf0j.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233605/ecommerce-carrefour/womenjuppe_2_s81tv1.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233615/ecommerce-carrefour/womenjuppe_3_zhvhkm.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233638/ecommerce-carrefour/womenjuppe_4_pvb6d5.jpg"
+          ],
+          "discount": 5,
+          "_id": {
+            "$oid": "66c5b816d9313339b6b6b740"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c5b816d9313339b6b6b73c"
+      }
+    },
+    {
+      "sku": "02938Z23",
+      "style": {
+        "color": "#3e3e3c",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233858/ecommerce-carrefour/womenjuppe_0_1_dekwfo.jpg",
+        "name": "reverso"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 23.99,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233878/ecommerce-carrefour/womenjuppe_0_1_dkqioz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233894/ecommerce-carrefour/womenjuppe_0_2_u5ekgz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233900/ecommerce-carrefour/womenjuppe_0_3_fzftc0.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233910/ecommerce-carrefour/womenjuppe_0_4_y40giq.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233920/ecommerce-carrefour/womenjuppe_0_5_s5ikac.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c5b913d9313339b6b6b77c"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 33.99,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233878/ecommerce-carrefour/womenjuppe_0_1_dkqioz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233894/ecommerce-carrefour/womenjuppe_0_2_u5ekgz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233900/ecommerce-carrefour/womenjuppe_0_3_fzftc0.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233910/ecommerce-carrefour/womenjuppe_0_4_y40giq.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233920/ecommerce-carrefour/womenjuppe_0_5_s5ikac.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c5b913d9313339b6b6b77d"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 44.99,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233878/ecommerce-carrefour/womenjuppe_0_1_dkqioz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233894/ecommerce-carrefour/womenjuppe_0_2_u5ekgz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233900/ecommerce-carrefour/womenjuppe_0_3_fzftc0.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233910/ecommerce-carrefour/womenjuppe_0_4_y40giq.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233920/ecommerce-carrefour/womenjuppe_0_5_s5ikac.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c5b913d9313339b6b6b77e"
+          }
+        },
+        {
+          "qty": 20,
+          "price": 55.99,
+          "sold": 0,
+          "option": "x-large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233878/ecommerce-carrefour/womenjuppe_0_1_dkqioz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233894/ecommerce-carrefour/womenjuppe_0_2_u5ekgz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233900/ecommerce-carrefour/womenjuppe_0_3_fzftc0.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233910/ecommerce-carrefour/womenjuppe_0_4_y40giq.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724233920/ecommerce-carrefour/womenjuppe_0_5_s5ikac.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c5b913d9313339b6b6b77f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c5b913d9313339b6b6b77b"
+      }
+    },
+    {
+      "sku": "76273UYE",
+      "style": {
+        "color": "#FF0000",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234024/ecommerce-carrefour/womenjuppe_1_0_eznnvy.jpg",
+        "name": "redify"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 58.99,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234037/ecommerce-carrefour/womenjuppe_1_0_ezhczf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234042/ecommerce-carrefour/womenjuppe_1_1_ep9qdj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234049/ecommerce-carrefour/womenjuppe_1_2_eyelhh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234054/ecommerce-carrefour/womenjuppe_1_3_nodyiz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234059/ecommerce-carrefour/womenjuppe_1_4_loyuyr.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c5b9c2d9313339b6b6b7a3"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 60.99,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234037/ecommerce-carrefour/womenjuppe_1_0_ezhczf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234042/ecommerce-carrefour/womenjuppe_1_1_ep9qdj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234049/ecommerce-carrefour/womenjuppe_1_2_eyelhh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234054/ecommerce-carrefour/womenjuppe_1_3_nodyiz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234059/ecommerce-carrefour/womenjuppe_1_4_loyuyr.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c5b9c2d9313339b6b6b7a4"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 61.99,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234037/ecommerce-carrefour/womenjuppe_1_0_ezhczf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234042/ecommerce-carrefour/womenjuppe_1_1_ep9qdj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234049/ecommerce-carrefour/womenjuppe_1_2_eyelhh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234054/ecommerce-carrefour/womenjuppe_1_3_nodyiz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234059/ecommerce-carrefour/womenjuppe_1_4_loyuyr.jpg"
+          ],
+          "discount": 10,
+          "_id": {
+            "$oid": "66c5b9c2d9313339b6b6b7a5"
+          }
+        },
+        {
+          "qty": 20,
+          "price": 63.99,
+          "sold": 0,
+          "option": "x-large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234037/ecommerce-carrefour/womenjuppe_1_0_ezhczf.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234042/ecommerce-carrefour/womenjuppe_1_1_ep9qdj.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234049/ecommerce-carrefour/womenjuppe_1_2_eyelhh.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234054/ecommerce-carrefour/womenjuppe_1_3_nodyiz.jpg",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724234059/ecommerce-carrefour/womenjuppe_1_4_loyuyr.jpg"
+          ],
+          "discount": 29,
+          "_id": {
+            "$oid": "66c5b9c2d9313339b6b6b7a6"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c5b9c2d9313339b6b6b7a2"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-21T09:15:55.717Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-21T09:57:57.146Z"
+  },
+  "__v": 0,
+  "content": "About this item\nSize: US SIZE, X-Small=US 0-2, Small=(US 4-6), Medium=(US 8-10), Large=(US 12-14), X-Large=(US 16-18), XX-Large=US 20. Made of soft and comfy knit fabric, the flattering midi dress is lightweight, breathable and stretchy.\nFeatures: Sleveless style, ribbed knit fabric, striped print, side slit, midi length, slim fit, square neck, wide shoulder strap. A casual and versatile sundress, ideal maternity dress, summer dress for women 2024, dream dress for you!\nThis sexy tank dress is suitable for all seasons and can be dressed up or down to fit any occasion. Pair this trendy bodycon dress with sneakers, sandals, high heels, earrings or necklace for a chic and elegant look. You can layer this formal dress with a coat or cardigan and style it with boots in cool weather.\nOccasions: The cute slim fitted dress is great for daily wear, office, work, business, beach resort, vacation, cruise wear, holiday, photoshoot, wedding guest, bachelorette party,bridal shower, baby shower, shopping, brunch, dates, club, night out, concert, birthday, graduation, homecoming, church, gatherings, cocktail, engagement, etc.\nWash Tips: Machine wash with a laundry bag. Do not bleach, iron in low, and hang or line dry. Please carefully check the specific size chart before ordering."
+},
+{
+  "_id": {
+    "$oid": "66c60441d9313339b6b6b9b4"
+  },
+  "featured": true,
+  "name": "dress the population women's uma",
+  "slug": "dress-the-population-womens-uma",
+  "description": "dress the population women's uma",
+  "category": {
+    "$oid": "66969377d0776db430386ddc"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c358bf15c25b10765f6979"
+    }
+  ],
+  "brand": {
+    "$oid": "66c4301715c25b10765f782f"
+  },
+  "details": [
+    {
+      "name": "Fabric type",
+      "value": "100% Nylon",
+      "_id": {
+        "$oid": "66c60619d9313339b6b6ba0d"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "0293AIZOA",
+      "style": {
+        "color": "#600b0b",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724253428/ecommerce-carrefour/beautiful0000_cbhofe.png",
+        "name": "beautiful"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 239,
+          "sold": 0,
+          "option": "small",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724253420/ecommerce-carrefour/beautiful0000_mk05sp.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724253423/ecommerce-carrefour/beautiful000_yr2asd.png"
+          ],
+          "discount": 12,
+          "_id": {
+            "$oid": "66c605dcd9313339b6b6b9cb"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 255.99,
+          "sold": 0,
+          "option": "medium",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724253420/ecommerce-carrefour/beautiful0000_mk05sp.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724253423/ecommerce-carrefour/beautiful000_yr2asd.png"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c605dcd9313339b6b6b9cc"
+          }
+        },
+        {
+          "qty": 10,
+          "price": 300.99,
+          "sold": 0,
+          "option": "large",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724253420/ecommerce-carrefour/beautiful0000_mk05sp.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724253423/ecommerce-carrefour/beautiful000_yr2asd.png"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c605dcd9313339b6b6b9cd"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c605dcd9313339b6b6b9ca"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-21T15:14:09.636Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-21T15:22:01.624Z"
+  },
+  "__v": 0,
+  "content": "Dress the population is an la based brand that created your go-to collection the girl that's invited to every party. She wants easy, sequins/embellished dresses at an affordable price point without compromising on quality. Each dress is lined with a high-grade lycra stretch that flatters & conforms to every shape, hiding any imperfections."
+},
+{
+  "_id": {
+    "$oid": "66c608a5d9313339b6b6ba3c"
+  },
+  "featured": false,
+  "name": "forum novelties faux suede adult cowboy costume hat, brown, one size",
+  "slug": "forum-novelties-faux-suede-adult-cowboy-costume-hat-brown-one-size",
+  "description": "forum novelties faux suede adult cowboy costume hat, brown, one size",
+  "category": {
+    "$oid": "668544f16c0c5a9794adb766"
+  },
+  "subCategories": [
+    {
+      "$oid": "66c3900415c25b10765f706d"
+    }
+  ],
+  "brand": {
+    "$oid": "66c4301715c25b10765f782f"
+  },
+  "details": [
+    {
+      "name": "Product Dimensions ",
+      "value": "12.5 x 10 x 4 inches; 3.2 ounces",
+      "_id": {
+        "$oid": "66c60be8d9313339b6b6ba5e"
+      }
+    }
+  ],
+  "questions": [],
+  "reviews": [],
+  "subProducts": [
+    {
+      "sku": "029382ED",
+      "style": {
+        "color": "#957575",
+        "image": "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724255127/ecommerce-carrefour/cowboy-image_1_fgj3kx.png",
+        "name": "brun cowboy"
+      },
+      "options": [
+        {
+          "qty": 10,
+          "price": 12.95,
+          "sold": 0,
+          "option": "brun",
+          "images": [
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724255053/ecommerce-carrefour/cowboy-image_1_ktmdaw.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724255062/ecommerce-carrefour/cowboy-image_2_h6u1um.png",
+            "https://res.cloudinary.com/dlm0ieiyt/image/upload/v1724255066/ecommerce-carrefour/cowboy-image_3_lrgxgv.png"
+          ],
+          "discount": 0,
+          "_id": {
+            "$oid": "66c60bb6d9313339b6b6ba4c"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "66c60bb6d9313339b6b6ba4b"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-08-21T15:32:53.236Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-21T15:46:48.682Z"
+  },
+  "__v": 0,
+  "content": "Costume cowboy hat with faux suede finish\nAvailable in several colors for a variety of looks\nOne size fits most adults\nAdditional accessories and costume pieces sold separately\nMade by Forum Novelties, a leader in costumes and novelty products for more than 30 years\nManufacturer minimum age: 48"
+}]

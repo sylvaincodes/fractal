@@ -52,7 +52,6 @@ export default function SidebarMenu() {
           .get(process.env.NEXT_PUBLIC_API_URL + "/api/categories")
           .then((response) => {
             setCategories(response.data.data);
-            console.log(response.data.data);
           })
           .catch((error) => {
             setError(error.message);
@@ -80,8 +79,8 @@ export default function SidebarMenu() {
           <div className="mt-10">
             <Tabs defaultValue="account" className="w-full">
               <TabsList className="grid w-fit grid-cols-2">
-                <TabsTrigger value="category" >Categories</TabsTrigger>
-                <TabsTrigger value="menu">Pages</TabsTrigger>
+                <TabsTrigger value="category" className="text-h6">Categories</TabsTrigger>
+                <TabsTrigger value="menu" className="text-h6">Pages</TabsTrigger>
               </TabsList>
 
               <TabsContent value="category" className="pt-4">
@@ -95,7 +94,7 @@ export default function SidebarMenu() {
                         <div key={idx} className="group px-4 py-2">
                           <div className="flex items-center gap-4">
                             <span
-                              className="text-xl capitalize hover:text-primary-500 cursor-pointer"
+                              className="text-span capitalize hover:text-primary-500 cursor-pointer"
                               onClick={() =>
                                 router.push(`/categories/${item.link}/products`)
                               }
@@ -108,7 +107,7 @@ export default function SidebarMenu() {
                                   setShow(!show);
                                   setSubCategories(item?.submenu);
                                 }}
-                                className="text-slate-600 ms-auto h-5 w-5"
+                                className="text-icon ms-auto h-5 w-5"
                                 size={14}
                               />
                             )}
@@ -128,24 +127,24 @@ export default function SidebarMenu() {
                         className="group inline-flex items-center px-4 py-2 gap-4 w-full hover:text-primary-700 capitalize cursor-pointer"
                       >
                         <div className="flex items-center gap-4 w-full">
-                          <span className="text-xl">{item.name}</span>
+                          <span className="">{item.name}</span>
                           {item?.subpage && item.subpage.length > 0 && (
                             <ChevronRight
-                              className="text-slate-600 ms-auto"
+                              className="text-icon ms-auto"
                               size={14}
                             />
                           )}
                         </div>
 
                         {item?.subpage && item.subpage.length > 0 ? (
-                          <div className="hidden absolute group-hover:grid grid-cols-2 gap-4 shadow-md left-0 bg-white text-black p-4 w-[600px] z-[1000] duration-300 ease-linear mt-[100px] ">
+                          <div className="hidden absolute group-hover:grid grid-cols-2 gap-4 shadow-md left-0 bg-white p-4 w-[600px] z-[1000] duration-300 ease-linear mt-[100px] ">
                             {item?.subpage?.map(
                               (item2: SubPage, idx2: number) => (
                                 <Link
                                   key={idx2}
                                   href={`${item2.link}`}
                                   className="min-w-40 hover:text-primary-900 text-xl"
-                                >
+                                > 
                                   {item2.name}
                                 </Link>
                               )

@@ -11,6 +11,8 @@ const config = {
   ],
   prefix: "",
   theme: {
+    // ----------- Here we add custom style --------//
+    /** 1- Responsive design */
     container: {
       center: true,
       padding: {
@@ -56,21 +58,8 @@ const config = {
       },
     },
 
+    /** 2- Set colors  */
     colors: {
-      // default colors
-      white: colors.white,
-      black: colors.black,
-      slate: colors.slate,
-      gray: colors.gray,
-      neutral: colors.neutral,
-      red: colors.red,
-      yellow: colors.yellow,
-      cyan: colors.cyan,
-      blue: colors.blue,
-      indigo: colors.indigo,
-      transparent: "transparent",
-
-      //primary color: mauvelous
       primary: {
         "50": "#fcf3f6",
         "100": "#fbe8f0",
@@ -82,10 +71,8 @@ const config = {
         "700": "#b32346",
         "800": "#94203b",
         "900": "#7c1f34",
-        "950": "#4b0c1a",
       },
 
-      //secondary color: matisse
       secondary: {
         "50": "#f0f8ff",
         "100": "#e0f0fe",
@@ -97,8 +84,133 @@ const config = {
         "700": "#025fa2",
         "800": "#065186",
         "900": "#0c446e",
-        "950": "#082b49",
       },
+
+      /**Color Palette */
+      white: "#FFFFFF",
+      black: "#1f1f1f",
+      slate: colors.slate,
+      gray: colors.gray,
+      neutral: colors.neutral,
+      transparent: "transparent",
+
+      /**Text Color Themes */
+      heading: colors.black,
+      paragraphe: colors.gray[600],
+      label: colors.black,
+      placeholder: colors.gray[400],
+      body: colors.slate[700],
+
+      /**Background Color Themes */
+      table: colors.gray[900],
+      background: colors.gray[100],
+
+      /**Miscellaneous Color Themes */
+      border: colors.gray[200],
+      "inputs-border": colors.gray[300],
+      icon: colors.gray[500],
+    },
+
+    /** 3- Typography  */
+    fontWeight: {
+      thin: "100",
+      hairline: "100",
+      extralight: "200",
+      light: "300",
+      normal: "400",
+      medium: "500",
+      semibold: "600",
+      bold: "700",
+      extrabold: "800",
+      black: "900",
+    },
+
+    fontSize: {
+      // Default font size
+      sm: "0.8rem",
+      base: "1rem",
+      xl: "1.25rem",
+      "2xl": "1.563rem",
+      "3xl": "1.953rem",
+      "4xl": "2.441rem",
+      "5xl": "3.052rem",
+
+      //custom font size
+      /** FRoot font size  = 16px how can be 64px  */
+      h1: [
+        "4rem",
+        {
+          lineHeight: "3rem",
+          letterSpacing: "0.1875em",
+          fontWeight: "700",
+        },
+      ],
+      h2: [
+        "3rem",
+        {
+          lineHeight: "1.75rem",
+          letterSpacing: "0.5em",
+          fontWeight: "600",
+        },
+      ],
+      h3: [
+        "2.5rem",
+        {
+          lineHeight: "2.5rem",
+          letterSpacing: "0.25em",
+          fontWeight: "600",
+        },
+      ],
+      h4: [
+        "2rem",
+        {
+          lineHeight: "2.25rem",
+          letterSpacing: "0em",
+          fontWeight: "400",
+        },
+      ],
+      h5: [
+        "1.5rem",
+        {
+          lineHeight: "1rem",
+          letterSpacing: "0rem",
+          fontWeight: "400",
+        },
+      ],
+      h6: [
+        "1.25rem",
+        {
+          lineHeight: "1.75rem",
+          letterSpacing: "0rem",
+          fontWeight: "700",
+        },
+      ],
+
+      p: [
+        "0.875rem",
+        {
+          lineHeight: "1.5rem",
+          letterSpacing: "0rem",
+          fontWeight: "400",
+        },
+      ],
+      body: [
+        "1rem",
+        {
+          lineHeight: "1.5rem",
+          letterSpacing: "0rem",
+          fontWeight: "400",
+        },
+      ],
+
+      span: [
+        "0.75rem",
+        {
+          lineHeight: "1.5rem",
+          letterSpacing: "0rem",
+          fontWeight: "400",
+        },
+      ],
     },
 
     extend: {

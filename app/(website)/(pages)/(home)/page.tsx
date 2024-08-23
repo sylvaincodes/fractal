@@ -1,10 +1,11 @@
-import HomeSlide from "@/components/modules/website/home/HomeSlide";
 import * as React from "react";
+import HomeSlide from "@/components/modules/website/home/HomeSlide";
 import Categories from "../../../../components/modules/website/home/Categories";
 import CtaOne from "@/components/modules/website/home/CtaOne";
 import CtaTwo from "@/components/modules/website/home/CtaTwo";
 import Payments from "@/components/modules/website/home/Payments";
 import FeaturesProducts from "@/components/modules/website/home/FeaturesProducts";
+import { Metadata } from "next";
 
 export default function Home() {
   return (
@@ -18,3 +19,12 @@ export default function Home() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Fractal - Home page",
+  description:
+    "A Ecommerce app. We are selling clothing, shoes for mens womens and kids",
+  icons: {
+    icon: "/assets/images/logo.svg",
+  },
+};

@@ -1,4 +1,5 @@
-import { Josefin_Sans } from "next/font/google";
-export const font = Josefin_Sans({
-  subsets: ["latin"]
+import { Kanit } from "next/font/google";
+export const font = Kanit({
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });

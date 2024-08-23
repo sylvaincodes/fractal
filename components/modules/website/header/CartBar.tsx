@@ -33,9 +33,9 @@ export default function CartBar({
           className="absolute top-[54px] right-0 h-fit w-[360px] bg-white z-[9999] p-4 shadow-xl"
         >
           <div className="flex flex-col justify-between gap-8">
-            <h1>
+            <p>
               You have <strong>3</strong> items in your cart{" "}
-            </h1>
+            </p>
             <div className="flex flex-col snap-y gap-6 border-b border-gray-200 pb-4 max-h-[360px] overflow-y-auto">
               <div className="flex justify-between snap-center cursor-grab">
                 <Image
@@ -46,9 +46,7 @@ export default function CartBar({
                   className="h-20 w-20 object-cover"
                 />
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-sm capitalize ">
-                    This si hjh hj JHQS QSL
-                  </h2>
+                  <span className="capitalize">This si hjh hj JHQS QSL</span>
                   <div className="inline-flex gap-4 font-bold">
                     <span>1</span>
                     <span>X</span>
@@ -56,19 +54,19 @@ export default function CartBar({
                   </div>
 
                   <div className="flex justify-between">
-                    <div className="inline-flex gap-4">
-                      <span className="font-light">Style: </span>
-                      <strong> One </strong>
+                    <div className="inline-flex gap-4 items-center">
+                      <span className="">Style: </span>
+                      <span> One </span>
                     </div>
                     <div className="inline-flex gap-4">
-                      <span className="font-light">Size: </span>
-                      <strong> S </strong>
+                      <span className="">Option: </span>
+                      <span> S </span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <Trash className="text-red-500" size={20} />
+                  <Trash className="hover:text-primary-500" size={20} />
                 </div>
               </div>
               <div className="flex justify-between snap-center">
@@ -80,9 +78,9 @@ export default function CartBar({
                   className="h-20 w-20 object-cover"
                 />
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-sm capitalize ">
+                  <span className="text-sm capitalize ">
                     This si hjh hj JHQS QSL
-                  </h2>
+                  </span>
                   <div className="inline-flex gap-4 font-bold">
                     <span>1</span>
                     <span>X</span>
@@ -92,17 +90,17 @@ export default function CartBar({
                   <div className="flex justify-between">
                     <div className="inline-flex gap-4">
                       <span className="font-light">Style: </span>
-                      <strong> One </strong>
+                      <span> One </span>
                     </div>
                     <div className="inline-flex gap-4">
-                      <span className="font-light">Size: </span>
-                      <strong> S </strong>
+                      <span className="font-light">Option: </span>
+                      <span> S </span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <Trash className="text-red-500" size={20} />
+                  <Trash className="hover:text-primary-500" size={20} />
                 </div>
               </div>
               <div className="flex justify-between snap-center">
@@ -114,9 +112,9 @@ export default function CartBar({
                   className="h-20 w-20 object-cover"
                 />
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-sm capitalize ">
+                  <span className="text-sm capitalize ">
                     This si hjh hj JHQS QSL
-                  </h2>
+                  </span>
                   <div className="inline-flex gap-4 font-bold">
                     <span>1</span>
                     <span>X</span>
@@ -126,17 +124,17 @@ export default function CartBar({
                   <div className="flex justify-between">
                     <div className="inline-flex gap-4">
                       <span className="font-light">Style: </span>
-                      <strong> One </strong>
+                      <span> One </span>
                     </div>
                     <div className="inline-flex gap-4">
-                      <span className="font-light">Size: </span>
-                      <strong> S </strong>
+                      <span className="font-light">Option: </span>
+                      <span> S </span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <Trash className="text-red-500" size={20} />
+                  <Trash className="hover:text-primary-500" size={20} />
                 </div>
               </div>
               <div className="flex justify-between snap-center">
@@ -148,9 +146,9 @@ export default function CartBar({
                   className="h-20 w-20 object-cover"
                 />
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-sm capitalize ">
+                  <span className="text-sm capitalize ">
                     This si hjh hj JHQS QSL
-                  </h2>
+                  </span>
                   <div className="inline-flex gap-4 font-bold">
                     <span>1</span>
                     <span>X</span>
@@ -160,25 +158,25 @@ export default function CartBar({
                   <div className="flex justify-between">
                     <div className="inline-flex gap-4">
                       <span className="font-light">Style: </span>
-                      <strong> One </strong>
+                      <span> One </span>
                     </div>
                     <div className="inline-flex gap-4">
-                      <span className="font-light">Size: </span>
-                      <strong> S </strong>
+                      <span className="font-light">Option: </span>
+                      <span> S </span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <Trash className="text-red-500" size={20} />
+                  <Trash className="hover:text-primary-500" size={20} />
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col gap-6">
               <div className="flex justify-between font-bold">
-                <span>Subtotal:</span>
-                <strong className="text-base tracking-wider">$200.00</strong>
+                <h6>Subtotal:</h6>
+                <strong className="">$200.00</strong>
               </div>
               <div className="flex flex-col gap-4">
                 <Button

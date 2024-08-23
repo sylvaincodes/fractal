@@ -67,12 +67,12 @@ export default function Payments() {
             <div className="flex items-center gap-4  lg:after:h-10  lg:after:w-[2px] after:translate-x-14 after:bg-neutral-200 ">
               <Headset className="text-primary-900 h-6 w-6" />
               <div className="flex-col gap-4">
-                <h1 className="uppercase font-bold text-slate-700 text-base">
-                  24/7 support
-                </h1>
-                <h2 className="text-sm text-slate-700 font-normal">
+                <h6 className="uppercase font-bold text-slate-700 text-base">
+                  24/7  support
+                </h6>
+                <span className="text-sm text-slate-700 font-normal">
                   Support every time
-                </h2>
+                </span>
               </div>
             </div>
           </SwiperSlide>
@@ -81,12 +81,12 @@ export default function Payments() {
             <div className="flex items-center gap-4 lg:after:h-10  after:w-[2px] after:translate-x-14 after:bg-neutral-200 ">
               <CreditCard className="text-primary-900 h-6 w-6" />
               <div className="flex-col gap-4">
-                <h1 className="uppercase font-bold text-slate-700 text-base">
+                <h6 className="uppercase font-bold text-slate-700 text-base">
                   accept payment
-                </h1>
-                <h2 className="text-sm capitalize text-slate-700 font-normal">
+                </h6>
+                <span className="text-sm capitalize text-slate-700 font-normal">
                   visa, paypal, master
-                </h2>
+                </span>
               </div>
             </div>
           </SwiperSlide>
@@ -95,12 +95,12 @@ export default function Payments() {
             <div className="flex items-center gap-4 lg:after:h-10  after:w-[2px] after:translate-x-14 after:bg-neutral-200 ">
               <LockKeyhole className="text-primary-900 h-6 w-6" />
               <div className="flex-col gap-4">
-                <h1 className="uppercase font-bold text-slate-700 text-base">
+                <h6 className="uppercase font-bold text-slate-700 text-base">
                   secured payment
-                </h1>
-                <h2 className="text-sm text-slate-700 font-normal">
+                </h6>
+                <span className="text-sm text-slate-700 font-normal">
                   100% secured
-                </h2>
+                </span>
               </div>
             </div>
           </SwiperSlide>
@@ -109,12 +109,12 @@ export default function Payments() {
             <div className="flex items-center gap-4 lg:after:h-10  after:w-[2px] after:translate-x-14 after:bg-neutral-200 ">
               <Truck className="text-primary-900 h-6 w-6" />
               <div className="flex-col gap-4">
-                <h1 className="uppercase font-bold text-slate-700 text-base">
+                <h6 className="uppercase font-bold text-slate-700 text-base">
                   free shipping
-                </h1>
-                <h2 className="text-sm text-slate-700 font-normal">
+                </h6>
+                <span className="text-sm text-slate-700 font-normal">
                   order over $300
-                </h2>
+                </span>
               </div>
             </div>
           </SwiperSlide>
@@ -123,12 +123,12 @@ export default function Payments() {
             <div className="flex items-center gap-4 lg:after:h-10  after:w-[2px] after:translate-x-14 after:bg-neutral-200 ">
               <Calendar className="text-primary-900 h-6 w-6" />
               <div className="flex-col gap-4">
-                <h1 className="uppercase font-bold text-slate-700 text-base">
+                <h6 className="uppercase font-bold text-slate-700 text-base">
                   30 days return
-                </h1>
-                <h2 className="text-sm text-slate-700 font-normal">
+                </h6>
+                <span className="text-sm text-slate-700 font-normal">
                   30 days guarantee
-                </h2>
+                </span>
               </div>
             </div>
           </SwiperSlide>
