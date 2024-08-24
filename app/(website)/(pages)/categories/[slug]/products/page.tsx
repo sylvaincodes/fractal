@@ -9,12 +9,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import Container from "@/components/custom/Container";
 import Link from "next/link";
-import { getProductBySlug } from "@/actions/product";
-import { Product, SubCategory } from "@/types";
-
 export default async function page({ params }: { params: { slug: string } }) {
-  const product: Product = await getProductBySlug(params.slug);
-  console.log(product);
   return (
     <>
       <section className="my-10">
@@ -22,14 +17,14 @@ export default async function page({ params }: { params: { slug: string } }) {
           <Breadcrumb>
             <BreadcrumbList className="capitalize flex flex-wrap">
               <Link href="/" className="text-xl hover:text-primary-500">
-              Store
+                Home
               </Link>
               <BreadcrumbSeparator />
               <Link
                 href={"/products"}
                 className="text-xl hover:text-primary-500"
               >
-                Products
+                Store
               </Link>
               <BreadcrumbSeparator />
               <BreadcrumbItem>

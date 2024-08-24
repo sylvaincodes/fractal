@@ -140,49 +140,49 @@ const config = {
       h1: [
         "4rem",
         {
-          lineHeight: "3rem",
-          letterSpacing: "0.1875em",
+          lineHeight: "5rem",
+          letterSpacing: "0.0375em",
           fontWeight: "700",
         },
       ],
       h2: [
         "3rem",
         {
-          lineHeight: "1.75rem",
-          letterSpacing: "0.5em",
-          fontWeight: "600",
+          lineHeight: "3.75rem",
+          letterSpacing: "0.035em",
+          fontWeight: "700",
         },
       ],
       h3: [
         "2.5rem",
         {
-          lineHeight: "2.5rem",
-          letterSpacing: "0.25em",
-          fontWeight: "600",
+          lineHeight: "3.5rem",
+          letterSpacing: "0.05em",
+          fontWeight: "700",
         },
       ],
       h4: [
         "2rem",
         {
-          lineHeight: "2.25rem",
+          lineHeight: "2.75rem",
           letterSpacing: "0em",
-          fontWeight: "400",
+          fontWeight: "700",
         },
       ],
       h5: [
         "1.5rem",
         {
-          lineHeight: "1rem",
+          lineHeight: "2.5rem",
           letterSpacing: "0rem",
-          fontWeight: "400",
+          fontWeight: "600",
         },
       ],
       h6: [
         "1.25rem",
         {
-          lineHeight: "1.75rem",
+          lineHeight: "2rem",
           letterSpacing: "0rem",
-          fontWeight: "700",
+          fontWeight: "500",
         },
       ],
 

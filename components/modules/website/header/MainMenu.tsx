@@ -117,9 +117,9 @@ export default function MainMenu() {
                               className="font-bold group/item w-full transitions-all flex items-center gap-2 duration-100 ease-linear hover:translate-x-1"
                             >
                               {/* <span className="hidden w-2 h-2 group-hover/item:block bg-primary-500 rounded-full "></span> */}
-                              <h6 className="transition ease-in-out hover:text-primary-500">
+                              <h5 className="transition ease-in-out hover:text-primary-500">
                                 {item.name}
-                              </h6>
+                              </h5>
                             </Link>
                           </li>
 

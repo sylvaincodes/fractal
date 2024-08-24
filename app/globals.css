@@ -147,3 +147,9 @@ input[type=range] {
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-black
 }
+
+/* Rating style */
+/* gap between stars */
+.MuiRating-root span{
+  font-size: 30px;
+} 

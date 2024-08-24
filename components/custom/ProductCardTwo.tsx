@@ -11,6 +11,7 @@ import { Eye, Heart } from "lucide-react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { m } from "framer-motion";
+import Link from "next/link";
 
 export default function ProductCardTwo({ item }: { item: Product }) {
   const active = 0;
@@ -34,7 +35,13 @@ export default function ProductCardTwo({ item }: { item: Product }) {
   return (
     <div className="flex flex-col gap-4 items-center cursor-pointer">
       {/* images  */}
-      <div className="flex group/image h-[400px] relative overflow-hidden">
+      <div
+        role="button"
+        onClick={() => {
+          router.push(`/products/${item.slug}`);
+        }}
+        className="flex group/image h-[400px] relative overflow-hidden"
+      >
         <Image
           src={images[0]}
           alt="image"
@@ -83,6 +90,7 @@ export default function ProductCardTwo({ item }: { item: Product }) {
         <p className="capitalize text-sm">
           {item.description.substring(0, 30)}..
         </p>
+
         <div className="inline-flex justify-center gap-4 items-center">
           {discountRate > 0 ? (
             <div className="flex flex-wrap gap-4">

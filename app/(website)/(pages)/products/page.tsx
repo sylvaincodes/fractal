@@ -28,10 +28,10 @@ export default function page() {
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <Link
-                    href="#"
+                    href="/products"
                     className="text-xl font-bold hover:text-primary-500"
                   >
-                    All products
+                    Store
                   </Link>
                 </BreadcrumbItem>
               </BreadcrumbList>
