@@ -6,7 +6,7 @@ export default function CurrencyFormat({
   value,
   className,
 }: {
-  value: number;
+  value: number | 0;
   className?: string;
 }) {
   return (

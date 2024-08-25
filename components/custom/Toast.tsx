@@ -23,13 +23,13 @@ export default function Toast({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, type: "spring" }}
       className={cn(
-        "flex items-center justify-between gap-10 shadow-md p-4 mb-4 text-primary-800 border-primary-400 bg-primary-50 ",
+        "z-[99999] shadow-xl flex items-center justify-between gap-10  p-4 mb-4 text-slate-800 border-slate-400 bg-white",
         status === "error" && "text-red-800 border-t-4 border-red-300"
       )}
       role="alert"
     >
       {status === "success" ? (
-        <CheckCheck className="w-8 h-8 text-primary-700" />
+        <CheckCheck className="w-8 h-8 text-green-700" />
       ) : (
         <AlertCircle className="w-8 h-8 text-red-700" />
       )}

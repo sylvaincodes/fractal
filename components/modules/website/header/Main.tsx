@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import MainMenu from "./MainMenu";
 import IconsGroups from "./IconsGroups";
 import MobileButton from "./MobileButton";
-import { Input } from "@/components/ui/input";
 
 export default function Main() {
   const [openSearchBar, setOpenSearchBar] = useState(false);

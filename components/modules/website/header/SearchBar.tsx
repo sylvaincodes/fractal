@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import { useEffect, useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { Product } from "@/types";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -12,6 +12,7 @@ import Toast from "@/components/custom/Toast";
 import { getBestPriceWithDiscountFromProduct } from "../../../../lib/utils";
 import Loading from "@/components/custom/Loading";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function SearchBar({
   openSearchBar,
@@ -20,8 +21,8 @@ export function SearchBar({
   openSearchBar: boolean;
   setOpenSearchBar: (value: boolean) => void;
 }) {
+  const router = useRouter();
   const [data, setData] = useState<Product[]>();
-
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
 
@@ -51,7 +52,7 @@ export function SearchBar({
 
   return (
     <Dialog open={openSearchBar}>
-      <DialogContent className="sm:max-w-md lg:max-w-screen-xl">
+      <DialogContent className="sm:max-w-md lg:max-w-screen-xl z-[99999]">
         <div className="flex items-center w-full gap-4">
           <Search className="text-slate-300" />
           <Input
@@ -72,7 +73,12 @@ export function SearchBar({
         <div className="flex h-[600px] overflow-y-auto w-full py-12 gap-4 flex-col justify-start items-center px-12">
           {!isPending ? (
             data?.map((item: Product, idx: number) => (
-              <Link href={`/products/${item.slug}`} title="click to see"
+              <div
+                onClick={() => {
+                  router.push(`/products/${item.slug}`);
+                  setOpenSearchBar(false);
+                }}
+                title="click to see"
                 key={idx}
                 className="lg:h-fit group flex flex-col  justify-start gap-8 px-8  items-center w-full py-4 hover:border-gray-50 cursor-pointer  hover:scale-105 transition-all hover:shadow-lg lg:flex-row lg:px-2 lg:gap-32 "
               >
@@ -83,16 +89,13 @@ export function SearchBar({
                   className="object-contain"
                   alt="product"
                 />
-                <h1 className=" text-center text-base font-bold tracking-wider max-w-lg capitalize">
-                  {item.name.substring(0, 100)}
-                </h1>
+                <h6 className="capitalize">{item.name.substring(0, 100)}</h6>
 
                 <div className="lg:ms-auto font-bold text-xl text-primary-900">
                   {" "}
                   $ {getBestPriceWithDiscountFromProduct(item)}
                 </div>
-
-              </Link>
+              </div>
             ))
           ) : (
             <Loading isLoading={isPending} />

@@ -27,36 +27,31 @@ export default function SidebarMenu() {
   const [error, setError] = useState();
   const [show, setShow] = useState(false);
   const [subCategories, setSubCategories] = useState<SubCategory[]>();
-  const [isPending, startTransition] = useTransition();
   const [categories, setCategories] = useState<Category[]>([]);
   const [pages, setPages] = useState<Page[]>([]);
   const router = useRouter();
 
   useEffect(() => {
-    const getPages = () => {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/pages")
-          .then((response) => {
-            setPages(response.data.data);
-          })
-          .catch((error) => {
-            setError(error.message);
-          });
-      });
+    const getPages = async () => {
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/pages")
+        .then((response) => {
+          setPages(response.data.data);
+        })
+        .catch((error) => {
+          setError(error.message);
+        });
     };
 
-    const getCategories = () => {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/categories")
-          .then((response) => {
-            setCategories(response.data.data);
-          })
-          .catch((error) => {
-            setError(error.message);
-          });
-      });
+    const getCategories = async () => {
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/categories")
+        .then((response) => {
+          setCategories(response.data.data);
+        })
+        .catch((error) => {
+          setError(error.message);
+        });
     };
 
     getCategories();
@@ -79,14 +74,16 @@ export default function SidebarMenu() {
           <div className="mt-10">
             <Tabs defaultValue="account" className="w-full">
               <TabsList className="grid w-fit grid-cols-2">
-                <TabsTrigger value="category" className="text-h6">Categories</TabsTrigger>
-                <TabsTrigger value="menu" className="text-h6">Pages</TabsTrigger>
+                <TabsTrigger value="category" className="text-h6">
+                  Categories
+                </TabsTrigger>
+                <TabsTrigger value="menu" className="text-h6">
+                  Pages
+                </TabsTrigger>
               </TabsList>
 
               <TabsContent value="category" className="pt-4">
                 <div className="flex flex-col gap-6 h-full">
-                  {isPending && <Loading isLoading={isPending} />}
-
                   {categories &&
                     categories
                       .slice(0, 20)
@@ -118,7 +115,6 @@ export default function SidebarMenu() {
               </TabsContent>
               <TabsContent value="menu">
                 <div>
-                  {isPending && <Loading isLoading={isPending} />}
                   {pages &&
                     pages.slice(0, 20).map((item: Page, idx: number) => (
                       <div
@@ -144,7 +140,7 @@ export default function SidebarMenu() {
                                   key={idx2}
                                   href={`${item2.link}`}
                                   className="min-w-40 hover:text-primary-900 text-xl"
-                                > 
+                                >
                                   {item2.name}
                                 </Link>
                               )

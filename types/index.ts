@@ -224,6 +224,14 @@ export type User = {
   confirm_password?: string;
 };
 
+export type clerkUser = {
+  id: string;
+  imageUrl: string;
+  username: string | null;
+  firstName: string | null;
+  lastName: string | null;
+};
+
 export type IReview = {
   rating: number;
   review: string;

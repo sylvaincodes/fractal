@@ -21,8 +21,11 @@ import toast from "react-hot-toast";
 import Toast from "@/components/custom/Toast";
 import axios from "axios";
 import Loading from "@/components/custom/Loading";
+import { useUser } from "@clerk/nextjs";
 
 export default function Footer() {
+  const { isSignedIn } = useUser();
+
   const [error, submitAction, isPending] = useActionState(
     async (previousState: any, formData: any) => {
       const email = formData.get("email");
@@ -104,22 +107,28 @@ export default function Footer() {
                   </h1>
                 </li>
                 <li className="flex gap-4">
-                  <Link className="flex gap-4 hover:text-primary-500" href="#">
+                  <Link
+                    className="flex gap-4 hover:text-primary-500"
+                    href="/account/dashboard"
+                  >
                     My account
                   </Link>
                 </li>
                 <li className="flex gap-4">
-                  <Link className="flex gap-4 hover:text-primary-500" href="#">
-                    Login
+                  <Link
+                    className="flex gap-4 hover:text-primary-500"
+                    href={isSignedIn ? "/account/dashoard" : "/sign-in"}
+                  >
+                    {isSignedIn ? "Dashboard" : "Login"}
                   </Link>
                 </li>
                 <li className="flex gap-4 hover:text-primary-500">
-                  <Link className="flex gap-4" href="#">
+                  <Link className="flex gap-4" href="/cart">
                     My cart
                   </Link>
                 </li>
                 <li className="flex gap-4 hover:text-primary-500">
-                  <Link className="flex gap-4" href="#">
+                  <Link className="flex gap-4" href="/checkout">
                     Checkout
                   </Link>
                 </li>
@@ -210,13 +219,25 @@ export default function Footer() {
                 @2024 Fractal All rights reserved
               </div>
               <div className="inline-flex gap-4">
-                <Button className="hover:bg-primary-500 hover:text-white" variant="outline" size="icon">
+                <Button
+                  className="hover:bg-primary-500 hover:text-white"
+                  variant="outline"
+                  size="icon"
+                >
                   <Facebook />
                 </Button>
-                <Button className="hover:bg-primary-500 hover:text-white" variant="outline" size="icon">
+                <Button
+                  className="hover:bg-primary-500 hover:text-white"
+                  variant="outline"
+                  size="icon"
+                >
                   <Instagram />
                 </Button>
-                <Button className="hover:bg-primary-500 hover:text-white" variant="outline" size="icon">
+                <Button
+                  className="hover:bg-primary-500 hover:text-white"
+                  variant="outline"
+                  size="icon"
+                >
                   <Twitter />
                 </Button>
               </div>

@@ -91,7 +91,10 @@ const config = {
       black: "#1f1f1f",
       slate: colors.slate,
       gray: colors.gray,
+
       neutral: colors.neutral,
+      red: colors.red, // for validation and errors
+      green: colors.green, // for success notification
       transparent: "transparent",
 
       /**Text Color Themes */

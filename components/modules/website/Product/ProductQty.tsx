@@ -5,11 +5,9 @@ import React from "react";
 export default function ProductQty({
   updateQty,
   qty,
-  setQty,
 }: {
   updateQty: (value: string) => void;
   qty: number;
-  setQty: (v: number) => void;
 }) {
   return (
     <div className="flex justify-between gap-4 border border-border rounded-lg items-center p-2">

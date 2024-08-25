@@ -1,5 +1,5 @@
 import CategoriesPage from "@/components/modules/website/categories";
-import React, { Fragment } from "react";
+import React from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,

@@ -19,7 +19,7 @@ export default function AddReview({
 }: {
   product: Product;
   reviews: Review[];
-  setReviews: (v: Review) => void;
+  setReviews: (value: Review[]) => void;
 }) {
   const { user, isSignedIn } = useUser();
   const [rating, setRating] = useState("");
@@ -51,15 +51,19 @@ export default function AddReview({
       createdAt: JSON.parse(JSON.stringify(new Date())),
     };
 
-    setReviews([...reviews, data]);
-
     if (!rating) {
-      toast.custom(<Toast message="choose a rating 😠" status="error" />);
+      toast.custom(
+        <Toast message="Please give your rating ⭐⭐⭐ !" status="error" />
+      );
       return;
     }
+
+    //@ts-ignore:  need to check later
+    TODO: setReviews([...reviews, data]);
+
     setLoading(true);
     await axios
-      .post(process.env.NEXT_PUBLIC_SERVER_URL + "/api/review", data)
+      .post(process.env.NEXT_PUBLIC_API_URL + "/api/review", data)
       .then((response) => {
         const data = response.data;
         toast.custom(<Toast message={data.message} status="success" />);
@@ -110,7 +114,8 @@ export default function AddReview({
               <Rating
                 onChange={(e) => {
                   const target = e.target;
-                  setRating(target.value);
+                  //@ts-ignore:  need to check later
+                  TODO: setRating(target.value);
                 }}
                 name="rating"
                 precision={1}
@@ -122,13 +127,13 @@ export default function AddReview({
               {isSignedIn ? (
                 <Button
                   variant="default"
-                  size="icon"
+                  size="lg"
                   disabled={loading}
                   type="submit"
-                  className="px-4"
+                  className="px-4 w-fit"
                 >
                   Post your review
-                  <SendIcon className="text-white" />
+                  <SendIcon className="text-white ms-4" />
                 </Button>
               ) : (
                 <Link

@@ -4,7 +4,7 @@ import AddReview from "./AddReview";
 import { Product, Review as Type } from "@/types";
 
 export default function Review({ product }: { product: Product }) {
-  const [reviews, setReviews] = useState<Review[]>(product.reviews);
+  const [reviews, setReviews] = useState<Type[]>(product.reviews);
   return (
     <div className="flex flex-col gap-16">
       <AddReview product={product} reviews={reviews} setReviews={setReviews} />

@@ -19,6 +19,8 @@ export default function ProductDetails({
   active: number;
   setActive: (value: number) => void;
 }) {
+  const [loading, setLoading] = useState(false);
+
   const [options, setOptions] = useState(product.subProducts[active].options);
   const [style, setStyle] = useState(product.subProducts[active].style);
 
@@ -57,7 +59,14 @@ export default function ProductDetails({
         options={options}
         optionActive={optionActive}
       />
-      <ProductIcons />
+      <ProductIcons
+        loading={loading}
+        setLoading={setLoading}
+        product={product}
+        active={active}
+        option={option}
+        optionActive={optionActive}
+      />
       <ProductShare product={product} active={active} />
     </div>
   );

@@ -36,7 +36,7 @@ export default function Reviews({
       </div>
       <hr />
 
-      <div className="flex my-10">
+      <div className="flex flex-col gap-4 my-10">
         {_DATA.currentData().map((i: Review, idx: number) => (
           <ReviewItem key={idx} item={i} />
         ))}
