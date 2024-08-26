@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,24 +28,26 @@ export default function Categories() {
   };
   const [slides, setSlides] = useState<Slide[]>();
   const router = useRouter();
-  const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getSlides = () => {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/slides")
-          .then((response) => {
-            setSlides(
-              response.data.data.filter(
-                (item: Slide) => item.slug === "top-categories-home"
-              )
-            );
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
-      });
+    const getSlides = async () => {
+      setLoading(true);
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/slides")
+        .then((response) => {
+          setSlides(
+            response.data.data.filter(
+              (item: Slide) => item.slug === "top-categories-home"
+            )
+          );
+        })
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     };
     getSlides();
   }, []);
@@ -65,7 +67,7 @@ export default function Categories() {
         <Row className="mb-10">
           <Heading name="shop by top categories" />
         </Row>
-        {isPending ? (
+        {loading ? (
           <Swiper
             breakpoints={{
               // when window width is >= 340

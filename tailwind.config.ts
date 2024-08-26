@@ -18,47 +18,24 @@ const config = {
       padding: {
         DEFAULT: "0",
         sm: "0",
-
         md: "0",
-
         lg: "0",
-
         xl: "0",
-
         "2xl": "2rem",
-
         "3xl": "2rem",
-
         "4xl": "2rem",
       },
       screens: {
         xs: "360px",
-        // => @media (min-width: 360px) { ... }
-
         sm: "575px",
-        // => @media (min-width: 575px) { ... }
-
         md: "768px",
-        // => @media (min-width: 768px) { ... }
-
         lg: "1024px",
-        // => @media (min-width: 1024px) { ... }
-
         xl: "1280px",
-        // => @media (min-width: 1280px) { ... }
-
         "2xl": "1440px",
-        // => @media (min-width: 1536px) { ... }
-
         "3xl": "1680px",
-        // => @media (min-width: 1536px) { ... }
-
         "4xl": "1920px",
-        // => @media (min-width: 1536px) { ... }
       },
     },
-
-    /** 2- Set colors  */
     colors: {
       primary: {
         "50": "#fcf3f6",
@@ -72,7 +49,6 @@ const config = {
         "800": "#94203b",
         "900": "#7c1f34",
       },
-
       secondary: {
         "50": "#f0f8ff",
         "100": "#e0f0fe",
@@ -85,30 +61,25 @@ const config = {
         "800": "#065186",
         "900": "#0c446e",
       },
-
-      /**Color Palette */
       white: "#FFFFFF",
       black: "#1f1f1f",
       slate: colors.slate,
       gray: colors.gray,
 
       neutral: colors.neutral,
-      red: colors.red, // for validation and errors
-      green: colors.green, // for success notification
+      red: colors.red,
+      green: colors.green,
       transparent: "transparent",
 
-      /**Text Color Themes */
       heading: colors.black,
       paragraphe: colors.gray[600],
       label: colors.black,
       placeholder: colors.gray[400],
       body: colors.slate[700],
 
-      /**Background Color Themes */
       table: colors.gray[900],
       background: colors.gray[100],
 
-      /**Miscellaneous Color Themes */
       border: colors.gray[200],
       "inputs-border": colors.gray[300],
       icon: colors.gray[500],
@@ -219,7 +190,7 @@ const config = {
     extend: {
       boxShadow: {
         button:
-          "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
+          "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
       },
       keyframes: {
         "accordion-down": {

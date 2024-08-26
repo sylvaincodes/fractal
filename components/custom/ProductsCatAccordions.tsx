@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -13,27 +13,29 @@ import { Skeleton } from "../ui/skeleton";
 export default function ProductsCatAccordions() {
   // GET API
   const [categories, setCategories] = useState<Category[]>();
-  const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getCategories = () => {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/categories")
-          .then((response) => {
-            setCategories(response.data.data);
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
-      });
+    const getCategories = async () => {
+      setLoading(true);
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/categories")
+        .then((response) => {
+          setCategories(response.data.data);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     };
     getCategories();
   }, []);
 
   return (
     <>
-      {isPending ? (
+      {loading ? (
         <Skeleton className="h-[600px] w-full" />
       ) : (
         <Accordion type="single" collapsible className="w-full">

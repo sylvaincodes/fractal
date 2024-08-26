@@ -1,11 +1,11 @@
 "use client";
-import React from 'react'
+import React from "react";
 import { Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { Product } from "@/types";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -24,25 +24,28 @@ export function SearchBar({
   const router = useRouter();
   const [data, setData] = useState<Product[]>();
   const [error, setError] = useState(null);
-  const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
 
   const handleSearch = async (e: React.ChangeEvent<HTMLInputElement>) => {
+
+    setLoading(true)
     const search = e.currentTarget.value;
     if (search.length > 1) {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/products", {
-            params: {
-              search: search,
-            },
-          })
-          .then((response) => {
-            setData(response.data.data);
-          })
-          .catch((error) => {
-            setError(error.message);
-          });
-      });
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/products", {
+          params: {
+            search: search,
+          },
+        })
+        .then((response) => {
+          setData(response.data.data);
+        })
+        .catch((error) => {
+          setError(error.message);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
 
       if (error) {
         toast.custom(<Toast message={error} status="error" />);
@@ -71,7 +74,7 @@ export function SearchBar({
         </div>
 
         <div className="flex h-[600px] overflow-y-auto w-full py-12 gap-4 flex-col justify-start items-center px-12">
-          {!isPending ? (
+          {!loading ? (
             data?.map((item: Product, idx: number) => (
               <div
                 onClick={() => {
@@ -98,7 +101,7 @@ export function SearchBar({
               </div>
             ))
           ) : (
-            <Loading isLoading={isPending} />
+            <Loading isLoading={loading} />
           )}
         </div>
       </DialogContent>

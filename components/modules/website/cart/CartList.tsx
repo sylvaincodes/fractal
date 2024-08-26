@@ -41,7 +41,7 @@ export default function Cart() {
         user_id: user.id,
       };
 
-      axios
+      await axios
         .post(process.env.NEXT_PUBLIC_API_URL + "/api/cart", data)
         .then((response) => {
           const data = response.data;
@@ -51,7 +51,9 @@ export default function Cart() {
         .catch((err) => {
           console.log(err);
         })
-        .finally(() => {});
+        .finally(() => {
+
+        });
     } else {
       router.push("/sign-in");
       toast.custom(

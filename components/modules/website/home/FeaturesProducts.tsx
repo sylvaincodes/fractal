@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,31 +18,31 @@ import Loading from "@/components/custom/Loading";
 
 export default function FeaturesProducts() {
   const [products, setProducts] = useState<Product[]>();
-  const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getProducts = () => {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/products")
-          .then((response) => {
-            setProducts(
-              response.data.data.filter(
-                (item: Product) => item.featured === true
-              )
-            );
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
-      });
+    const getProducts = async () => {
+      setLoading(true);
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/products")
+        .then((response) => {
+          setProducts(
+            response.data.data.filter((item: Product) => item.featured === true)
+          );
+        })
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     };
     getProducts();
   }, []);
 
   return (
     <>
-      {isPending ? <Loading isLoading={isPending} /> : ""}
+      {loading ? <Loading isLoading={loading} /> : ""}
       <m.section
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

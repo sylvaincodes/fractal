@@ -16,7 +16,7 @@ export default function ReviewItem({ item }: { item: Review }) {
   //   item.likes.find((i: string) => i === userId) ? true : false
   // );
   // const [error, setError] = useState();
-  // const [isPending, startTransition] = useTransition();
+  // const [loading, startTransition] = useTransition();
 
   // const handleLike = async () => {
   //   if (likeDisable) {
@@ -30,7 +30,7 @@ export default function ReviewItem({ item }: { item: Review }) {
   //     remove: likeDisable,
   //   };
 
-  //   startTransition(async () => {
+  //
   //     await axios
   //       .put(process.env.NEXT_PUBLIC_SERVER_URL + "/api/review", data)
   //       .then((response) => {

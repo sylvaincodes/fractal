@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,24 +18,26 @@ import Loading from "@/components/custom/Loading";
 
 export default function RelatedProducts({ product }: { product: Product }) {
   const [products, setProducts] = useState<Product[]>();
-  const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getProducts = () => {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/products", {
-            params: {
-              related: product.category,
-            },
-          })
-          .then((response) => {
-            setProducts(response.data.data);
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
-      });
+    const getProducts = async () => {
+      setLoading(true);
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/products", {
+          params: {
+            related: product.category,
+          },
+        })
+        .then((response) => {
+          setProducts(response.data.data);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     };
     getProducts();
   }, [product]);
@@ -100,7 +102,7 @@ export default function RelatedProducts({ product }: { product: Product }) {
           modules={[Autoplay, Navigation, Pagination]}
           className={cn("swiper")}
         >
-          {!isPending ? (
+          {!loading ? (
             products &&
             products.map((item: Product, idx: number) => (
               <SwiperSlide key={idx} className="relative [&>button:block]">
@@ -108,7 +110,7 @@ export default function RelatedProducts({ product }: { product: Product }) {
               </SwiperSlide>
             ))
           ) : (
-            <Loading isLoading={isPending} />
+            <Loading isLoading={loading} />
           )}
         </Swiper>
       </Container>

@@ -13,7 +13,10 @@ export default function NotFound() {
         <div className="flex flex-col items-center">
           <div className="flex flex-col gap-10 ">
             <div className="flex flex-col items-center">
-              <h1 className="text-[100px] font-bold text-primary-900">
+              <h1
+                className="text-[100px] font-bold text-primary-900"
+                data-testid="title"
+              >
                 404 Not Found
               </h1>
               <p className="text-xl text-slate-700 font-medium">

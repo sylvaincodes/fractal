@@ -2,7 +2,7 @@
 import Container from "@/components/custom/Container";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useState } from "react";
 import Countdown from "react-countdown";
 import { m } from "framer-motion";
 import axios from "axios";
@@ -12,26 +12,28 @@ import { useRouter } from "next/navigation";
 
 export default function CtaOne() {
   const [slide, setSlide] = useState<Slide>();
-  const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    const getSlide = () => {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/slides")
-          .then((response) => {
-            setSlide(
-              response.data.data.filter(
-                (item: Slide) => item.slug === "cta-home"
-              )[0]
-            );
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
-      });
+    const getSlide = async () => {
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/slides")
+        .then((response) => {
+          setSlide(
+            response.data.data.filter(
+              (item: Slide) => item.slug === "cta-home"
+            )[0]
+          );
+        })
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     };
+
     getSlide();
   }, []);
 
@@ -39,7 +41,7 @@ export default function CtaOne() {
     <section className="my-20">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  items-center">
-          {isPending ? (
+          {loading ? (
             <Skeleton className="h-[400px]" />
           ) : (
             <m.div
@@ -63,7 +65,7 @@ export default function CtaOne() {
             </m.div>
           )}
 
-          {isPending ? (
+          {loading ? (
             <Skeleton className="h-[400px]" />
           ) : (
             <m.div

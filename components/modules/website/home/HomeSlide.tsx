@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -24,24 +24,26 @@ export default function HomeSlide() {
     },
   };
   const [slides, setSlides] = useState<Slide[]>();
-  const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getSlides = () => {
-      startTransition(async () => {
-        await axios
-          .get(process.env.NEXT_PUBLIC_API_URL + "/api/slides")
-          .then((response) => {
-            setSlides(
-              response.data.data.filter(
-                (item: Slide) => item.slug === "banner-home"
-              )
-            );
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
-      });
+    const getSlides = async () => {
+      setLoading(true);
+      await axios
+        .get(process.env.NEXT_PUBLIC_API_URL + "/api/slides")
+        .then((response) => {
+          setSlides(
+            response.data.data.filter(
+              (item: Slide) => item.slug === "banner-home"
+            )
+          );
+        })
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     };
     getSlides();
   }, []);
@@ -49,7 +51,7 @@ export default function HomeSlide() {
   return (
     <section>
       <Container>
-        {isPending ? (
+        {loading ? (
           <Skeleton className="h-[700px] w-full" />
         ) : (
           <Swiper

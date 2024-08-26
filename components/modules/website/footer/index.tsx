@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useActionState } from "react";
+import React, { useState } from "react";
 import { m } from "framer-motion";
 import { z } from "zod";
 import toast from "react-hot-toast";
@@ -26,59 +26,54 @@ import { useUser } from "@clerk/nextjs";
 export default function Footer() {
   const { isSignedIn } = useUser();
 
-  const [error, submitAction, isPending] = useActionState(
-    //the previousState variable contains the last recorded value of the user's input
+  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
 
-    async (previousState: void | null, formData: FormData) => {
+  const handleSave = async () => {
+    if (loading) {
+      return;
+    }
+    setLoading(true);
 
-      console.log(previousState);
-      const email = formData.get("email");
+    const Email = z.object({
+      email: z.string().email().min(5).max(100),
+    });
 
-      const Email = z.object({
-        email: z.string().email().min(5).max(100),
-      });
+    const validatedFields = Email.safeParse({
+      email: email,
+    });
 
-      const validatedFields = Email.safeParse({
+    if (!validatedFields.success) {
+      toast.custom(
+        <Toast message="Email is invalid. Try again" status="error" />
+      );
+      return;
+    }
+
+    const sendEmail = async () => {
+      const values = {
+        subject: "Subscribe to newsletter",
         email: email,
-      });
-
-      if (!validatedFields.success) {
-        toast.custom(
-          <Toast message="Email is invalid. Try again" status="error" />
-        );
-        return;
-      }
-
-      const sendEmail = async () => {
-        const values = {
-          subject: "Subscribe to newsletter",
-          email: email,
-          message: "I just subscribed to your newsletter",
-        };
-
-        await axios
-          .post(process.env.NEXT_PUBLIC_API_URL + "/api/sendemail", values)
-          .then((response) => {
-            const data = response.data;
-
-            toast.custom(<Toast status="success" message={data.message} />);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        message: "I just subscribed to your newsletter",
       };
-      await sendEmail();
 
-      if (error) {
-        toast.custom(<Toast message="Error. Try again" status="error" />);
-        return;
-      }
-    },
-    null
-  );
+      await axios
+        .post(process.env.NEXT_PUBLIC_API_URL + "/api/sendemail", values)
+        .then((response) => {
+          const data = response.data;
+
+          toast.custom(<Toast status="success" message={data.message} />);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    await sendEmail();
+  };
+
   return (
     <>
-      {isPending && <Loading isLoading={true} />}
+      {loading && <Loading isLoading={true} />}
       <m.footer
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -177,20 +172,20 @@ export default function Footer() {
                   </h6>
                 </li>
                 <li className="flex gap-4">
-                  <form
-                    action={submitAction}
-                    className="flex w-full bg-transparent border border-white rounded-xl gap-4 items-center p-3"
-                  >
+                  <form className="flex w-full bg-transparent border border-white rounded-xl gap-4 items-center p-3">
                     <Mail size="40" />
                     <Input
                       name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.currentTarget.value)}
                       className="rounded-xl  py-4 bg-transparent text-white text-xl"
                       placeholder="Enter your email here"
                       max="40"
                     />
 
                     <Button
-                      disabled={isPending}
+                      onClick={handleSave}
+                      disabled={loading}
                       type="submit"
                       variant="outline"
                       size="icon"
