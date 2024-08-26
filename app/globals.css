@@ -160,3 +160,7 @@ input[type=range] {
 .cl-internal-16vtwdp{
   display: none;
 }
+.cl-userButtonAvatarBox{
+  height: 100px;
+  width: 100px
+}

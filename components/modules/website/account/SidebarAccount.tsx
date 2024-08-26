@@ -16,7 +16,7 @@ export default function SidebarAccount() {
   const [openSidebar, setSidebar] = useState(false);
 
   return (
-    <div className="">
+    <div className="!z-1 flex flex-col">
       <Button
         variant="outline"
         onClick={() => setSidebar(!openSidebar)}
@@ -28,39 +28,37 @@ export default function SidebarAccount() {
 
       <aside
         className={cn(
-          "h-full bg-white shadow-md absolute xl:relative xl:translate-x-0 top-10 left-0 z-40 w-64 transition-transform -translate-x-full",
+          "!z-1 h-full bg-white shadow-md absolute xl:relative xl:translate-x-0 top-10 left-0 w-64 transition-transform -translate-x-full",
           openSidebar && "translate-x-0"
         )}
         aria-label="Sidebar"
       >
         <div className="h-full flex flex-col items-start gap-4 overflow-y-auto bg-gray-50 py-4">
-          <ul className="flex flex-col gap-4">
-            <li className="">
+          <ul className="flex flex-col gap-4 w-full ps-12">
+            <li className="flex ps-12">
               <div className="flex justify-center  items-center ">
-                <UserButton afterSignOutUrl="/" appearance={{
-                  
-                }} />
+                <UserButton afterSignOutUrl="/" appearance={{}} />
               </div>
             </li>
 
             <li>
-              <Link href="/account/dashboard" className="flex items-center p-2">
+              <Link href="/account/dashboard" className="flex items-center p-2 hover:text-primary-900">
                 <LayoutDashboard />
                 <h6 className="ms-3">Dashboard</h6>
               </Link>
             </li>
 
             <li>
-              <Link href="/account/orders" className="flex items-center p-2">
+              <Link href="/account/orders" className="flex items-center p-2 hover:text-primary-900">
                 <BadgeDollarSign />
-                <h6 className="ms-3">Orders</h6>
+                <h6 className="ms-3">Your orders</h6>
               </Link>
             </li>
 
             <li>
-              <Link href="/account/address" className="flex items-center p-2 ">
+              <Link href="/account/address" className="flex items-center p-2 hover:text-primary-900 ">
                 <BookUser />
-                <h6 className="ms-3">Address</h6>
+                <h6 className="ms-3">Your addresses</h6>
               </Link>
             </li>
 

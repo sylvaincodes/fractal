@@ -47,6 +47,7 @@ export default function Footer() {
       toast.custom(
         <Toast message="Email is invalid. Try again" status="error" />
       );
+      setLoading(false);
       return;
     }
 
@@ -69,6 +70,7 @@ export default function Footer() {
         });
     };
     await sendEmail();
+    setLoading(false);
   };
 
   return (

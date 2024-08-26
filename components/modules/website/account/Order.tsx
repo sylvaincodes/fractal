@@ -74,6 +74,7 @@ export const columns: ColumnDef<Order>[] = [
     header: ({ column }) => {
       return (
         <button
+          className="flex items-center"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Payment Method
@@ -119,6 +120,7 @@ export const columns: ColumnDef<Order>[] = [
     header: ({ column }) => {
       return (
         <button
+          className="flex items-center"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Created At
@@ -195,20 +197,20 @@ export function DataTableOrder({ data }: { data: Order[] }) {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full px-8">
       <div className="flex items-center py-4">
         <Input
           placeholder="Filter..."
-          value={(table.getColumn("_id")?.getFilterValue() as string) ?? ""}
+          value={(table.getColumn("status")?.getFilterValue() as string) ?? ""}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-            table.getColumn("_id")?.setFilterValue(event.target.value)
+            table.getColumn("status")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="ml-auto">
+            <button className="ml-auto flex items-center ">
               Columns <ChevronDown className="ml-2 h-4 w-4" />
             </button>
           </DropdownMenuTrigger>

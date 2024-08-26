@@ -94,7 +94,7 @@ export function SearchBar({
                 />
                 <h6 className="capitalize">{item.name.substring(0, 100)}</h6>
 
-                <div className="lg:ms-auto font-bold text-xl text-primary-900">
+                <div className="w-40 text-right lg:ms-auto font-bold text-xl text-primary-900">
                   {" "}
                   $ {getBestPriceWithDiscountFromProduct(item)}
                 </div>

@@ -1,6 +1,6 @@
 import CurrencyFormat from "@/components/custom/CurrencyFomat";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function Checkout({
@@ -74,7 +74,7 @@ export default function Checkout({
           variant="outline"
           disabled={loading}
           className="text-center hover:text-primary-500"
-          onClick={() => router.push(".products")}
+          onClick={() => router.push("/products")}
         >
           Continue to shop
         </Button>

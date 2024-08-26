@@ -83,6 +83,22 @@ export function Address({ data }: { data: Address[] }) {
     },
 
     {
+      accessorKey: "country",
+      header: "Country",
+      cell: ({ row }) => (
+        <div className="capitalize">{row.getValue("country")}</div>
+      ),
+    },
+
+    {
+      accessorKey: "city",
+      header: "City",
+      cell: ({ row }) => (
+        <div className="capitalize">{row.getValue("city")}</div>
+      ),
+    },
+
+    {
       accessorKey: "address",
       header: "Address",
       cell: ({ row }) => (
@@ -144,20 +160,20 @@ export function Address({ data }: { data: Address[] }) {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full px-8">
       <div className="flex items-center py-4">
         <Input
-          placeholder="Filter..."
-          value={(table.getColumn("_id")?.getFilterValue() as string) ?? ""}
+          placeholder="Filter here..."
+          value={(table.getColumn("address")?.getFilterValue() as string) ?? ""}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-            table.getColumn("_id")?.setFilterValue(event.target.value)
+            table.getColumn("address")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="max-w-lg ms-4"
         />
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="ml-auto">
+            <button className="ml-auto flex items-center">
               Columns <ChevronDown className="ml-2 h-4 w-4" />
             </button>
           </DropdownMenuTrigger>

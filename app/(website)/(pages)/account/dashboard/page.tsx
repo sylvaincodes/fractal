@@ -22,7 +22,6 @@ export default async function Page() {
   const received = orders.filter(
     (item: Order) => item.shippingStatus === "completed"
   );
-  console.log(received);
 
   const paid = orders
     .filter((item: Order) => item.isPaid === true)
@@ -71,7 +70,7 @@ export default async function Page() {
               <div className="flex gap-4 items-center">
                 <MdMoney className="font-bold h-10 w-10" />
                 <span className="text-2xl text-gray-400 dark:text-gray-500">
-                  {paid}+
+                  {paid.toFixed(2)}+
                 </span>
                 paid
               </div>

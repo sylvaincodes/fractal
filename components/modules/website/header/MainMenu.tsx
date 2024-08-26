@@ -87,7 +87,7 @@ export default function MainMenu() {
                   transition: { type: "spring", duration: 0.7 },
                 }}
                 className="grid grid-cols-4 justify-items-center grid-rows-auto
-          absolute bg-white py-4 px-4 h-[560px] w-[1100px] z-[9999] 
+          absolute bg-white py-4 px-4 h-[560px] w-[1100px] z-[999999] 
           right-0 top-[54px] gap-12 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-neutral-500"
               >
                 {categories &&

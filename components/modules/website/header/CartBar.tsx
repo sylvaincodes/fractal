@@ -205,14 +205,13 @@ export default function CartBar({
                 </strong>
               </div>
               <div className="flex flex-col gap-4">
-                <Button
+                <Link
+                  href="/cart"
                   onClick={() => router.push("/cart")}
-                  variant="outline"
-                  size="lg"
-                  className="rounded-sm py-8 capitalize text-xl border border-border"
+                  className="rounded-sm py-4 flex justify-center hover:bg-primary-500 hover:text-white capitalize text-xl border border-border"
                 >
                   view cart
-                </Button>
+                </Link>
                 <Button
                   onClick={() => {
                     addToCartHandler();

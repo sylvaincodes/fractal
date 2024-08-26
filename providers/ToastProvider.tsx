@@ -9,7 +9,7 @@ export default function ToastProvider() {
       }}
       toastOptions={{
         position: "top-center",
-        duration: 5000,
+        duration: 3000,
       }}
     />
   );
