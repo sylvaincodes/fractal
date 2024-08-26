@@ -52,6 +52,10 @@ export default function CartBar({
   const [loading, setLoading] = useState(false);
 
   const addToCartHandler = async () => {
+    if (loading) {
+      return;
+    }
+
     if (order.orderDetails.length > 0) {
       toast.custom(
         <Toast message="An order has already been placing!" status="success" />
@@ -211,7 +215,7 @@ export default function CartBar({
                 </Button>
                 <Button
                   onClick={() => {
-                    loading === false ? addToCartHandler() : "";
+                    addToCartHandler();
                   }}
                   variant="default"
                   size="lg"

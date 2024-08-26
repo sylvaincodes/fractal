@@ -1,11 +1,9 @@
 "use client";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useState } from "react";
 import { m, AnimatePresence } from "framer-motion";
 import { Category, Page, SubCategory } from "@/types";
-import toast from "react-hot-toast";
-import Toast from "@/components/custom/Toast";
 import axios from "axios";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -14,7 +12,6 @@ export default function MainMenu() {
   const pathname = usePathname();
 
   const [show, setShow] = useState(false);
-  const [error, setError] = useState();
   const [categories, setCategories] = useState<Category[]>([]);
   const [pages, setPages] = useState<Page[]>([]);
 
@@ -26,7 +23,7 @@ export default function MainMenu() {
           setCategories(response.data.data);
         })
         .catch((error) => {
-          setError(error.message);
+          console.log(error.message);
         });
     };
     const getPages = async () => {
@@ -36,16 +33,12 @@ export default function MainMenu() {
           setPages(response.data.data);
         })
         .catch((error) => {
-          setError(error.message);
+          console.log(error.message);
         });
     };
 
     getCategories();
     getPages();
-
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
   }, []);
 
   return (

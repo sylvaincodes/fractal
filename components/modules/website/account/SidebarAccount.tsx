@@ -3,20 +3,18 @@ import { cn } from "@/lib/utils";
 import {
   BadgeDollarSign,
   LayoutDashboard,
-  User,
   BookUser,
   AlignJustify,
   LogOut,
 } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
-import Image from "next/image";
-import { SignOutButton, UserButton, useUser } from "@clerk/nextjs";
+import { SignOutButton, UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 
 export default function SidebarAccount() {
   const [openSidebar, setSidebar] = useState(false);
-  const { user } = useUser();
+
   return (
     <div className="">
       <Button

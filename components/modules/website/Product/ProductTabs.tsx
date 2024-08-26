@@ -2,13 +2,11 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Detail, Product } from "@/types";
 import Review from "../review";
+import React from 'react'
 
 export function ProductTabs({
   className,

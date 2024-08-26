@@ -34,7 +34,7 @@ export default function Toast({
         <AlertCircle className="w-8 h-8 text-red-700" />
       )}
 
-      <div className="ms-3 text-sm font-medium">
+      <div className="ms-3 text-base font-medium">
         {message}
         {link && (
           <Link

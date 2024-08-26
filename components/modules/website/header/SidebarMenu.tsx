@@ -1,30 +1,17 @@
 "use client";
-import React, { useEffect, useRef, useState, useTransition } from "react";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { ChevronLeft, ChevronRight, MenuIcon, X } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Category, Page, SubCategory, SubPage } from "@/types";
 import axios from "axios";
-import { ClipLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
-import Loading from "../../../custom/Loading";
-import toast from "react-hot-toast";
-import Toast from "@/components/custom/Toast";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export default function SidebarMenu() {
-  const [error, setError] = useState();
   const [show, setShow] = useState(false);
   const [subCategories, setSubCategories] = useState<SubCategory[]>();
   const [categories, setCategories] = useState<Category[]>([]);
@@ -39,7 +26,7 @@ export default function SidebarMenu() {
           setPages(response.data.data);
         })
         .catch((error) => {
-          setError(error.message);
+          console.log(error.message);
         });
     };
 
@@ -50,16 +37,12 @@ export default function SidebarMenu() {
           setCategories(response.data.data);
         })
         .catch((error) => {
-          setError(error.message);
+          console.log(error.message);
         });
     };
 
     getCategories();
     getPages();
-
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
   }, []);
 
   return (

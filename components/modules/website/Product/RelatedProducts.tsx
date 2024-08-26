@@ -14,14 +14,10 @@ import Heading from "@/components/custom/Heading";
 import Row from "@/components/custom/Row";
 import ProductCard from "@/components/custom/ProductCard";
 import axios from "axios";
-import toast from "react-hot-toast";
-import Toast from "@/components/custom/Toast";
 import Loading from "@/components/custom/Loading";
 
 export default function RelatedProducts({ product }: { product: Product }) {
   const [products, setProducts] = useState<Product[]>();
-
-  const [error, setError] = useState();
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
@@ -37,15 +33,12 @@ export default function RelatedProducts({ product }: { product: Product }) {
             setProducts(response.data.data);
           })
           .catch((error) => {
-            setError(error.message);
+            console.log(error.message);
           });
       });
     };
     getProducts();
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
-  }, []);
+  }, [product]);
 
   return (
     <m.section

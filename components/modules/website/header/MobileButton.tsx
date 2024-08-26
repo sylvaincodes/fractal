@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { MenuIcon } from "lucide-react";
+
 import React from "react";
 import SidebarMenu from "./SidebarMenu";
 

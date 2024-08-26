@@ -13,8 +13,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Container from "@/components/custom/Container";
 import axios from "axios";
-import toast from "react-hot-toast";
-import Toast from "@/components/custom/Toast";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function HomeSlide() {
@@ -26,7 +24,6 @@ export default function HomeSlide() {
     },
   };
   const [slides, setSlides] = useState<Slide[]>();
-  const [error, setError] = useState();
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
@@ -42,14 +39,11 @@ export default function HomeSlide() {
             );
           })
           .catch((error) => {
-            setError(error.message);
+            console.log(error.message);
           });
       });
     };
     getSlides();
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
   }, []);
 
   return (

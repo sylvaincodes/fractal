@@ -1,4 +1,5 @@
 "use client";
+import React from 'react'
 import { Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -11,7 +12,6 @@ import toast from "react-hot-toast";
 import Toast from "@/components/custom/Toast";
 import { getBestPriceWithDiscountFromProduct } from "../../../../lib/utils";
 import Loading from "@/components/custom/Loading";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export function SearchBar({

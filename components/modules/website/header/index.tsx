@@ -1,5 +1,6 @@
 "use client"
 import Main from "./Main";
+import * as React from 'react'
 
 export default function Header() {
   return (

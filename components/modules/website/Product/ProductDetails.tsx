@@ -2,7 +2,6 @@ import { Product, SubProduct } from "@/types";
 import React, { useEffect, useState } from "react";
 import ProductInfo from "./ProductInfo";
 import ProductStyles from "./ProductStyles";
-import ProductOptions from "./ProductOptions";
 import ProductIcons from "./ProductIcons";
 import ProductShare from "./ProductShare";
 

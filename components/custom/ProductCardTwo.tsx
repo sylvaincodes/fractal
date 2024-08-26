@@ -5,13 +5,12 @@ import {
 } from "@/lib/utils";
 import { Product } from "@/types";
 import Image from "next/image";
-import React, { ChangeEvent, useState } from "react";
+import React from "react";
 import CurrencyFormat from "./CurrencyFomat";
-import { Eye, Heart } from "lucide-react";
+import { Eye } from "lucide-react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { m } from "framer-motion";
-import Link from "next/link";
 
 export default function ProductCardTwo({ item }: { item: Product }) {
   const active = 0;
@@ -27,10 +26,10 @@ export default function ProductCardTwo({ item }: { item: Product }) {
 
   const router = useRouter();
 
-  const addToWishList = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.currentTarget.setAttribute("disabled", "true");
-    // TODO::Do logic add to wishlist
-  };
+  // TODO::Do logic add to wishlist
+  // const addToWishList = (e: React.MouseEvent<HTMLButtonElement>) => {
+  //   e.currentTarget.setAttribute("disabled", "true");
+  // };
 
   return (
     <div className="flex flex-col gap-4 items-center cursor-pointer">
@@ -73,14 +72,15 @@ export default function ProductCardTwo({ item }: { item: Product }) {
           >
             <Eye />
           </Button>
-          <Button
+          {/* TODO::New feature */}
+          {/* <Button
             onClick={(e) => addToWishList(e)}
             variant="outline"
             size="icon"
             className="hover:bg-primary-500 hover:text-white"
           >
             <Heart />
-          </Button>
+          </Button> */}
         </m.div>
       </div>
 

@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import StripePayment from "./StripePayment";
 import Image from "next/image";
 import { Order } from "@/types";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import Loading from "@/components/custom/Loading";
+// import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+// import Loading from "@/components/custom/Loading";
 
 export default function OrderSummary({
   order,

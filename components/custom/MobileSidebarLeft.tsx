@@ -7,7 +7,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { ArrowDownZA, Filter } from "lucide-react";
+import { ArrowDownZA } from "lucide-react";
 import ProductsFilters from "./ProductsFilters";
 
 export default function MobileSidebarLeft({

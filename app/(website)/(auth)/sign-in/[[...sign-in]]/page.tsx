@@ -1,6 +1,6 @@
 import { SignIn } from "@clerk/nextjs";
-import { url } from "inspector";
 import { Metadata } from "next";
+import React from 'react'
 
 export default function Page() {
   return (

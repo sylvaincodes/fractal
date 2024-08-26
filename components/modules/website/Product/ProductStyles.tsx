@@ -45,7 +45,7 @@ export default function ProductStyles({
                   setStyle(item);
                   setActive(idx);
                 }}
-                key={idx}
+                key={idx + optionActive}
                 className={cn(
                   "relative w-[100px] h-[60px] outline outline-slate-300 cursor-pointer rounded-lg overflow-hidden hover:outline-primary-600 outline-offset-2 flex items-center justify-center",
                   item === style &&

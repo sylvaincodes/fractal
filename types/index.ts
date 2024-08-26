@@ -42,7 +42,7 @@ export type Category = {
   link: string;
   slug: string;
   image: string;
-  createdAt?: String;
+  createdAt?: string;
   submenu?: SubCategory[];
 };
 
@@ -60,8 +60,8 @@ export type SubCategory = {
   slug: string;
   link: string;
   parent?: string;
-  createdAt?: String;
-  updatedAt?: String;
+  createdAt?: string;
+  updatedAt?: string;
 };
 
 export type SubPage = {
@@ -70,7 +70,7 @@ export type SubPage = {
   slug: string;
   link: string;
   parent?: string;
-  createdAt?: String;
+  createdAt?: string;
 };
 
 export type Page = {
@@ -79,7 +79,7 @@ export type Page = {
   slug: string;
   link: string;
   subpage?: SubPage[];
-  createdAt?: String;
+  createdAt?: string;
 };
 
 export type Slide = {
@@ -93,7 +93,7 @@ export type Slide = {
   btn: string;
   image: string;
   textColor: string;
-  createdAt?: String;
+  createdAt?: string;
 };
 
 export type FormValues = {
@@ -220,7 +220,7 @@ export type User = {
   defaultPaymentMethod?: string;
   address: Address;
   resetCode?: string;
-  createdAt?: String;
+  createdAt?: string;
   confirm_password?: string;
 };
 
@@ -270,17 +270,21 @@ export type Blog = {
   content: string;
   postBy: IUser;
   category: BlogCategory;
-  createdAt: String;
+  createdAt: string;
 };
 
 export type Review = {
   _id: string;
-  reviewBy: string;
+  reviewBy: {
+    id: string;
+    imageUrl: string;
+    fullName: string;
+  };
   rating: number;
   review: string;
   likes: string[];
-  createdAt: String;
-  updatedAt: String;
+  createdAt: Date;
+  updatedAt: string;
 };
 
 export type Style = {
@@ -419,7 +423,7 @@ export type Coupon = {
   startDate?: Date;
   endDate?: Date;
   discount: number;
-  createdAt?: String;
+  createdAt?: string;
   status?: string;
 };
 
@@ -429,7 +433,7 @@ export type ICoupon = {
   startDate?: Date;
   endDate?: Date;
   discount: number;
-  createdAt?: String;
+  createdAt?: string;
   status?: string;
 };
 
@@ -459,7 +463,7 @@ export type IOrder = {
   paymentResult: paymentResult;
   shippingTimes: string;
   shippingAddress: Address;
-  createdAt: String;
+  createdAt: string;
 };
 
 export type paymentResult = {
@@ -494,7 +498,7 @@ export type Order = {
   paymentResult: paymentResult;
   shippingTimes: string;
   shippingAddress: Address;
-  createdAt: String;
+  createdAt: string;
 };
 
 export type ProductOrder = {

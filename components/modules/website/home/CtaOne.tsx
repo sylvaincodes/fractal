@@ -6,15 +6,14 @@ import React, { useEffect, useState, useTransition } from "react";
 import Countdown from "react-countdown";
 import { m } from "framer-motion";
 import axios from "axios";
-import toast from "react-hot-toast";
-import Toast from "@/components/custom/Toast";
 import { Slide } from "@/types";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useRouter } from "next/navigation";
 
 export default function CtaOne() {
   const [slide, setSlide] = useState<Slide>();
-  const [error, setError] = useState();
   const [isPending, startTransition] = useTransition();
+  const router = useRouter();
 
   useEffect(() => {
     const getSlide = () => {
@@ -29,14 +28,11 @@ export default function CtaOne() {
             );
           })
           .catch((error) => {
-            setError(error.message);
+            console.log(error.message);
           });
       });
     };
     getSlide();
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
   }, []);
 
   return (
@@ -52,9 +48,7 @@ export default function CtaOne() {
               transition={{ duration: 0.3, type: "tween" }}
               className="flex flex-col items-center gap-12"
             >
-              <h3 className="inline-flex capitalize">
-                {slide?.title}
-              </h3>
+              <h3 className="inline-flex capitalize">{slide?.title}</h3>
               <p className="text-center">{slide?.subtitle}</p>
               <Countdown date={Date.now() + 600000} className="text-2xl" />
 
@@ -62,6 +56,7 @@ export default function CtaOne() {
                 variant="default"
                 size="lg"
                 className="uppercase text-xl py-8 px-6"
+                onClick={() => router.push(slide?.link ? slide?.link : "")}
               >
                 {slide?.btn}
               </Button>

@@ -30,6 +30,9 @@ export default function ProductIcons({
   const dispatch = useDispatch();
 
   const addToCartHandler = async () => {
+    if (loading) {
+      return;
+    }
     setLoading(true);
 
     await axios
@@ -107,9 +110,9 @@ export default function ProductIcons({
       <Button
         id="addToCart"
         onClick={() => {
-          loading === false ? addToCartHandler() : "";
+          addToCartHandler();
         }}
-        disabled={option.qty < 0 ? true : false}
+        disabled={option.qty < 0 || loading ? true : false}
         variant="default"
         size="lg"
         className="text-white text-2xl capitalize col-span-2 p-8 flex-1"

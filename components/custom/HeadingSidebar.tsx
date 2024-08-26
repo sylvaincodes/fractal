@@ -1,6 +1,4 @@
 import React from "react";
-import { Button } from "../ui/button";
-import { ChevronUp } from "lucide-react";
 
 export default function HeadingSidebar({ name }: { name: string }) {
   return (

@@ -1,18 +1,14 @@
 "use client";
-import { ctaHomeTwo } from "@/constants";
 import React, { useEffect, useState, useTransition } from "react";
 import { m } from "framer-motion";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { Slide } from "@/types";
-import Toast from "@/components/custom/Toast";
-import toast from "react-hot-toast";
 import Loading from "@/components/custom/Loading";
 
 export default function CtaOne() {
   const router = useRouter();
   const [slide, setSlide] = useState<Slide>();
-  const [error, setError] = useState();
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
@@ -28,14 +24,11 @@ export default function CtaOne() {
             );
           })
           .catch((error) => {
-            setError(error.message);
+            console.log(error.message);
           });
       });
     };
     getSlide();
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
   }, []);
 
   return (

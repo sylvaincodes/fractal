@@ -1,14 +1,11 @@
 import Loading from "@/components/custom/Loading";
 import ProductsContent from "@/components/custom/ProductsContent";
 import ProductsTopBar from "@/components/custom/ProductsTopBar";
-import Toast from "@/components/custom/Toast";
 import usePagination from "@/hooks/usePagination";
 import { Product } from "@/types";
 import { Pagination } from "@mui/material";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import React, { useEffect, useState, useTransition } from "react";
-import toast from "react-hot-toast";
 
 export default function ProductsMainContent({
   slug,
@@ -32,7 +29,6 @@ export default function ProductsMainContent({
   const [products, setProducts] = useState<Product[]>([]);
   const [perpage, setPerPages] = useState<number>(10);
   const [filter, setFilter] = useState<string>("latest");
-  const [error, setError] = useState();
   const [isPending, startTransition] = useTransition();
   const [page, setPage] = useState(1);
   const count = Math.ceil(products.length / perpage);
@@ -60,20 +56,17 @@ export default function ProductsMainContent({
             setProducts(response.data.data);
           })
           .catch((error) => {
-            setError(error.message);
+            console.log(error.message);
           });
       });
     };
     getProducts();
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
   }, [page, filter, slug, minPrice, maxPrice, setLoading]);
 
   return (
     <>
       {isPending ? (
-        <Loading isLoading={isPending} />
+        <Loading isLoading={loading} />
       ) : (
         <div className={`${className}`}>
           <div className="flex flex-col gap-4">

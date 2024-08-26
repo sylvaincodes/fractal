@@ -10,7 +10,6 @@ import { memoize } from "proxy-memoize";
 import { IRootState } from "@/store";
 import Toast from "@/components/custom/Toast";
 import toast from "react-hot-toast";
-import ProductQty from "../Product/ProductQty";
 import ProductQtyCart from "@/components/custom/ProductQtyCart";
 
 export default function CartItem({ item }: { item: CI }) {

@@ -1,4 +1,3 @@
-import CategoriesPage from "@/components/modules/website/categories";
 import React, { Fragment } from "react";
 import {
   Breadcrumb,
@@ -12,6 +11,7 @@ import Link from "next/link";
 import { getProductBySlug } from "@/actions/product";
 import { Product, SubCategory } from "@/types";
 import ProductPage from "@/components/modules/website/Product";
+import { mergeOpenGraph } from "@/lib/mergeOpenGraph";
 
 export default async function page({ params }: { params: { slug: string } }) {
   const product: Product = await getProductBySlug(params.slug);
@@ -81,11 +81,21 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
+  const product: Product = await getProductBySlug(params.slug);
+  const images = product.subProducts[0].options[0].images[0];
+
   return {
     title: `Buy ${params.slug} - Carrefour`,
     description: "Online Ecommerce for selling anything electronics",
     icons: {
       icon: "/assets/images/logo.svg",
     },
+
+    //For SEO: Sharing on social media twitter, whatsapp, Linkeidn etc
+    openGraph: mergeOpenGraph({
+      title: `Buy ${product.name.substring(0, 60)}`,
+      url: `/products/${params.slug}`,
+      images: `${images}`,
+    }),
   };
 }

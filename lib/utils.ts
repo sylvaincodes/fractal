@@ -21,7 +21,7 @@ export const discountPrice = (price: number, discount: number): number => {
   return parseInt(price_final.toFixed(2));
 };
 
-export const getDate = (date: Date): string => {
+export const getDate = (date: Date) => {
   const newDate = new Date(date).toDateString();
   return newDate;
 };

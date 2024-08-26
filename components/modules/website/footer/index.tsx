@@ -27,7 +27,11 @@ export default function Footer() {
   const { isSignedIn } = useUser();
 
   const [error, submitAction, isPending] = useActionState(
-    async (previousState: any, formData: any) => {
+    //the previousState variable contains the last recorded value of the user's input
+
+    async (previousState: void | null, formData: FormData) => {
+
+      console.log(previousState);
       const email = formData.get("email");
 
       const Email = z.object({

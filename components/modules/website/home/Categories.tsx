@@ -16,8 +16,6 @@ import Heading from "@/components/custom/Heading";
 import Row from "@/components/custom/Row";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import toast from "react-hot-toast";
-import Toast from "@/components/custom/Toast";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Categories() {
@@ -30,7 +28,6 @@ export default function Categories() {
   };
   const [slides, setSlides] = useState<Slide[]>();
   const router = useRouter();
-  const [error, setError] = useState();
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
@@ -46,14 +43,11 @@ export default function Categories() {
             );
           })
           .catch((error) => {
-            setError(error.message);
+            console.log(error.message);
           });
       });
     };
     getSlides();
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
   }, []);
 
   const handleClick = (link: string) => {
@@ -120,10 +114,7 @@ export default function Categories() {
             }}
             modules={[]}
           >
-            <Skeleton className="h-[100px]" />
-            <Skeleton className="h-[100px]" />
-            <Skeleton className="h-[100px]" />
-            <Skeleton className="h-[100px]" />
+            <Skeleton className="h-[400px]" />
           </Swiper>
         ) : (
           <Swiper
@@ -194,7 +185,7 @@ export default function Categories() {
                         <m.h6
                           initial={animation.hide}
                           whileInView={animation.show}
-                          transition={{ delay: 0.3 }}
+                          transition={{ delay: 0.1 + idx / 6 }}
                           className={cn("capitalize")}
                           style={{
                             color: `${item.textColor}`,

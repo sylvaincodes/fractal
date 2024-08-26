@@ -1,6 +1,6 @@
 import CurrencyFormat from "@/components/custom/CurrencyFomat";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 export default function Checkout({
@@ -20,6 +20,8 @@ export default function Checkout({
   addToCartHandler: () => void;
   loading: boolean;
 }) {
+  const router = useRouter();
+
   return (
     <div
       className={`flex border boder-border p-4 min-w-[360px] flex-col gap-4 h-full ${className}`}
@@ -32,9 +34,19 @@ export default function Checkout({
       </div>
       <hr />
       <div className="flex justify-between">
+        <span>Tax</span>
+        <span className="">
+          <CurrencyFormat className="text-right" value={tax ? tax : 0} />
+        </span>
+      </div>
+      <hr />
+      <div className="flex justify-between">
         <span>Shipping</span>
         <span className="">
-          <CurrencyFormat className="text-right" value={shippingFee!!} />
+          <CurrencyFormat
+            className="text-right"
+            value={shippingFee ? shippingFee : 0}
+          />
         </span>
       </div>
       <hr />
@@ -42,7 +54,7 @@ export default function Checkout({
       <div className="flex justify-between">
         <strong>Grand Total</strong>
         <strong>
-          <CurrencyFormat className="text-right"  value={total} />
+          <CurrencyFormat className="text-right" value={total} />
         </strong>
       </div>
 
@@ -51,15 +63,21 @@ export default function Checkout({
           variant="default"
           size="lg"
           onClick={() => {
-            loading === false ? addToCartHandler() : "";
+            addToCartHandler();
           }}
+          disabled={loading}
         >
           Continue to checkout
         </Button>
 
-        <Link className="text-center hover:text-primary-500" href="/products">
+        <Button
+          variant="outline"
+          disabled={loading}
+          className="text-center hover:text-primary-500"
+          onClick={() => router.push(".products")}
+        >
           Continue to shop
-        </Link>
+        </Button>
       </div>
     </div>
   );

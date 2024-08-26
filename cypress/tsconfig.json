@@ -1,8 +1,10 @@
+// Cypress configuration file
 {
     "compilerOptions": {
-        "target": "es5",
-        "lib": ["es5", "dom"],
-        "types": ["cypress", "node"],
+      "target": "es5",
+      "lib": ["es5", "dom"],
+      "types": ["cypress", "node"],
+      "baseUrl": "http://localhost:3000"
     },
     "include": ["**/*.ts"]
 }

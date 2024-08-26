@@ -1,7 +1,7 @@
 "use client";
 import { Mail } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";

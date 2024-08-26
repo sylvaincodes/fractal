@@ -5,7 +5,7 @@ import {
 } from "@/lib/utils";
 import { Product } from "@/types";
 import Image from "next/image";
-import React, { ChangeEvent, useState } from "react";
+import React from "react";
 import CurrencyFormat from "./CurrencyFomat";
 import { Eye, Heart } from "lucide-react";
 import { Button } from "../ui/button";
@@ -34,9 +34,13 @@ export default function ProductCard({ item }: { item: Product }) {
   return (
     <div className="flex flex-col gap-4 items-center cursor-pointer">
       {/* images  */}
-      <div role="button" onClick={() => {
-              router.push(`/products/${item.slug}`);
-            }} className="flex group/image h-[500px] relative overflow-hidden">
+      <div
+        role="button"
+        onClick={() => {
+          router.push(`/products/${item.slug}`);
+        }}
+        className="flex group/image h-[500px] relative overflow-hidden"
+      >
         <Image
           src={images[0]}
           alt="image"
@@ -81,9 +85,7 @@ export default function ProductCard({ item }: { item: Product }) {
 
       {/* content  */}
       <div className="flex flex-col gap-4 items-start py-4">
-        <h5 className="capitalize">
-          {item.name.substring(0, 20)}..
-        </h5>
+        <h5 className="capitalize">{item.name.substring(0, 20)}..</h5>
         <p className="capitalize text-sm">
           {item.description.substring(0, 30)}..
         </p>

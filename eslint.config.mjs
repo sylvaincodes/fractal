@@ -17,6 +17,14 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
-    ignores: [".next", "docs", "node_modules", "coverage"],
+    ignores: [
+      ".next",
+      "docs",
+      "node_modules",
+      "coverage",
+      "components/ui",
+      "tailwind.config.ts",
+      "hooks/*",
+    ],
   },
 ];

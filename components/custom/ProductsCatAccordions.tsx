@@ -5,19 +5,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Checkbox } from "@/components/ui/checkbox";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import { Category, SubCategory } from "@/types";
-import toast from "react-hot-toast";
-import Toast from "./Toast";
 import Link from "next/link";
 import { Skeleton } from "../ui/skeleton";
 
 export default function ProductsCatAccordions() {
   // GET API
   const [categories, setCategories] = useState<Category[]>();
-  const [error, setError] = useState();
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
@@ -29,14 +24,11 @@ export default function ProductsCatAccordions() {
             setCategories(response.data.data);
           })
           .catch((error) => {
-            setError(error.message);
+            console.log(error.message);
           });
       });
     };
     getCategories();
-    if (error) {
-      toast.custom(<Toast message={error} status="error" />);
-    }
   }, []);
 
   return (
@@ -48,7 +40,7 @@ export default function ProductsCatAccordions() {
           {categories &&
             categories.slice(0, 20).map((item: Category, idx: number) => (
               <AccordionItem key={idx} value={item._id}>
-                <AccordionTrigger>
+                <AccordionTrigger className="!py-0">
                   <Link
                     href={`/categories/${item.link}/products`}
                     className="capitalize text-xl"

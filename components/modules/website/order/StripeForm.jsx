@@ -8,6 +8,7 @@ import Toast from "@/components/custom/Toast";
 import { Button } from "@/components/ui/button";
 // import { Order } from "@/types";
 // import { PaymentMethod, StripeError } from "@stripe/stripe-js";
+import PropTypes from 'prop-types';
 
 export default function StripeForm({ order,setLoading, loading }) {
 
@@ -84,6 +85,7 @@ export default function StripeForm({ order,setLoading, loading }) {
           });
 
       } catch (error) {
+        console.log(error)
       }
     }
   };
@@ -104,3 +106,10 @@ export default function StripeForm({ order,setLoading, loading }) {
     </form>
   );
 }
+
+
+StripeForm.propTypes = {
+  setLoading: PropTypes.func,
+  order: PropTypes.object,
+  loading: PropTypes.boolean,
+};

@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { LogInIcon, SendIcon } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function AddReview({
   product,
@@ -28,8 +29,8 @@ export default function AddReview({
   const validate = Yup.object({
     review: Yup.string()
       .required("required")
-      .min(2, "2 letters at least")
-      .max(1000, "1000 letters max"),
+      .min(10, "At least 10 string.")
+      .max(250, "250 string max."),
     rating: Yup.mixed(),
   });
 
@@ -37,14 +38,29 @@ export default function AddReview({
     review: "",
     rating: "",
   };
+
+  const router = useRouter();
+
   const handleSave = async (values: { review: string }) => {
+    setLoading(true);
+    if (!isSignedIn) {
+      toast.custom(
+        <Toast
+          message="You need to login. Redirecting... Login page !"
+          status="error"
+        />
+      );
+      router.push("/sign-in");
+      return;
+    }
     const data = {
       productId: product._id,
       review: values.review,
       rating: rating,
       reviewBy: {
-        _id: user?.id,
-        ...user,
+        id: user.id,
+        fullName: user.fullName,
+        imageUrl: user.imageUrl,
       },
       images: [],
       likes: [],
@@ -55,11 +71,13 @@ export default function AddReview({
       toast.custom(
         <Toast message="Please give your rating ⭐⭐⭐ !" status="error" />
       );
+      setLoading(false);
       return;
     }
 
-    //@ts-ignore:  need to check later
-    TODO: setReviews([...reviews, data]);
+    //TODO:check error
+    //@ts-expect-error:  need to check later
+    setReviews([...reviews, data]);
 
     setLoading(true);
     await axios
@@ -100,8 +118,8 @@ export default function AddReview({
                 name="review"
                 placeholder="Put your review here"
                 className={cn(
-                  "w-[600px] h-20 border border-border p-4 text-black focus:outline-none outline-none",
-                  errors && "border border-red-300"
+                  "w-full h-20 border border-black p-4 text-black focus:outline-none outline-none",
+                  errors.review && "border border-red-300"
                 )}
               />
               <ErrorMessage
@@ -114,8 +132,9 @@ export default function AddReview({
               <Rating
                 onChange={(e) => {
                   const target = e.target;
-                  //@ts-ignore:  need to check later
-                  TODO: setRating(target.value);
+                  //TODO: Check error
+                  //@ts-expect-error:  need to check later
+                  setRating(target.value);
                 }}
                 name="rating"
                 precision={1}
@@ -137,7 +156,7 @@ export default function AddReview({
                 </Button>
               ) : (
                 <Link
-                  href="/signin"
+                  href="/sign-in"
                   className="bg-primary-700 flex items-center justify-center gap-4 uppercase text-white p-6"
                 >
                   Login to post your comment

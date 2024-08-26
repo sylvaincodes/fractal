@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -48,7 +48,6 @@ export type Address = {
 };
 
 export function Address({ data }: { data: Address[] }) {
-  const [openModal, setOpenModal] = useState(false);
   const columns: ColumnDef<Address>[] = [
     {
       id: "select",
@@ -117,7 +116,6 @@ export function Address({ data }: { data: Address[] }) {
       },
     },
   ];
-  // const [openModal, setOpenModal] = React.useState(false);
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []

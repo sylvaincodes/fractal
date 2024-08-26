@@ -2,10 +2,6 @@
 import React from "react";
 import Container from "@/components/custom/Container";
 import Row from "@/components/custom/Row";
-import { Button } from "@/components/ui/button";
-import { Trash } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";

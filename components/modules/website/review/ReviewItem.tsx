@@ -1,60 +1,51 @@
-import Toast from "@/components/custom/Toast";
 import { Review } from "@/types";
-import { useAuth, useUser } from "@clerk/nextjs";
 import Rating from "@mui/material/Rating";
-import axios from "axios";
 import Image from "next/image";
-import React, { useState, useTransition } from "react";
-import toast from "react-hot-toast";
-import { styled } from "@mui/material/styles";
-import { IconContainerProps } from "@mui/material/Rating";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
-import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
-import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
-import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAltOutlined";
-import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfied";
+import React from "react";
 import { getDate } from "@/lib/utils";
 
 export default function ReviewItem({ item }: { item: Review }) {
-  const { isLoaded, userId, sessionId, getToken } = useAuth();
-  const { user } = useUser();
+  // TODO:New feature
 
-  const [likes, setLikes] = useState(item.likes.length);
+  // const { isLoaded, userId, sessionId, getToken } = useAuth();
+  // const { user } = useUser();
 
-  const [likeDisable, setLikeDisable] = useState<boolean>(
-    item.likes.find((i: string) => i === userId) ? true : false
-  );
-  const [error, setError] = useState();
-  const [isPending, startTransition] = useTransition();
+  // const [likes, setLikes] = useState(item.likes.length);
 
-  const handleLike = async () => {
-    if (likeDisable) {
-      setLikes(likes - 1);
-    } else {
-      setLikes(likes + 1);
-    }
-    const data = {
-      reviewId: item._id,
-      likeBy: item.reviewBy._id,
-      remove: likeDisable,
-    };
+  // const [likeDisable, setLikeDisable] = useState<boolean>(
+  //   item.likes.find((i: string) => i === userId) ? true : false
+  // );
+  // const [error, setError] = useState();
+  // const [isPending, startTransition] = useTransition();
 
-    startTransition(async () => {
-      await axios
-        .put(process.env.NEXT_PUBLIC_SERVER_URL + "/api/review", data)
-        .then((response) => {
-          const data = response.data;
-          toast.custom(<Toast message={data.message} status="success" />);
+  // const handleLike = async () => {
+  //   if (likeDisable) {
+  //     setLikes(likes - 1);
+  //   } else {
+  //     setLikes(likes + 1);
+  //   }
+  //   const data = {
+  //     reviewId: item._id,
+  //     likeBy: item.reviewBy._id,
+  //     remove: likeDisable,
+  //   };
 
-          if (data) {
-            setLikeDisable(!likeDisable);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    });
-  };
+  //   startTransition(async () => {
+  //     await axios
+  //       .put(process.env.NEXT_PUBLIC_SERVER_URL + "/api/review", data)
+  //       .then((response) => {
+  //         const data = response.data;
+  //         toast.custom(<Toast message={data.message} status="success" />);
+
+  //         if (data) {
+  //           setLikeDisable(!likeDisable);
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   });
+  // };
 
   return (
     <div className="flex flex-col gap-4">
@@ -63,11 +54,11 @@ export default function ReviewItem({ item }: { item: Review }) {
           width="40"
           height="40"
           className="mr-2 w-auto h-auto rounded-full"
-          src={item?.reviewBy?.image}
+          src={item?.reviewBy?.imageUrl}
           alt="image"
         />
         <div className="flex flex-col gap-1 items-center [&span]:text-2xl">
-          <h6>{item.reviewBy?.name}</h6>
+          <h6>{item.reviewBy?.fullName}</h6>
           <Rating
             size="small"
             name="size-small"
