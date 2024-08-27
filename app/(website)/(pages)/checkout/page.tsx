@@ -10,8 +10,12 @@ import {
 import Container from "@/components/custom/Container";
 import Link from "next/link";
 import Checkout from "@/components/modules/website/Chechout";
+import { createCoupon } from "@/actions/coupon";
 
-export default function page() {
+export default async function page() {
+  const generateCoupon = await createCoupon();
+
+  console.log(generateCoupon);
   return (
     <>
       <section className="my-10">
@@ -40,7 +44,7 @@ export default function page() {
       </section>
       <section>
         <Container>
-          <Checkout />
+          <Checkout couponGenearated={generateCoupon.coupon} />
         </Container>
       </section>
     </>

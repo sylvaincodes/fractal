@@ -11,7 +11,7 @@ export const payments = [
     image: "https://cdn-icons-png.flaticon.com/128/8525/8525676.png",
     title: "cash on delivery",
     slug: "cash_on_delivery",
-    subtitle: "pay with your credit card",
+    subtitle: "pay when the product are delivered",
   },
   // {
   //   id: "3",

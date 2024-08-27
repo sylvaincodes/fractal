@@ -11,19 +11,19 @@ export default function ProductsMainContent({
   slug,
   maxPrice,
   minPrice,
-  loading,
-  setLoading,
   setMinPrice,
   setMaxPrice,
   className,
+  loading,
+  setLoading,
 }: {
   slug?: string;
   minPrice: number;
   maxPrice: number;
-  loading: boolean;
-  setLoading: (e: boolean) => void;
   setMinPrice: (e: number) => void;
   setMaxPrice: (e: number) => void;
+  setLoading: (e: boolean) => void;
+  loading: boolean;
   className: string;
 }) {
   const [products, setProducts] = useState<Product[]>([]);
@@ -41,6 +41,7 @@ export default function ProductsMainContent({
   //get products
   useEffect(() => {
     const getProducts = async () => {
+      setLoading(true);
       await axios
         .get(process.env.NEXT_PUBLIC_API_URL + "/api/products", {
           params: {
@@ -55,56 +56,56 @@ export default function ProductsMainContent({
         })
         .catch((error) => {
           console.log(error.message);
+        })
+        .finally(() => {
+          setLoading(false);
         });
     };
     getProducts();
-  }, [page, filter, slug, minPrice, maxPrice, setLoading]);
+  }, [page, filter, slug, minPrice, maxPrice]);
 
   return (
     <>
-      {loading ? (
-        <Loading isLoading={loading} />
-      ) : (
-        <div className={`${className}`}>
-          <div className="flex flex-col gap-4">
-            <ProductsTopBar
-              minPrice={minPrice}
-              maxPrice={maxPrice}
-              setMinPrice={setMinPrice}
-              setMaxPrice={setMaxPrice}
-              loading={loading}
-              setLoading={setLoading}
-              slug={slug}
-              perpage={perpage}
-              filter={filter}
-              setPerPages={setPerPages}
-              setFilter={setFilter}
-              maxPage={_DATA.maxPage}
-              page={_DATA.maxPage}
-              products={products}
+      {loading && <Loading isLoading={loading} />}
+      <div className={`${className}`}>
+        <div className="flex flex-col gap-4">
+          <ProductsTopBar
+            minPrice={minPrice}
+            maxPrice={maxPrice}
+            setMinPrice={setMinPrice}
+            setMaxPrice={setMaxPrice}
+            loading={loading}
+            setLoading={setLoading}
+            slug={slug}
+            perpage={perpage}
+            filter={filter}
+            setPerPages={setPerPages}
+            setFilter={setFilter}
+            maxPage={_DATA.maxPage}
+            page={_DATA.maxPage}
+            products={products}
+          />
+          <ProductsContent products={_DATA.currentData()} />
+
+          {/* pagination */}
+          <div className="py-10 flex justify-between mt-auto">
+            <Pagination
+              count={count}
+              page={page}
+              color="primary"
+              variant="outlined"
+              shape="rounded"
+              onChange={handleChange}
             />
-            <ProductsContent loading={loading} products={_DATA.currentData()} />
 
-            {/* pagination */}
-            <div className="py-10 flex justify-between mt-auto">
-              <Pagination
-                count={count}
-                page={page}
-                color="primary"
-                variant="outlined"
-                shape="rounded"
-                onChange={handleChange}
-              />
-
-              <div className="flex ms-auto">
-                Showing{" "}
-                {_DATA.maxPage === page ? products.length : perpage * page} of{" "}
-                {products.length} results
-              </div>
+            <div className="flex ms-auto">
+              Showing{" "}
+              {_DATA.maxPage === page ? products.length : perpage * page} of{" "}
+              {products.length} results
             </div>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }

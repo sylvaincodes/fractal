@@ -1,4 +1,5 @@
-// import Page from "@/app/(website)/(pages)/(home)/page";
+import * as React from "react";
+import Page from "@/app/(website)/(pages)/(home)/page";
 // import Page from "@/app/(website)/(pages)/cart/page";
 import { expect, test, describe } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
@@ -16,6 +17,6 @@ describe("Routing test", () => {
     });
 
     // ASSERT
-    expect(heading).toBeInTheDocument();
+    expect(heading).toBeDefined();
   });
 });

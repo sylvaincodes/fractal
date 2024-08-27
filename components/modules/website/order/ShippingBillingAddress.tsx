@@ -3,12 +3,12 @@ import { Mail } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { Order } from "@/types";
 import { Button } from "@/components/ui/button";
 import Toast from "@/components/custom/Toast";
 import { useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 export default function ShippingBillingAddress({
   order,
@@ -23,7 +23,7 @@ export default function ShippingBillingAddress({
 
   const router = useRouter();
 
-  const handledelivered = () => {
+  const handledelivered = async () => {
     if (loading) {
       return;
     }
@@ -35,7 +35,7 @@ export default function ShippingBillingAddress({
     };
 
     setLoading(true);
-    axios
+    await axios
       .put(process.env.NEXT_PUBLIC_API_URL + "/api/order", data)
       .then((response) => {
         const data = response.data;
@@ -55,7 +55,7 @@ export default function ShippingBillingAddress({
       });
   };
 
-  const handlecompleted = () => {
+  const handlecompleted = async () => {
     if (loading) {
       return;
     }
@@ -66,7 +66,7 @@ export default function ShippingBillingAddress({
     };
 
     setLoading(true);
-    axios
+    await axios
       .put(process.env.NEXT_PUBLIC_API_URL + "/api/order", data)
       .then((response) => {
         const data = response.data;
@@ -122,7 +122,7 @@ export default function ShippingBillingAddress({
           disabled={
             loading ||
             order?.shippingStatus === "delivered" ||
-            order?.shippingStatus === "completed"
+            order?.status === "completed"
           }
           onClick={() => handledelivered()}
           className="font-bold w-full bg-indigo-400 rounded-none border border-gray-300 text-slate-700 p-8 hover:text-white hover:bg-black"
@@ -131,7 +131,7 @@ export default function ShippingBillingAddress({
         </Button>
 
         <Button
-          disabled={loading || order?.shippingStatus === "completed"}
+          disabled={loading || order?.status === "completed"}
           onClick={() => handlecompleted()}
           className="font-bold w-full bg-blue-400 border rounded-none border-gray-300 text-slate-700 p-8 hover:text-white hover:bg-black"
         >

@@ -20,7 +20,7 @@ export default async function Page() {
   const orders = await getOrderByUserId(user?.id);
 
   const received = orders.filter(
-    (item: Order) => item.shippingStatus === "completed"
+    (item: Order) => item.shippingStatus === "delivered"
   );
 
   const paid = orders

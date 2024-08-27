@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import * as yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { cn } from "@/lib/utils";
-import { LockKeyhole, Plus } from "lucide-react";
+import { AlertCircleIcon, LockKeyhole, Plus } from "lucide-react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Address, Cart, Delivery, Payment } from "@/types";
@@ -16,7 +16,11 @@ import Loading from "@/components/custom/Loading";
 import CurrencyFormat from "@/components/custom/CurrencyFomat";
 import { Button } from "@/components/ui/button";
 
-export default function Adresses() {
+export default function Adresses({
+  couponGenearated,
+}: {
+  couponGenearated: string;
+}) {
   const { user } = useUser();
 
   const initialValues = {
@@ -515,7 +519,8 @@ export default function Adresses() {
                       onClick={() => setSelectedAddresses(item)}
                       className={cn(
                         "rounded-lg border border-gray-200 bg-gray-50 p-4 ps-4 cursor-pointer",
-                        item._id === selectedAddresses?._id && "border-2 border-gray-900"
+                        item._id === selectedAddresses?._id &&
+                          "border-2 border-gray-900"
                       )}
                     >
                       <div className="flex items-start">
@@ -549,7 +554,8 @@ export default function Adresses() {
                       onClick={() => setSelectedPayments(item)}
                       className={cn(
                         "rounded-lg border border-gray-200 bg-gray-50 p-4 ps-4 dark:border-gray-700 dark:bg-gray-800  cursor-pointer",
-                        item.id == selectedPayment?.id && "border-2 border-gray-900"
+                        item.id == selectedPayment?.id &&
+                          "border-2 border-gray-900"
                       )}
                     >
                       <div className="flex items-start">
@@ -592,7 +598,8 @@ export default function Adresses() {
                       onClick={() => setSelectedDeliverys(item)}
                       className={cn(
                         "rounded-lg border border-gray-200 bg-gray-50 p-4 ps-4 dark:border-gray-700 dark:bg-gray-800 cursor-pointer",
-                        item.id == selectedDelivery?.id && "border-2 border-gray-900"
+                        item.id == selectedDelivery?.id &&
+                          "border-2 border-gray-900"
                       )}
                     >
                       <div className="flex items-start">
@@ -682,7 +689,7 @@ export default function Adresses() {
                           touched?.coupon &&
                           "border border-red-900"
                       )}
-                      placeholder="Enter a coupon code"
+                      placeholder="Paste your code here"
                     />
 
                     <Button
@@ -700,6 +707,18 @@ export default function Adresses() {
                     component="div"
                     className="py-2 font-bold text-red-900"
                   />
+                  <div className="flex items-center gap-4 py-2 cursor-pointer">
+                    <AlertCircleIcon size={20} />{" "}
+                    <h6
+                      onClick={() => {
+                        navigator.clipboard.writeText(couponGenearated);
+                        toast("code copied");
+                      }}
+                    >
+                      Click to copy this Code:{" "}
+                      <strong>{couponGenearated}</strong>
+                    </h6>
+                  </div>
                 </Form>
               )}
             </Formik>
@@ -722,7 +741,7 @@ export default function Adresses() {
                   <dt className="text-base font-normal text-gray-500 ">
                     Shipping
                   </dt>
-                  <dd className="text-base font-medium text-green-500">0</dd>
+                  <dd className="text-xl font-medium text-red-500">+ 0</dd>
                 </dl>
 
                 <dl className="flex items-center justify-between gap-4 py-3">
@@ -730,7 +749,9 @@ export default function Adresses() {
                     Promo code
                   </dt>
                   <dd className="text-base font-bold text-green-500">
-                    - {discount ? discount : 0}%
+                    - {discount ? discount : 0}% <strong className="text-black">
+                       ( { discount ? (discount * (cart ? cart?.cartTotal : 0))/100 : "" } )
+                      </strong>
                   </dd>
                 </dl>
 
@@ -739,7 +760,7 @@ export default function Adresses() {
                   <dd className="text-base font-bold text-gray-900 ">
                     <CurrencyFormat
                       value={totalAfterDiscount}
-                      className="text-right"
+                      className="text-right font-bold"
                     />
                   </dd>
                 </dl>

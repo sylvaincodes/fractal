@@ -58,7 +58,10 @@ export default function CartBar({
 
     if (order.orderDetails.length > 0) {
       toast.custom(
-        <Toast message="An order has already been placing!" status="success" />
+        <Toast
+          message="An order has already been placing! Wait a second..."
+          status="success"
+        />
       );
       router.push("/checkout");
       return;
