@@ -574,5 +574,5 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 ---
 Patreon: [Patreon](https://www.patreon.com/sylvaincodes)
-Youtube: [Send a comment] (https://www.youtube.com/@sylvaincodes593)
+Youtube: [Youtube](https://www.youtube.com/@sylvaincodes593)
 ---
