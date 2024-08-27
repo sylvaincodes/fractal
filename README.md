@@ -7,35 +7,225 @@ This is how it looks:
 <table>
   <tr>
     <td>
-      <a href='./public/assets/images/og.png'><img src="./public/assets/images/og.png" style="width: 300px"/></a>
+      <a href='./public/assets/images/home.png'><img src="./public/assets/images/home.png" style="width: 300px"/></a>
     </td>
     <td>
-      <a href='./readme/assets/images/og.png'><img src="./public/assets/images/og.png" style="width: 300px"/></a>
+      <a href='./readme/assets/images/products_list.png'><img src="./public/assets/images/products_list.png" style="width: 300px"/></a>
     </td>
     <td>
-      <a href='./public/assets/images/og.png'><img src="./public/assets/images/og.png" style="width: 300px"/></a>
+      <a href='./public/assets/images/product_detail.png'><img src="./public/assets/images/product_detail.png" style="width: 300px"/></a>
     </td>
   </tr>
 </table>
 
 
 
-This is a frontend Nextjs app with a beautiful and amazing design ui. 
+This is a frontend Nextjs ecommerce app with a beautiful and amazing design ui. 
 
 ## Our goal
 
 - Build beautiful Frontend Design UI &  High quality code 
-- Test with Jest and Cypress.
 
 ## Core features 
 
-- Learn how to start a next js  project from scratch
-- Learn how to set SEO to Next Js Project
-- Learn how to set up Tailwind Css and Next Js Project
-- Learn how to create React components with Tailwind CSS
-- Learn how to create React components with framer motion
-- Learn how to Test your app with Jest, Cypress
-- Learn how to build consume API 
+- Responsive design and mobile optimization
+- Performance optimization techniques
+- Accessibility considerations in frontend development
+- Testing and debugging frontend code
+
+## Code organization and folder structure
+
+The project contains all Next.js App Router pages and layouts, and takes care of the routing.
+
+```
+.
+├───actions
+├───app                 
+│   └───(website)
+│       ├───(auth)
+│       │   ├───sign-in
+│       │   │   └───[[...sign-in]]
+│       │   └───sign-up
+│       │       └───[[...sign-up]]
+│       └───(pages)
+│           ├───(home)
+│           ├───account
+│           │   ├───address
+│           │   ├───dashboard
+│           │   └───orders
+│           ├───cart
+│           ├───categories
+│           │   └───[slug]
+│           │       └───products
+│           ├───checkout
+│           ├───order
+│           │   └───[id]
+│           └───products
+│               └───[slug]
+├───components
+│   ├───custom
+│   ├───modules
+│   │   └───website
+│   │       ├───account
+│   │       ├───cart
+│   │       ├───categories
+│   │       ├───Chechout
+│   │       ├───footer
+│   │       ├───header
+│   │       ├───home
+│   │       ├───order
+│   │       ├───Product
+│   │       ├───products
+│   │       └───review
+│   └───ui
+├───constants
+├───cypress
+│   ├───e2e
+│   ├───fixtures
+│   ├───pages
+│   ├───selectors
+│   └───support
+├───data
+├───hooks
+├───lib
+├───providers
+├───public
+│   └───assets
+│       └───images
+├───store
+├───types
+└───_tests_
+    └───ui
+
+```
+
+This structure enables efficient routing and organization of different parts of the app.
+
+### `/actions` **directory**
+
+This folder contains asynchronous functions that are executed on the server. They can be called in Server and Client Components to handle form submissions and data mutations in Next.js applications.
+
+### `/app` **directory**
+
+This folder is the Root directory of the app. it is also known as the app router.
+It supports shared layouts, nested routing, loading states, error handling, and more.
+
+─(website)    
+    ├───(auth)   
+    │   │   layout.tsx
+    │   │   
+    │   │
+    │   ├───sign-in
+    │   │   └───[[...sign-in]]
+    │   │           page.tsx
+    │   │
+    │   └───sign-up
+    │       └───[[...sign-up]]
+    │               page.tsx
+    │
+    └───(pages)
+    │   │   layout.tsx
+    │   │ 
+    │   │
+    │   ├───(home)
+    │   │       page.tsx
+    │   │
+    │   ├───account
+    │   │   │   layout.tsx
+    │   │   │ 
+    │   │   │
+    │   │   ├───address
+    │   │   │       page.tsx
+    │   │   │
+    │   │   ├───dashboard
+    │   │   │       page.tsx
+    │   │   │
+    │   │   └───orders
+    │   │           page.tsx
+    │   │
+    │   ├───cart
+    │   │       page.tsx
+    │   │
+    │   ├───categories
+    │   │   └───[slug]
+    │   │       └───products
+    │   │               page.tsx
+    │   │
+    │   ├───checkout
+    │   │       page.tsx
+    │   │
+    │   ├───order
+    │   │   └───[id]
+    │   │           page.tsx
+    │   │
+    │   └───products
+    │        │   page.tsx
+    │        │
+    │        └───[slug]
+    │                page.tsx
+layout.ts
+    │
+error.ts
+    │
+globals.css
+    │
+fonts.tsx
+    │
+loading.tsx
+    │
+manifest.ts
+    │
+not-found.tsx
+    │
+robots.ts
+    │
+sitemap.ts
+    │
+
+### File conventions 
+
+Next.js provides a set of special files to create UI with specific behavior in nested routes such as :
+
+#### layout
+
+	That is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. 
+  You can define a layout by default exporting a React component from a layout.js file. The component should accept a children prop that will be populated with a child layout (if it exists) or a page during rendering
+
+  By default, layouts are nested, which means they wrap child layouts via their children prop. 
+
+page       => 	Unique UI of a route and make routes publicly accessible
+loading    => 	Loading UI for a segment and its children
+not-found	 =>   Not found UI for a segment and its children
+error	     =>   Error UI for a segment and its children
+
+
+#### error
+
+In Next js Errors can be divided into two categories: expected errors and unexpected  exceptions:
+Expected errors can be handled with try or catch and UseActionState.
+But uncaught exceptions is handled by using error.tsx and global-error.tsx files
+
+unexpected errors that indicate bugs or issues that should not occur during the normal flow of your application.
+
+in other words, Next.js uses error boundaries to handle unexpected exceptions. it catches errors and shows a fallback UI instead of the component tree that crashed.
+
+### globals.css
+
+This is the main css file of the application. 
+
+### (Website) directory
+
+In the app directory, nested folders are normally mapped to URL paths. However, you can mark a folder as a Route Group to prevent the folder from being included in the route's URL path.
+
+This allows you to organize your route segments and project files into logical groups without affecting the URL path structure.
+A route group can be created by wrapping a folder's name in parenthesis like this: (folderName)
+
+This folder contains a 
+
+#### (auth) directory
+
+In next js you can nest folders inside each other. that is called nested route for instance we can create a folder called auth in the (website) folder. the auth folder become a route segment and his Root segment is website folder.
+
 
 ## Quick start
 

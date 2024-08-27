@@ -70,7 +70,6 @@ export default function Footer() {
         });
     };
     await sendEmail();
-    setLoading(false);
   };
 
   return (
