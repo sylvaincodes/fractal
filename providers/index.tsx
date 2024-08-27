@@ -6,6 +6,7 @@ import ToastProvider from "./ToastProvider";
 // import { neobrutalism } from "@clerk/themes";
 import { Provider } from "react-redux";
 import store from "@/store";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -34,6 +35,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         <FramerMotionProvider>
           <ToastProvider />
           {children}
+          <Analytics />
         </FramerMotionProvider>
       </ClerkProvider>
     </Provider>

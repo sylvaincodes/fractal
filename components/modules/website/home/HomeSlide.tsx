@@ -56,7 +56,7 @@ export default function HomeSlide() {
         ) : (
           <Swiper
             autoplay={{
-              delay: 100000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             spaceBetween={50}
@@ -129,10 +129,7 @@ export default function HomeSlide() {
                             duration: 0.8,
                           }}
                           className="rounded-sm p-4 bg-white hover:bg-black hover:text-white"
-                          // style={{
-                          //   // background: `${item.textColor}`,
-                          //   color: `#000000`,
-                          // }}
+                          
                           href={`/${item.link}`}
                         >
                           {item.btn}

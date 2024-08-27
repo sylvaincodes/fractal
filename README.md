@@ -34,7 +34,11 @@ This is a frontend Nextjs ecommerce app with a beautiful and amazing design ui.
 - Testing and debugging frontend code
 
 
-## Figma File 
+## Get the Brand File 
+
+[Click to download ](https://mega.nz/file/OUFiHKgD#C0_OebdaCO6C_2EP0NYaPyqpVKXnjq8wNBi94p3FVqw)
+
+<img src="./public/assets/images/brand.png"/>
 
 ```bash
 
@@ -180,17 +184,7 @@ It supports shared layouts, nested routing, loading states, error handling, and 
 
 ### File conventions 
 
-Next.js provides a set of special files to create UI with specific behavior in nested routes such as : 
-
-layout.ts
-error.ts
-globals.css
-fonts.tsx
-loading.tsx
-manifest.ts
-not-found.tsx
-robots.ts
-sitemap.ts
+Next.js provides a set of special files to create UI with specific behavior in nested routes such as 
  
 
 ### `layout.tsx`
