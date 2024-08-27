@@ -110,7 +110,7 @@ const config = {
       "5xl": "3.052rem",
 
       //custom font size
-      /** FRoot font size  = 16px how can be 64px  */
+      /** Root font size  = 16px how can be 64px  */
       h1: [
         "4rem",
         {
@@ -122,7 +122,7 @@ const config = {
       h2: [
         "3rem",
         {
-          lineHeight: "3.75rem",
+          lineHeight: "2rem",
           letterSpacing: "0.035em",
           fontWeight: "700",
         },
@@ -147,7 +147,7 @@ const config = {
         "1.5rem",
         {
           lineHeight: "2.5rem",
-          letterSpacing: "0rem",
+          letterSpacing: "0em",
           fontWeight: "600",
         },
       ],

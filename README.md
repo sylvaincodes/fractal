@@ -33,6 +33,15 @@ This is a frontend Nextjs ecommerce app with a beautiful and amazing design ui.
 - Accessibility considerations in frontend development
 - Testing and debugging frontend code
 
+
+## Figma File 
+
+```bash
+
+https://www.figma.com/design/1PgX87mEwDbaDZbfV6CSIe/Style-Guide-Template-(Color-Styles-%26-Typography)-(FRACTAL)?node-id=1207-164&t=PLQKqawTptMYrSQv-1
+
+```
+
 ## Code organization and folder structure
 
 The project contains all Next.js App Router pages and layouts, and takes care of the routing.
@@ -244,8 +253,7 @@ This group is used to organize all frontend routes
 
 ###  `components` **directory**
 
-this folders contains three folders
-
+this folder contains three folders custom, modules and ui
 
 
 ### `custom` **directory** 
@@ -263,7 +271,7 @@ This folders contains react components  which are  independent and reusable crea
 
 ###  `constants`  **directory**
 
-we use this folder to create static data
+We use this folder to create static data
 
 
 ### `cypress`  **directory**
@@ -324,7 +332,7 @@ This folder serve static assets, like images, fonts files.
 This folder contains state management files for redux toolkit.
 
 
-###  `store` **directory**
+###  `types` **directory**
 
 all types we are going to create should be stored in that folder
 
@@ -390,8 +398,6 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 2.  Project Folders & Files Structure
 
-2.  Setup JSdoc for Code documentation
-
 3.  Setup Eslint & typscript
    
 4.  Setup Jest
@@ -407,9 +413,6 @@ Use the ` git clone ` CLI to clone template directly  to your machine
      #Add to script in package json
     "test": "jest",
     "test:watch": "jest --watch"  
-
-    #setup jest with nextjs
-    npm init jest@latest
 
     #add this to jest.config
     import nextJest from "next/jest.js";
@@ -454,10 +457,7 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 ```bash
     #install
     npx shadcn-ui@latest init
-    npm i @radix-ui/react-slot framer-motion react-hot-toast react-icons	--legacy-peer-deps
-
-    #clerk go to site
-    https://clerk.com/
+    npm i framer-motion react-hot-toast react-icons
 
 
 ```
@@ -468,33 +468,31 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
   ```bash
 
-    screens here: https://tailwindcss.com/docs/screens
     screens: {
         xs: "360px",
-        // => @media (min-width: 360px) { ... }
+        # => @media (min-width: 360px) { ... }
 
         sm: "575px",
-        // => @media (min-width: 575px) { ... }
+        # => @media (min-width: 575px) { ... }
 
         md: "768px",
-        // => @media (min-width: 768px) { ... }
+        # => @media (min-width: 768px) { ... }
 
         lg: "1024px",
-        // => @media (min-width: 1024px) { ... }
+        # => @media (min-width: 1024px) { ... }
 
         xl: "1280px",
-        // => @media (min-width: 1280px) { ... }
+        # => @media (min-width: 1280px) { ... }
 
         "2xl": "1440px",
-        // => @media (min-width: 1536px) { ... }
+        # => @media (min-width: 1536px) { ... }
 
         "3xl": "1680px",
-        // => @media (min-width: 1536px) { ... }
+        # => @media (min-width: 1536px) { ... }
 
         "4xl": "1920px",
-        // => @media (min-width: 1536px) { ... }
+        # => @media (min-width: 1536px) { ... }
       },
-    },
 
   ```
 
