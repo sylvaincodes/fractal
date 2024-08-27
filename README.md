@@ -1,6 +1,6 @@
 <img src="./public/assets/images/og.png"/>
 
-# Build, Test, Deploy A Front End Ecommerce With Next 15, React 19 Clerk, Redux Toolkit, Framer Motion, ShadCn.
+# Build, Test, Deploy A Front End Ecommerce With Next 14, React 18 Clerk, Redux Toolkit, Framer Motion, ShadCn.
 
 This is how it looks:
 
@@ -110,7 +110,9 @@ This folder contains asynchronous functions that are executed on the server. The
 This folder is the Root directory of the app. it is also known as the app router.
 It supports shared layouts, nested routing, loading states, error handling, and more.
 
-─(website)    
+```
+
+  (website)    
     ├───(auth)   
     │   │   layout.tsx
     │   │   
@@ -163,43 +165,34 @@ It supports shared layouts, nested routing, loading states, error handling, and 
     │        │
     │        └───[slug]
     │                page.tsx
-layout.ts
-    │
-error.ts
-    │
-globals.css
-    │
-fonts.tsx
-    │
-loading.tsx
-    │
-manifest.ts
-    │
-not-found.tsx
-    │
-robots.ts
-    │
-sitemap.ts
-    │
+
+```
+
 
 ### File conventions 
 
-Next.js provides a set of special files to create UI with specific behavior in nested routes such as :
+Next.js provides a set of special files to create UI with specific behavior in nested routes such as : 
 
-#### layout
+layout.ts
+error.ts
+globals.css
+fonts.tsx
+loading.tsx
+manifest.ts
+not-found.tsx
+robots.ts
+sitemap.ts
+ 
+
+### `layout.tsx`
 
 	That is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. 
   You can define a layout by default exporting a React component from a layout.js file. The component should accept a children prop that will be populated with a child layout (if it exists) or a page during rendering
 
   By default, layouts are nested, which means they wrap child layouts via their children prop. 
 
-page       => 	Unique UI of a route and make routes publicly accessible
-loading    => 	Loading UI for a segment and its children
-not-found	 =>   Not found UI for a segment and its children
-error	     =>   Error UI for a segment and its children
 
-
-#### error
+### `error.tsx`
 
 In Next js Errors can be divided into two categories: expected errors and unexpected  exceptions:
 Expected errors can be handled with try or catch and UseActionState.
@@ -209,23 +202,157 @@ unexpected errors that indicate bugs or issues that should not occur during the 
 
 in other words, Next.js uses error boundaries to handle unexpected exceptions. it catches errors and shows a fallback UI instead of the component tree that crashed.
 
-### globals.css
+### `globals.css`
 
-This is the main css file of the application. 
+This is the main css file of the application. You can use this file to add CSS rules to all the routes in your application - such as CSS reset rules, site-wide styles for HTML elements like links, and more.
 
-### (Website) directory
+### `fonts.tsx`
+
+it allows you to create custom fonts with next/font.
+Next.js automatically optimizes fonts in the application when you use the next/font module. It downloads font files at build time there are no additional network requests for fonts which would increase performance.
+
+### `loading.tsx`
+
+The loading file is a special file that can be nested.
+it allows you to create fallback UI to show as a replacement while page content loads.
+
+
+### Metadat files: `manifest.ts`, `robots.ts`, `sitemap.ts`
+
+Next has some special files like manifest, robot , sitemap .
+ Each file convention can be defined using a static file (e.g. manifest.xml), or a dynamic variant that uses code to generate the file for example manifest.ts 
+
+### `(Website)` **directory**
 
 In the app directory, nested folders are normally mapped to URL paths. However, you can mark a folder as a Route Group to prevent the folder from being included in the route's URL path.
 
 This allows you to organize your route segments and project files into logical groups without affecting the URL path structure.
 A route group can be created by wrapping a folder's name in parenthesis like this: (folderName)
 
-This folder contains a 
+This folder contains all the routes and javascript files needed to build frontend app.
 
-#### (auth) directory
+We have:
 
-In next js you can nest folders inside each other. that is called nested route for instance we can create a folder called auth in the (website) folder. the auth folder become a route segment and his Root segment is website folder.
+### `(auth)` **directory**:
 
+This group route is used to organize clerk authentification routes like sign-in and sign-up
+
+
+### `(pages)` **directory**:
+
+This group is used to organize all frontend routes
+
+###  `components` **directory**
+
+this folders contains three folders
+
+
+
+### `custom` **directory** 
+
+this folder contains react components  which are independent and reusable.
+
+###  `modules`  **directory**
+
+This folders contains wrapper components:
+A wrapper components are components that surround unknown components and provide a default structure to display the child components.
+
+###  `ui`  **directory**
+
+This folders contains react components  which are  independent and reusable created by a third party like shadcn UI 
+
+###  `constants`  **directory**
+
+we use this folder to create static data
+
+
+### `cypress`  **directory**
+
+This is the root directory where Cypress-related files and folders are stored.
+
+```
+├───e2e
+├───fixtures
+├───pages
+├───selectors
+└───support
+
+```
+
+###  `e2e`  **directory**
+
+This directory is where you should place your test files. Cypress will automatically detect and run tests from this folder. Test files typically have .spec.ts or .test.ts file extension.
+
+###  `fixtures` **directory**
+
+You can use this directory to store static data or fixture files that your tests might need, such as JSON, CSV, or text files.
+
+###  `pages`  **directory**
+
+You can use this directory to create object page models.
+The Page Object Model (POM) is a design pattern commonly used in software testing, specifically in the context of test automation for web applications. It helps in creating an organized and maintainable structure for test scripts by encapsulating the details of the web pages and their elements.
+
+
+###  `pages`  **directory**
+
+You can use this directory to group all selector for every pages for testing.
+each file contains all selectors needed to perform test for a specific page
+
+
+###  `hooks`  **directory**
+
+this folders contains all custom hooks which will be used on client components
+
+
+###  `lib` **directory**
+
+this folder contains all the utility functions. 
+
+
+###  `providers` **directory**
+
+This folder is kind of root folder for third party library. it is used to wrap all those libraries which is needed throughout the app
+
+
+###  `public` **directory**
+
+This folder serve static assets, like images, fonts files. 
+
+
+###  `store` **directory**
+
+This folder contains state management files for redux toolkit.
+
+
+###  `store` **directory**
+
+all types we are going to create should be stored in that folder
+
+
+###  `ènv files`
+
+Next.js comes with built-in support for environment variables, which allows you to create multiple environments variables :
+
+Next.js allows you to set defaults in .env (all environments), .env.development (development environment), and .env.production (production environment) .env.testing (production environment).
+
+###  `.gitignore`
+###  `.babel.config`
+###  `.cypress.config`
+###  `.eslint.config`
+
+###  `jest files`
+
+*jest.config.ts* is the default jest config file : it defines Jest configurations.
+
+on the other hand *jest.setup.ts* configuration which are supposed to run before every test case.
+
+###  `middleware`
+###  `next.config`
+###  `package-lock`
+###  `postcss`
+###  `README`
+###  `tailwind`
+###  `tsconfig`
 
 ## Quick start
 
@@ -237,7 +364,6 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 
 ### Run project on local
-
 
 ```bash
     npm install
