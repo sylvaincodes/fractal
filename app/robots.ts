@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: "/private",
     },
 
-    sitemap: "https://carrefourstore.netlify.app",
+    sitemap: "https://fractal-mu-lac.vercel.app",
   };
 }
