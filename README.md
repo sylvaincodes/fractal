@@ -39,7 +39,7 @@ This is a frontend Nextjs ecommerce app with a beautiful and amazing design ui.
 
 [Pdf File ](https://mega.nz/file/OUFiHKgD#C0_OebdaCO6C_2EP0NYaPyqpVKXnjq8wNBi94p3FVqw)
 
-[Figma File ](https://www.figma.com/design/1PgX87mEwDbaDZbfV6CSIe/Style-Guide-Template-(Color-Styles-%26-Typography)-(FRACTAL)?node-id=1207-164&t=PLQKqawTptMYrSQv-1)
+[Figma File ](https://www.figma.com/design/1PgX87mEwDbaDZbfV6CSIe/Style-Guide-Template-(Color-Styles-%26-Typography)-(FRACTAL)?node-id=0-1&t=hlK4Mf8kf0G5Dl56-0)
 
 <img src="./public/assets/images/brand.png"/>
 

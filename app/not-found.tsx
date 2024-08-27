@@ -71,18 +71,6 @@ export default function NotFound() {
               <span className="text-slate-700 text-xl">Store</span>
             </div>
           </Link>
-          <Link
-            href="/contact"
-            className="flex p-8 rounded-md px-20 shadow-md hover:shadow-xl hover:cursor-pointer  border border-gray-200"
-          >
-            <div className="flex flex-col items-center gap-2">
-              <button className="bg-orange-200 rounded-md p-2 w-fit">
-                <HelpCircle className="text-orange-400 h-8 w-8 " />
-              </button>
-
-              <span className="text-slate-700 text-xl">Contact</span>
-            </div>
-          </Link>
         </div>
       </Container>
     </section>

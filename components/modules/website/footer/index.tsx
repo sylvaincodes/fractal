@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import {
   Facebook,
   Instagram,
+  Loader2Icon,
   Mail,
   MapPin,
   MoveRight,
@@ -22,6 +23,7 @@ import Toast from "@/components/custom/Toast";
 import axios from "axios";
 import Loading from "@/components/custom/Loading";
 import { useUser } from "@clerk/nextjs";
+import { cn } from "@/lib/utils";
 
 export default function Footer() {
   const { isSignedIn } = useUser();
@@ -29,7 +31,8 @@ export default function Footer() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
 
-  const handleSave = async () => {
+  const handleSave = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     if (loading) {
       return;
     }
@@ -62,11 +65,13 @@ export default function Footer() {
         .post(process.env.NEXT_PUBLIC_API_URL + "/api/sendemail", values)
         .then((response) => {
           const data = response.data;
-
           toast.custom(<Toast status="success" message={data.message} />);
         })
         .catch((err) => {
           console.log(err);
+        })
+        .finally(() => {
+          setLoading(false);
         });
     };
     await sendEmail();
@@ -185,13 +190,19 @@ export default function Footer() {
                     />
 
                     <Button
-                      onClick={handleSave}
+                      onClick={(e) => handleSave(e)}
                       disabled={loading}
                       type="submit"
                       variant="outline"
                       size="icon"
                     >
-                      <MoveRight />
+                      <MoveRight className={cn("block", loading && "hidden")} />
+                      <Loader2Icon
+                        className={cn(
+                          "hidden",
+                          loading && "block animate-spin"
+                        )}
+                      />
                     </Button>
                   </form>
                 </li>
