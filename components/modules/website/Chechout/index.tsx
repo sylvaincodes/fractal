@@ -707,9 +707,9 @@ export default function Adresses({
                     component="div"
                     className="py-2 font-bold text-red-900"
                   />
-                  <div className="flex items-center gap-4 py-2 cursor-pointer">
-                    <AlertCircleIcon size={20} />{" "}
-                    <h6
+                  <div className="flex items-center gap-4 pt-4 cursor-pointer">
+                    <AlertCircleIcon size={16} />{" "}
+                    <p
                       onClick={() => {
                         navigator.clipboard.writeText(
                           couponGenearated ? couponGenearated : ""
@@ -722,12 +722,12 @@ export default function Adresses({
                       }}
                     >
                       Click to copy this Code:{" "}
-                      <strong className="text-base">
+                      <strong className="">
                         {couponGenearated
                           ? couponGenearated
-                          : "No Code availbale now "}
+                          : "No free Code available now "}
                       </strong>
-                    </h6>
+                    </p>
                   </div>
                 </Form>
               )}
