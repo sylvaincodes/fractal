@@ -37,9 +37,12 @@ export default function Reviews({
       <hr />
 
       <div className="flex flex-col gap-8 my-10">
-        {_DATA.currentData().map((i: Review, idx: number) => (
-          <ReviewItem key={idx} item={i} />
-        ))}
+        {_DATA
+          .currentData()
+          .toReversed()
+          .map((i: Review, idx: number) => (
+            <ReviewItem key={idx} item={i} />
+          ))}
       </div>
 
       <div className="">
