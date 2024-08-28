@@ -509,7 +509,9 @@ export default function Adresses({
 
             {/* Addresse list  */}
             <div className="space-y-4 my-8">
-              <h5 className="border-b border-border my-10">Choose a address</h5>
+              <h5 className="border-b border-border my-10">
+                Choose an address
+              </h5>
 
               <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                 {addresses &&

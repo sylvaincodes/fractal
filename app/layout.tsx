@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils";
 import { font } from "./fonts";
 import { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_SERVER_URL}`),
   applicationName: "Fractal",

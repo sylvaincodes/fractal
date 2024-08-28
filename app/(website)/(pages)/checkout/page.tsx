@@ -12,10 +12,11 @@ import Link from "next/link";
 import Checkout from "@/components/modules/website/Chechout";
 import { createCoupon } from "@/actions/coupon";
 
+export const dynamic = "force-dynamic";
+
 export default async function page() {
   const generateCoupon = await createCoupon();
 
-  console.log(generateCoupon);
   return (
     <>
       <section className="my-10">
