@@ -711,12 +711,22 @@ export default function Adresses({
                     <AlertCircleIcon size={20} />{" "}
                     <h6
                       onClick={() => {
-                        navigator.clipboard.writeText(couponGenearated);
-                        toast("code copied");
+                        navigator.clipboard.writeText(
+                          couponGenearated ? couponGenearated : ""
+                        );
+                        toast(
+                          couponGenearated
+                            ? "code copied"
+                            : "Sorry no promo code available right now!"
+                        );
                       }}
                     >
                       Click to copy this Code:{" "}
-                      <strong>{couponGenearated}</strong>
+                      <strong className="text-base">
+                        {couponGenearated
+                          ? couponGenearated
+                          : "No Code availbale now "}
+                      </strong>
                     </h6>
                   </div>
                 </Form>
@@ -749,9 +759,14 @@ export default function Adresses({
                     Promo code
                   </dt>
                   <dd className="text-base font-bold text-green-500">
-                    - {discount ? discount : 0}% <strong className="text-black">
-                       ( { discount ? (discount * (cart ? cart?.cartTotal : 0))/100 : "" } )
-                      </strong>
+                    - {discount ? discount : 0}%{" "}
+                    <strong className="text-black">
+                      ({" "}
+                      {discount
+                        ? (discount * (cart ? cart?.cartTotal : 0)) / 100
+                        : ""}{" "}
+                      )
+                    </strong>
                   </dd>
                 </dl>
 

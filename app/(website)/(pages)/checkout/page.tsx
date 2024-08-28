@@ -44,7 +44,9 @@ export default async function page() {
       </section>
       <section>
         <Container>
-          <Checkout couponGenearated={generateCoupon.coupon} />
+          <Checkout
+            couponGenearated={generateCoupon ? generateCoupon.coupon : ""}
+          />
         </Container>
       </section>
     </>
