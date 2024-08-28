@@ -122,7 +122,7 @@ export default function Footer() {
                 <li className="flex gap-4">
                   <Link
                     className="flex gap-4 hover:text-primary-500"
-                    href={isSignedIn ? "/account/dashoard" : "/sign-in"}
+                    href={isSignedIn ? "/account/dashboard" : "/sign-in"}
                   >
                     {isSignedIn ? "Dashboard" : "Login"}
                   </Link>
