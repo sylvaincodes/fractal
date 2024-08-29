@@ -181,6 +181,7 @@ export default function Footer() {
                   <form className="flex w-full bg-transparent border border-white rounded-xl gap-4 items-center p-3">
                     <Mail size="40" />
                     <Input
+                      data-cy="emailNewsletter"
                       name="email"
                       value={email}
                       onChange={(e) => setEmail(e.currentTarget.value)}
@@ -190,6 +191,7 @@ export default function Footer() {
                     />
 
                     <Button
+                      data-cy="buttonNewsletter"
                       onClick={(e) => handleSave(e)}
                       disabled={loading}
                       type="submit"

@@ -23,6 +23,6 @@
       "@/components/*": ["./components/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.tsx", ".next/types/**/*.ts", "_tests_/ui/home.test.js", "cypress/tsconfig.json", "providers/AlgoliaProvider.jsx"],
+  "include": ["next-env.d.ts", "**/*.tsx", ".next/types/**/*.ts", "_tests_/ui/products.test.js", "cypress/tsconfig.json", "providers/AlgoliaProvider.jsx"],
   "exclude": ["node_modules"]
 }

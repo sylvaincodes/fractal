@@ -19,7 +19,7 @@ export default function ProductInfo({
 
   return (
     <div className="flex flex-col gap-4">
-      <h4 className="capitalize text-pretty">
+      <h4 className="capitalize text-pretty" data-cy="nameItem">
         {product.name.substring(0, 150)}
       </h4>
       <h6 className="text-balance capitalize">{product.description}</h6>

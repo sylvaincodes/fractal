@@ -1,6 +1,21 @@
+import home from "../selectors/home.sel";
+
 class HomePage {
-  goToHomePage(link: string) {
-    cy.visit(link);
+  goToHomePage() {
+    cy.visit("/");
+  }
+
+  register(email: string) {
+    cy.get(home.emailNewsletter).clear().type(email);
+    cy.get(home.buttonNewsletter).click();
+    cy.get(home.notification)
+      .should("exist")
+      .should("be.visible")
+      .contains(/Thanks for you subscription./);
+  }
+
+  goToProductsPage() {
+    cy.visit("/products");
   }
 }
 

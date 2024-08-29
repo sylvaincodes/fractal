@@ -12,6 +12,7 @@ export default function ProductQty({
   return (
     <div className="flex justify-between gap-4 border border-border rounded-lg items-center p-2">
       <Button
+        data-cy="decreaseBtn"
         onClick={() => updateQty("dec")}
         variant="outline"
         size="lg"
@@ -25,6 +26,7 @@ export default function ProductQty({
         variant="outline"
         size="lg"
         className=""
+        data-cy="increaseBtn"
       >
         <Plus />
       </Button>

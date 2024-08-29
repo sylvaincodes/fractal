@@ -19,7 +19,7 @@ export default function ProductDesription({
   setActive: (value: number) => void;
 }) {
   return (
-    <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 ${className}`}>
+    <div className={`flex flex-col lg:flex-row  gap-[60px] ${className}`}>
       <ProductImage
         className=""
         product={product}

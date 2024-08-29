@@ -17,8 +17,9 @@ export default function Error({
 
   return (
     <div className="min- h-screen">
-      <div className="flex py-6 flex-col justify-center items-center h-full">
-        <h2> OOps, Something went wrong </h2>
+      <div className="flex py-6 flex-col  justify-center items-center h-full">
+        <h3 className="text-center"> OOps, something went wrong </h3>
+
         <Image
           src="/assets/images/error.png"
           width="600"

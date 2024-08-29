@@ -17,14 +17,14 @@ export function ProductTabs({
 }) {
   return (
     <Tabs defaultValue="descriptions" className={`${className}`}>
-      <TabsList className="grid grid-cols-3 w-fit">
-        <TabsTrigger className="w-80" value="descriptions">
+      <TabsList className="grid grid-cols-3 w-fit overflow-auto">
+        <TabsTrigger className="w-fit lg:w-80" value="descriptions">
           Descriptions
         </TabsTrigger>
-        <TabsTrigger className="w-80" value="additionnal">
-          Additionnal Information
+        <TabsTrigger className="w-fit lg:w-80" value="additionnal">
+          Additionnal Info
         </TabsTrigger>
-        <TabsTrigger className="w-80" value="reviews">
+        <TabsTrigger className="w-fit lg:w-80" value="reviews">
           Reviews
         </TabsTrigger>
       </TabsList>
@@ -39,7 +39,7 @@ export function ProductTabs({
         <Card className="p-10 flex flex-col gap-4">
           {product.details.map((item: Detail, idx: number) => {
             return (
-              <div key={idx} className="grid grid-cols-2">
+              <div key={idx} className="grid grid-cols-1 lg:grid-cols-2 ">
                 <span className="w-80 font-bold text-xl capitalize">
                   {item.name}:{" "}
                 </span>

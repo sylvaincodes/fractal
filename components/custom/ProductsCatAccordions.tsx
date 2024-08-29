@@ -47,7 +47,9 @@ export default function ProductsCatAccordions() {
                     href={`/categories/${item.link}/products`}
                     className="capitalize text-xl"
                   >
-                    <span className="text-xl">{item.name}</span>
+                    <span className="text-xl" data-cy="categoryItem">
+                      {item.name}
+                    </span>
                   </Link>
                 </AccordionTrigger>
                 <AccordionContent>

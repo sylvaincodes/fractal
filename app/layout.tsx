@@ -73,6 +73,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn("", font.className)}>
         <Providers>{children}</Providers>
+        <script type="module"></script>
       </body>
     </html>
   );

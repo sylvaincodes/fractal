@@ -49,6 +49,7 @@ export default function MainMenu() {
           pages.map((item: Page, idx: number) => (
             <li key={idx} className="relative">
               <Link
+                data-cy="storeLink"
                 href={item.link}
                 className={cn(
                   "h-full duration-300 after:absolute after:top-[26px] after:left-0  after:w-0 after:h-1 after:bg-primary-400 after:duration-100 after:ease-linear hover:after:w-full",

@@ -84,9 +84,9 @@ export default function Cart() {
           <h2>Cart</h2>
         </Row>
 
-        <Row className="gap-12 items-start mt-20 flex-wrap">
-          <div className="relative overflow-x-auto flex-1">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <div className="flex flex-col gap-12 items-start mt-20 xl:flex-row">
+          <div className="relative overflow-x-auto flex-1 w-full">
+            <table className="w-screen text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 cursor-move">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" className="px-6 py-3">
@@ -122,7 +122,7 @@ export default function Cart() {
             addToCartHandler={addToCartHandler}
             loading={loading}
           />
-        </Row>
+        </div>
       </Container>
     </section>
   );

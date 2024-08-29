@@ -36,6 +36,7 @@ export default function ProductCardTwo({ item }: { item: Product }) {
       {/* images  */}
       <div
         role="button"
+        data-cy="productItem"
         onClick={() => {
           router.push(`/products/${item.slug}`);
         }}

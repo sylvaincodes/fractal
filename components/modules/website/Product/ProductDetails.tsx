@@ -43,7 +43,7 @@ export default function ProductDetails({
   };
 
   return (
-    <div className={`flex flex-col gap-2${className}`}>
+    <div className={`flex flex-col gap-2 ${className}`}>
       <ProductInfo product={product} option={option} />
       <ProductStyles
         style={style}

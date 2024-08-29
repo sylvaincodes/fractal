@@ -41,6 +41,7 @@ export default function ProductStyles({
           {styles.map((item: Style, idx: number) => {
             return (
               <div
+                data-cy="styleItem"
                 onMouseEnter={() => {
                   setStyle(item);
                   setActive(idx);
@@ -80,6 +81,7 @@ export default function ProductStyles({
           {options.map((item: Options, idx: number) => {
             return (
               <span
+              data-cy="optionItem"
                 onMouseEnter={() => {
                   setOption(item);
                   setImages(item.images);

@@ -28,7 +28,7 @@ export default async function page({ params }: { params: { slug: string } }) {
               </Link>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage className="text-xl font-bold hover:text-primary-500 ">
+                <BreadcrumbPage data-cy="categorySlug" className="text-xl font-bold hover:text-primary-500 ">
                   {params.slug}
                 </BreadcrumbPage>
               </BreadcrumbItem>

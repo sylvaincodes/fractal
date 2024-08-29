@@ -4,10 +4,10 @@ module.exports = {
     "@babel/preset-react",
     "@babel/preset-typescript",
   ],
-  // env: {
-  //   testing: {
-  //     presets: [["@babel/preset-env", { targets: { node: "current" } }]],
-  //     plugins: ["@babel/plugin-transform-modules-commonjs"],
-  //   },
-  // },
+  env: {
+    test: {
+      presets: ["next/babel"],
+      plugins: ["@babel/plugin-transform-modules-commonjs"],
+    },
+  },
 };

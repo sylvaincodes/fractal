@@ -1,7 +1,8 @@
 const home = {
-  // put any seletor on homepage here
-  // exmaple:
-  // heading: '[data-cy="heading"]',
+  emailNewsletter: '[data-cy="emailNewsletter"]',
+  buttonNewsletter: '[data-cy="buttonNewsletter"]',
+  notification: '[data-cy="notification"]',
+  storeLink: '[data-cy="storeLink"]',
 };
 
 export default home;

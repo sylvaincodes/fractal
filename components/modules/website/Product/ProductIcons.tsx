@@ -105,7 +105,7 @@ export default function ProductIcons({
 
   const [qty, setQty] = useState<number>(1);
   return (
-    <div className="flex items-center gap-12 mt-10">
+    <div className="flex items-center flex-wrap gap-12 mt-10">
       <ProductQty updateQty={updateQty} qty={qty} />
       <Button
         id="addToCart"
@@ -116,6 +116,7 @@ export default function ProductIcons({
         variant="default"
         size="lg"
         className="text-white text-2xl capitalize col-span-2 p-8 flex-1"
+        data-cy="addToCartBtn"
       >
         add to cart
       </Button>

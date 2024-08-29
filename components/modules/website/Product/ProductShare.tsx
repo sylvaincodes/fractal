@@ -16,7 +16,7 @@ export default function ProductShare({
 }) {
   const pathname = usePathname();
   return (
-    <ul className="flex justify-between items-center gap-1 mt-6 w-full">
+    <ul className="flex justify-between flex-wrap items-center gap-1 mt-auto w-full">
       <li className="inline-flex items-center gap-4">
         <h6 className="capitalize">sku: </h6>
         <span className="text-primary uppercase ms-auto">
@@ -36,9 +36,9 @@ export default function ProductShare({
         </div>
       </li>
 
-      <li className="inline-flex items-center gap-4">
+      <li className="inline-flex items-center gap-8">
         <h6 className="capitalize">share: </h6>
-        <div className=" capitalize inline-flex gap-4 ms-auto text-slate-700">
+        <div className=" capitalize inline-flex gap-8 ms-auto text-slate-700">
           <Link
             target="_blank"
             href={`https://x.com/intent/post?url=${process.env.NEXT_PUBLIC_SERVER_URL}${pathname}`}
