@@ -1,13 +1,13 @@
-## Introduction
+## ✔️ Introduction
 
-You are $${\color{green}new to React}$$  and ready  $${\color{yellow}to learn Next Js}$$. This course is definitely for you. I made everything easier to help you learn step by step all the frontend development with NextJs.
+You are $${\color{green}new}$$  to $${\color{green}React}$$  and ready  $${\color{yellow}to learn }$$ Next Js This course is definitely for you. I made everything $${\color{green}easier}$$  to help you learn step by step all the frontend development with NextJs.
 
 You will start from the basics concepts of Nextjs then you will grow up by learning responsive design with TailwindCss and Nextjs from a Figma Design template and so much more.
 
 
 <img src="./public/assets/images/og.png"/>
 
-# Become a NextJs Frontend Developer with this full course.
+# Become a Frontend NextJs Developer - Full Course.
 
 This is how the project looks:
 
@@ -27,7 +27,7 @@ This is how the project looks:
 
 
 
-## What skills you will learn  
+## 🎯 What skills you will learn  
 
 Throughout this course, you will improve your technical frontend skill set such as:
 
@@ -48,12 +48,12 @@ Throughout this course, you will improve your technical frontend skill set such 
 - Basic knowledge of web performance optimization techniques and the principles of an accessible web.
 
 
-## Prerequisite knowledge
+## ✅ Prerequisite knowledge
 
 This tutorial assumes knowledge of HTML, CSS, JavaScript, and no knowledge of React or NextJs.
 
 
-## System requirements
+## ✅ System requirements
 
 - Before you start this course, make sure you have the following installed:
 
@@ -64,7 +64,7 @@ This tutorial assumes knowledge of HTML, CSS, JavaScript, and no knowledge of Re
 - VSCode or another text editor of your choice.
 
 
-## Get the Brand File 
+## 📚 Get the Brand File 
 
 [Pdf File ](https://mega.nz/file/OUFiHKgD#C0_OebdaCO6C_2EP0NYaPyqpVKXnjq8wNBi94p3FVqw)
 
@@ -74,7 +74,7 @@ This tutorial assumes knowledge of HTML, CSS, JavaScript, and no knowledge of Re
 
 
 
-## Code organization and folder structure
+## 📅 Code organization and folder structure
 
 The project contains all Next.js App Router pages and layouts, and takes care of the routing.
 
@@ -609,11 +609,8 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 28. Deploy 
 
 
+## How to join me
 
-## Questions
-
-Send me a message on:
-
-- Patreon: [Patreon](https://www.patreon.com/sylvaincodes)
-- Youtube: [Youtube](https://www.youtube.com/@sylvaincodes593)
+- Patreon chat: [Patreon](https://www.patreon.com/sylvaincodes)
+- Youtube comment: [Youtube](https://www.youtube.com/@sylvaincodes593)
 
