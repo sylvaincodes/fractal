@@ -9,7 +9,7 @@ These folders hold end-to-end tests and supporting files for the Cypress Test Ru
 - [fixtures](fixtures) holds optional JSON data for mocking, [read more](https://on.cypress.io/fixture)
 - [e2e](integration) holds the actual test files, [read more](https://on.cypress.io/writing-and-organizing-tests)
 - [pages](pages) Page Object Model refers to using the Objects/Classes to depict and represent all the locators and functions (Components used for the automation) related to that particular page in a web application
-- [selectors] refers to DOM node using to identify an element.
+- [selectors](selectors) refers to DOM node using to identify an element.
 - [support](support) file runs before all tests and is a great place to write or load additional custom commands, [read more](https://on.cypress.io/writing-and-organizing-tests#Support-file)
 
 

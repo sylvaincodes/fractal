@@ -1,6 +1,6 @@
 ## ✔️ Introduction
 
-You are $${\color{green}new}$$  to $${\color{green}React}$$  and ready  $${\color{yellow}to learn }$$ Next Js This course is definitely for you. I made everything $${\color{green}easier}$$  to help you learn step by step all the frontend development with NextJs.
+You are $${\color{green}new}$$  to $${\color{green}React}$$  and ready to $${\color{yellow} learn }$$ Next Js This course is definitely for you. I made everything $${\color{green}easier}$$  to help you learn step by step all the frontend development with NextJs.
 
 You will start from the basics concepts of Nextjs then you will grow up by learning responsive design with TailwindCss and Nextjs from a Figma Design template and so much more.
 
