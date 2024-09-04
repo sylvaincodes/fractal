@@ -1,0 +1,451 @@
+1
+00:00:11,00 --> 00:00:13,00
+Hi, Everyone.
+
+2
+00:00:13,08 --> 00:00:14,25
+This is S.Codes.
+
+3
+00:00:14,610 --> 00:00:16,20
+In just a few hours,
+
+4
+00:00:17,800 --> 00:00:18,210
+You will be able to biuld
+
+5
+00:00:18,45 --> 00:00:22,610
+this incredible app from scratch.
+
+6
+00:00:22,000 --> 00:00:24,630
+And add it to your porfolio.
+
+7
+00:00:25,630 --> 00:00:28,980
+Besides, this course is completely free.
+
+8
+00:00:29,980 --> 00:00:32,390
+You will find all the links in the comments
+
+9
+00:00:33,390 --> 00:00:37,300
+to help you get started.
+
+10
+00:00:40,300 --> 00:00:50,640
+In this tutorial we will cover all aspects of frontend development with NextJs
+
+11
+00:00:51,640 --> 00:00:55,250
+In others words, we'll start from a figma template;
+
+12
+00:00:56,000 --> 00:01:05,970
+and you will learn how to transform your figma design into NextJs code using TailwindCss.
+
+13
+00:01:06,970 --> 00:01:13,900
+You will also learn how to organize and structure your project in a logical way.
+
+14
+00:01:14,000 --> 00:01:16,640
+to keep your code base maintainable.
+
+15
+00:01:17,640 --> 00:00:24,270
+From there, you will learn how to create reusable, functional React components
+
+16
+00:01:24,270 --> 00:01:30,580
+with Tailwind Css, ShadCn and Framer Motion.
+
+17
+00:01:32,580 --> 00:01:34,840
+We'll be using Typescript for type checking
+
+18
+00:01:35,000 --> 00:01:39,150
+to ensure the correctness of your react components.
+
+19
+00:01:40,150 --> 00:01:45,700
+Ad also Eslint to check and fix syntax errors.
+
+20
+00:01:47,700 --> 00:01:56,000
+Managing React global state can be tricky, that's why we will be using Redux toolkit
+
+21
+00:01:56,250 --> 00:02:00,290
+Which is the most popular state management library
+
+22
+00:02:00,390 --> 00:02:04,000
+to manage the state of your NextJs application.
+
+23
+00:02:04,240 --> 00:02:10,19
+Additionnaly, you wil learn how to monitor and test your code using jest
+
+24
+00:02:10,300 --> 00:02:14,150
+React testing library and Cypress.
+
+25
+00:02:14,350 --> 00:02:21,27
+Finally, we'll commit our code to the repository and deploy our app to Vercel.
+
+26
+00:02:30,000 --> 00:02:33,080
+Before diving into Next.js
+
+27
+00:02:34,000 --> 00:02:37,470
+Let's make sure that you have prerequisites.
+
+28
+00:02:38,000 --> 00:02:45,470 
+You need to have a solid understanding of fundamental web development concepts.
+
+29
+00:02:46,000 --> 00:02:51,470
+Including HTML, CSS, Javascript.
+
+30
+00:02:53,000 --> 00:02:57,470
+Whether you're new to React, Next.js or not.
+
+31
+00:02:57,800 --> 00:02:58,470
+It doesn't matter, 
+
+32
+00:02:58,690 --> 00:03:03 ,490
+i'm going to give you all the details you need in this course.
+
+33
+00:03:08,000 --> 00:03:12,00
+Next.js is a Javascript framework.
+
+34
+00:03:13,000 --> 00:03:16,280
+Which means, Next is made of Javascript.
+
+35
+00:03:17,280 --> 00:03:25,300
+It needs to run in a Javascript environment and that kind of environment is called Node.js
+
+36
+00:03:28,000 --> 00:03:32,220
+Node.js is an open source cross platform Javascript runtime environment.
+
+37
+00:03:34,000 --> 00:03:35,220
+To install this environment on your computer
+
+38
+00:03:36,220 --> 00:03:44,421
+you actually need to download a pakage that is available from the nodejs.org website.
+
+39
+00:03:46,430 --> 00:03:53,10
+This package will install the Javascript environment and also something called npm.
+
+40
+00:03:53,300 --> 00:03:57,260
+NPM is a node package manager.
+
+41
+00:03:57,460 --> 00:04:10,060
+Which refers to a software repository, but it's also a place where developers can find, build and manage Javascript packages.
+
+42
+00:04:12,260 --> 00:04:23,410
+Currently, NPM contains over 800,000 packages for various Javascript applications so enjoy it.
+
+43
+00:04:29,000 --> 00:04:41,410
+Next.js is a flexible React framework that gives you building blocks to create fast full stack web applicaion
+
+44
+00:04:41,000 --> 00:04:44,410
+But what exactly does that mean ?
+
+45
+00:04:44,000 --> 00:04:50,010
+First of all you need to understand the word "web application".
+
+46
+00:04:50,410 --> 00:04:57,460
+A web application also known as a web app is nothing more than a computer program
+
+47
+00:04:58,310 --> 00:05:04,000
+that uses a web browser to perform a specific function.
+
+48
+00:05:05,050 --> 00:05:15,130
+A web app is a client-server program that has a client side and a server side.
+
+49
+00:05:15,34 --> 00:05:27,350
+On the one hand, client side refers to everything in a web application that is displayed or takes place on the client.
+
+50
+00:05:28,050 --> 00:05:38,230
+This includes what the use sees such as text, images and the rest of the user interface.
+
+51
+00:05:45,030 --> 00:05:49,570
+The client side, it's also known as the Frontend, although these two terms do not mean exactly the same thing.
+
+52
+00:05:50,670 --> 00:05:57,200
+Client side refers only to the location where processes run.
+
+53
+00:05:57,700 --> 00:06:07,000
+While Frontend refers to the types of processes that run on the client side.
+
+54
+00:06:08,400 --> 00:06:16,990
+On the other hand, server side refers to everything that happens on the server instead of the client.
+
+55
+00:06:17,990 --> 00:06:21,60
+It refers to applications that run on the server side.
+
+56
+00:06:22,990 --> 00:06:24,20
+And this includes:
+
+57
+00:06:24,730 --> 00:06:26,500
+rendering dynamic web pages,
+
+58
+00:06:27,730 --> 00:06:28,500
+interactive with databases,
+
+59
+00:06:29,290 --> 00:06:32,500
+authentification and push notifications.
+
+60
+00:06:35,380 --> 00:06:41,540
+Now, we are going to create a new project,
+
+61
+00:06:43,380 --> 00:06:47,540
+So, go to Nextjs.org
+
+62
+00:06:48,020 --> 00:06:50,270
+copy this command
+
+63
+00:06:53,270 --> 00:06:54,940
+open your terminal
+
+64
+00:06:55,270 --> 00:07:00,940
+cd to the folder where you want to keep your project.
+
+65
+00:07:01,270 --> 00:07:03,000
+And run the following  command
+
+66
+00:07:28,000 --> 00:07:31,050
+Now open your project.
+
+67
+00:07:48,050 --> 00:07:55,050
+We will use npm run dev to start your nextjs development server.
+
+68
+00:08:05,050 --> 00:08:10,570
+Then go to localhost:3000 in your browser.
+
+69
+00:08:24,070 --> 00:08:29,390
+Your home page should look like this, which is intentionally unstyled:
+
+70
+00:08:32,090 --> 00:08:38,900
+You should navigate to the comments to see the necessary links
+
+71
+00:08:39,000 --> 00:08:41,830
+Select the repo link 
+
+72
+00:08:42,030 --> 00:08:45,240
+to access to project git repository.
+
+73
+00:08:46,240 --> 00:08:50,160
+Then scroll down to the README section.
+
+74
+00:08:51,160 --> 00:08:57,580
+and find title code organization and folder structure.
+
+75
+00:08:58,580 --> 00:09:05,480
+You'll see the project tree and description of each project folder and subfolder.
+
+76
+00:09:08,480 --> 00:09:12,810
+It's very clear and easy to understand.
+
+77
+00:09:13,810 --> 00:09:18,520
+For now i'm just going to give you a brief description of each folder.
+
+78
+00:09:23,810 --> 00:09:33,520
+When you install a nextjs 14 app, you will have a empty project with defaults folders like .next folder
+
+79
+00:09:33,810 --> 00:09:42,520
+This is generated folder that contains the output of the nextjs build process.
+
+80
+00:09:44,810 --> 00:09:48,520
+You usually don't need to touch this folder directly.
+
+81
+00:09:50,810 --> 00:09:55,520
+The app folder, this is the main NextJs 14 folder.
+
+82
+00:09:56,810 --> 00:10:00,520
+You can edit all pages and API routes in this folder.
+
+83
+00:10:02,810 --> 00:10:15,520
+The node_modules directory, this directory houses all third party libraries adn dependencies for your app.
+
+84
+00:10:17,810 --> 00:10:26,520
+Public folder, it contains all static assets for your application such as images. 
+
+85
+00:10:27,010 --> 00:10:33,520
+You'll also notice configurations files in the root of your applicaion.
+
+86
+00:10:36,810 --> 00:10:45,520
+Most of theses files are created and pre-configured you start a new project with the create-next-app.
+
+87
+00:10:47,810 --> 00:10:55,520
+We have the Eslint file, this file is for Eslint configuration.
+
+88
+00:10:56,810 --> 00:11:08,520
+The .gitignore file is used to specify intentionally untracked files that git should ignore.
+
+89
+00:11:10,810 --> 00:11:17,520
+Also, nextjs.config file is the NextJs configuration file.
+
+90
+00:11:20,810 --> 00:11:37,520
+The package.json is a Metadata file in a Node Js project that describes the project dependencies, scripts, configurations and other details.
+
+91
+00:11:39,810 --> 00:11:53,520
+The package lock is automatically generated for all operations where npm modifies either the node_modules tree or package.json.
+
+92
+00:11:56,810 --> 00:12:01,520
+The post.config is the post css configuration file.
+
+93
+00:12:02,810 --> 00:12:12,520
+Post Css is a language for transforming Css code, i mean it will convert our Tailwind Css code
+
+94
+00:12:13,810 --> 00:12:18,520
+into something that most browsers can understand.
+
+95
+00:12:20,810 --> 00:12:28,520
+The README file is a text file that introduces and explain the project.
+ 
+96
+00:12:30,810 --> 00:12:41,520
+Tailwind Css config is a file where we should define our Tailwind configuration like theme, breakpoints and more.
+
+97
+00:12:44,810 --> 00:12:53,520
+Finally, the tsconfig file is a configuration file for Typescript project.
+
+98
+00:12:53,810 --> 00:12:59,520
+It specifies the compiler option needed to compile the project.
+
+99
+00:13:04,810 --> 00:13:08,520
+Now we actually need to create new folders in our project.
+
+100
+00:13:10,810 --> 00:13:13,520
+For instance, we will create a folder called actions.
+
+101
+00:13:15,810 --> 00:13:20,520
+This folder contains asynchronous functions that run on the server.
+
+102
+00:13:22,810 --> 00:13:29,520
+They can be called in server in client componentsto handle form submission and data mutation.
+
+103
+00:13:30,810 --> 00:13:56,520
+Woah, what do you mean by server in client component and what is data mutation ?
+
+104
+00:13:57,810 --> 00:13:47,520
+Well, if you clearly understood client-server concepts i've just explained  earlieryou would already know that.
+
+105
+00:13:49,810 --> 00:13:56,520
+A server component is a component that is obviously going to be rendered on the server.
+
+106
+00:13:57,810 --> 00:14:00,020
+And it would be the same for a client component.
+
+107
+00:14:00,810 --> 00:14:13,520
+Just keep in mind that every time you create a component in NextJs, it would be either a client or server component.
+
+108
+00:14:14,810 --> 00:14:19,520
+Knowing whether you are using a client or server component  is very easy.
+
+109
+00:14:19,810 --> 00:14:35,520
+By default, Next.js always uses server components, this allows you to automatically implement server rendering with no additionnal configuration.
+
+110
+00:14:36,810 --> 00:14:51,520
+And you can opt to use client component when needed by adding the react use client directive at the top of the file above your imports
+
+111
+00:14:54,810 --> 00:14:56,520
+We'll make a directory _tests_ 
+
+112
+00:14:57,810 --> 00:15:01,520
+This is where Jest will used to look up test
+
+102
+00:15:04,110 --> 00:15:9,520
+We'll also make a directory called components

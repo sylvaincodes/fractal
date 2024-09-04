@@ -4,7 +4,7 @@ import SidebarMenu from "./SidebarMenu";
 
 export default function MobileButton() {
   return (
-    <div className="block lg:hidden">
+    <div className="block xl:hidden">
       <SidebarMenu />
     </div>
   );

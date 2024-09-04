@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function Logo({className}: {className?: string}) {
+export default function Logo({ className }: { className?: string }) {
   return (
     <Link href="/">
       <Image
@@ -12,6 +12,7 @@ export default function Logo({className}: {className?: string}) {
         alt="logo"
         height="0"
         width="0"
+        priority
       />
     </Link>
   );

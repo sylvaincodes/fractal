@@ -15,8 +15,8 @@ import Container from "@/components/custom/Container";
 import Heading from "@/components/custom/Heading";
 import Row from "@/components/custom/Row";
 import { useRouter } from "next/navigation";
-import axios from "axios";
 import { Skeleton } from "@/components/ui/skeleton";
+import useSWR, { Fetcher } from "swr";
 
 export default function Categories() {
   const animation = {
@@ -26,31 +26,18 @@ export default function Categories() {
       opacity: 1,
     },
   };
-  const [slides, setSlides] = useState<Slide[]>();
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const getSlides = async () => {
-      setLoading(true);
-      await axios
-        .get(process.env.NEXT_PUBLIC_API_URL + "/api/slides")
-        .then((response) => {
-          setSlides(
-            response.data.data.filter(
-              (item: Slide) => item.slug === "top-categories-home"
-            )
-          );
-        })
-        .catch((error) => {
-          console.log(error.message);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    };
-    getSlides();
-  }, []);
+  // Client-side data fetching with SWR
+  const fetcher: Fetcher<Slide[], string> = (args) =>
+    fetch(args)
+      .then((res) => res.json())
+      .then((res) => res.data);
+  const { data, error, isLoading } = useSWR<Slide[]>(
+    process.env.NEXT_PUBLIC_API_URL + "/api/slides",
+    fetcher
+  );
+  if (error) return <div>Failed to load Api</div>;
 
   const handleClick = (link: string) => {
     router.push(link);
@@ -67,7 +54,7 @@ export default function Categories() {
         <Row className="mb-10">
           <Heading name="shop by top categories" />
         </Row>
-        {loading ? (
+        {isLoading ? (
           <Swiper
             breakpoints={{
               // when window width is >= 340
@@ -168,51 +155,53 @@ export default function Categories() {
             modules={[Autoplay, Navigation, Pagination]}
             className={cn("")}
           >
-            {slides &&
-              slides.map((item: Slide, idx: number) => (
-                <SwiperSlide
-                  key={idx}
-                  className="relative [&>button:block] hover:scale-105 duration-300 ease-linear cursor-pointer"
-                  style={{
-                    backgroundImage: `url(${item.image})`,
-                    height: "600px",
-                    width: "auto",
-                    backgroundSize: "cover",
-                    backgroundPosition: "top",
-                  }}
-                >
-                  {item?.title !== "" ? (
-                    item.title !== "" && (
-                      <div className="absolute bg-white rounded-lg p-4 bottom-10 w-40 shadow-xl cursor-pointer hover:bg-black hover:text-white drop-shadow-xl duration-300 ease-linear">
-                        <m.h6
-                          initial={animation.hide}
-                          whileInView={animation.show}
-                          transition={{ delay: 0.1 + idx / 6 }}
-                          className={cn("capitalize")}
-                          style={{
-                            color: `${item.textColor}`,
-                          }}
-                          onClick={() => handleClick(item.link)}
+            {data &&
+              data
+                .filter((item: Slide) => item.slug === "top-categories-home")
+                .map((item: Slide, idx: number) => (
+                  <SwiperSlide
+                    key={idx}
+                    className="relative [&>button:block] hover:scale-105 duration-300 ease-linear cursor-pointer"
+                    style={{
+                      backgroundImage: `url(${item.image})`,
+                      height: "600px",
+                      width: "auto",
+                      backgroundSize: "cover",
+                      backgroundPosition: "top",
+                    }}
+                  >
+                    {item?.title !== "" ? (
+                      item.title !== "" && (
+                        <div className="absolute bg-white rounded-lg p-4 bottom-10 w-40 shadow-xl cursor-pointer hover:bg-black hover:text-white drop-shadow-xl duration-300 ease-linear">
+                          <m.h6
+                            initial={animation.hide}
+                            whileInView={animation.show}
+                            transition={{ delay: 0.1 + idx / 6 }}
+                            className={cn("capitalize")}
+                            style={{
+                              color: `${item.textColor}`,
+                            }}
+                            onClick={() => handleClick(item.link)}
+                          >
+                            {item.title}
+                          </m.h6>
+                        </div>
+                      )
+                    ) : (
+                      <div className="flex items-center justify-center">
+                        <Button
+                          variant="default"
+                          size="lg"
+                          className="hover:shadow-button px-12 py-8"
                         >
-                          {item.title}
-                        </m.h6>
+                          <Link href={item.link} className="text-xl">
+                            BUY NOW
+                          </Link>
+                        </Button>
                       </div>
-                    )
-                  ) : (
-                    <div className="flex items-center justify-center">
-                      <Button
-                        variant="default"
-                        size="lg"
-                        className="hover:shadow-button px-12 py-8"
-                      >
-                        <Link href={item.link} className="text-xl">
-                          BUY NOW
-                        </Link>
-                      </Button>
-                    </div>
-                  )}
-                </SwiperSlide>
-              ))}
+                    )}
+                  </SwiperSlide>
+                ))}
           </Swiper>
         )}
       </Container>

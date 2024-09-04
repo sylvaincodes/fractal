@@ -22,17 +22,47 @@ This is how it looks:
 
 This is a frontend Nextjs ecommerce app with a beautiful and amazing design ui. 
 
-## Our goal
+## Introduction
 
-- Build beautiful Frontend Design UI &  High quality code 
+You are new to React and ready to learn Next Js. This course is definitely for you. I made everything easier to help you learn step by step all the frontend development with NextJs.
 
-## Core features 
+you will start from a Figma Design template and build, test and deploy a full frontend project from scratch.
 
-- Responsive design and mobile optimization
-- Performance optimization techniques
-- Accessibility considerations in frontend development
-- Testing and debugging frontend code
 
+## What you will learn  
+
+Throughout this course, you will improve your technical frontend skill set such as:
+
+- Proficiency in JavaScript (ES6+), React.js, and Next.js framework.
+
+- Knowledge of  React Components, State Management, and Hooks;
+
+- Experience with server-side rendering (SSR), static site generation (SSG), client-side rendering, etc.;
+
+- Experience with RESTful APIs and efficient methods of requesting data from backend services such as SWR etc...;
+
+- Experience with CSS Framework  (Tailwindcss) and the principles of responsive web design;
+
+- Experience with version control systems (Git)
+
+- Experience with testing frameworks (Jest,React testing library, Cypress) and experience with code quality tools;
+
+- Basic knowledge of web performance optimization techniques and the principles of an accessible web.
+
+## Prerequisite knowledge
+
+This tutorial assumes knowledge of HTML, CSS, JavaScript, and no knowledge of React or NextJs.
+
+
+## System requirements
+
+- Before you start this course, make sure you have the following installed:
+
+- Node.js 20.12.0 or later installed.
+
+- Operating systems: macOS, Windows (including WSL), or Linux.
+
+- VSCode or another text editor of your choice.
 
 
 ## Get the Brand File 
@@ -44,7 +74,6 @@ This is a frontend Nextjs ecommerce app with a beautiful and amazing design ui.
 <img src="./public/assets/images/brand.png"/>
 
 ```bash
-
 
 
 ```
@@ -252,23 +281,27 @@ This group is used to organize all frontend routes
 
 this folder contains three folders custom, modules and ui
 
-
-### `custom` **directory** 
+1. Custom **directory** 
 
 this folder contains react components  which are independent and reusable.
 
-###  `modules`  **directory**
+2. Module  **directory**
 
 This folders contains wrapper components:
 A wrapper components are components that surround unknown components and provide a default structure to display the child components.
 
-###  `ui`  **directory**
+3. Ui  **directory**
 
 This folders contains react components  which are  independent and reusable created by a third party like shadcn UI 
 
 ###  `constants`  **directory**
 
-We use this folder to create static data
+We use this folder to create static constantes 
+
+
+###  `_tests_`  **directory**
+
+This is the directory that Jest will use to look up tests.
 
 
 ### `cypress`  **directory**
@@ -284,21 +317,21 @@ This is the root directory where Cypress-related files and folders are stored.
 
 ```
 
-###  `e2e`  **directory**
+1. e2e  **directory**
 
 This directory is where you should place your test files. Cypress will automatically detect and run tests from this folder. Test files typically have .spec.ts or .test.ts file extension.
 
-###  `fixtures` **directory**
+2. fixtures **directory**
 
 You can use this directory to store static data or fixture files that your tests might need, such as JSON, CSV, or text files.
 
-###  `pages`  **directory**
+3. pages  **directory**
 
 You can use this directory to create object page models.
 The Page Object Model (POM) is a design pattern commonly used in software testing, specifically in the context of test automation for web applications. It helps in creating an organized and maintainable structure for test scripts by encapsulating the details of the web pages and their elements.
 
 
-###  `pages`  **directory**
+3. selectors  **directory**
 
 You can use this directory to group all selector for every pages for testing.
 each file contains all selectors needed to perform test for a specific page
@@ -340,24 +373,24 @@ Next.js comes with built-in support for environment variables, which allows you 
 
 Next.js allows you to set defaults in .env (all environments), .env.development (development environment), and .env.production (production environment) .env.testing (production environment).
 
-###  `.gitignore`
-###  `.babel.config`
-###  `.cypress.config`
-###  `.eslint.config`
+1.  `gitignore`
+2.  `babel.config`
+3.  `cypress.config`
+4.  `eslint.config`
 
-###  `jest files`
+5.  `jest files`
 
 *jest.config.ts* is the default jest config file : it defines Jest configurations.
 
 on the other hand *jest.setup.ts* configuration which are supposed to run before every test case.
 
-###  `middleware`
-###  `next.config`
-###  `package-lock`
-###  `postcss`
-###  `README`
-###  `tailwind`
-###  `tsconfig`
+1.  `middleware`
+2.  `next.config`
+3.  `package-lock`
+4.  `postcss`
+5.  `README`
+6.  `tailwind`
+7.  `tsconfig`
 
 ## Quick start
 
@@ -372,7 +405,6 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 ```bash
     npm install
-    npm run dev
 ```
 
 ## Project Dev Steps
@@ -384,13 +416,17 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 ```bash
 
-    NEXT_PUBLIC_SERVER_URL=
-    NEXT_PUBLIC_API_URL=
+    NEXT_PUBLIC_SERVER_URL=http://localhost:3000
+    NEXT_PUBLIC_API_URL=https://fractal-api-zeta.vercel.app
+
+    # Clerk integration 
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+    CLERK_SECRET_KEY=
 
     # Stripe integration 
     NEXT_PUBLIC_STRIPE_CLIENT_KEY=
     STRIPE_SECRET_KEY=
-
+    
 ```
 
 2.  Project Folders & Files Structure

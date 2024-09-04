@@ -51,9 +51,7 @@ export default function Cart() {
         .catch((err) => {
           console.log(err);
         })
-        .finally(() => {
-
-        });
+        .finally(() => {});
     } else {
       router.push("/sign-in");
       toast.custom(
@@ -75,7 +73,6 @@ export default function Cart() {
     setTotal(subtotal + shippingFee + tax);
   }, [subtotal, shippingFee, tax]);
 
-  
   return (
     <section className="my-10">
       {loading && <Loading isLoading={loading} />}
@@ -86,7 +83,7 @@ export default function Cart() {
 
         <div className="flex flex-col gap-12 items-start mt-20 xl:flex-row">
           <div className="relative overflow-x-auto flex-1 w-full">
-            <table className="w-screen text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 cursor-move">
+            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 cursor-move">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" className="px-6 py-3">

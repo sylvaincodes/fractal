@@ -6,6 +6,7 @@ import CtaTwo from "@/components/modules/website/home/CtaTwo";
 import Payments from "@/components/modules/website/home/Payments";
 import FeaturesProducts from "@/components/modules/website/home/FeaturesProducts";
 import { Metadata } from "next";
+import { mergeOpenGraph } from "@/lib/mergeOpenGraph";
 
 export default function Home() {
   return (
@@ -27,4 +28,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/assets/images/logo.svg",
   },
+
+  //For SEO: Sharing on social media twitter, whatsapp, Linkeidn etc
+  openGraph: mergeOpenGraph({
+    title: `Fractal - Home page`,
+    url: `/`,
+  }),
 };

@@ -13,36 +13,25 @@ import Container from "@/components/custom/Container";
 import Heading from "@/components/custom/Heading";
 import Row from "@/components/custom/Row";
 import ProductCard from "@/components/custom/ProductCard";
-import axios from "axios";
 import Loading from "@/components/custom/Loading";
+import useSWR, { Fetcher } from "swr";
 
 export default function FeaturesProducts() {
-  const [products, setProducts] = useState<Product[]>();
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const getProducts = async () => {
-      setLoading(true);
-      await axios
-        .get(process.env.NEXT_PUBLIC_API_URL + "/api/products")
-        .then((response) => {
-          setProducts(
-            response.data.data.filter((item: Product) => item.featured === true)
-          );
-        })
-        .catch((error) => {
-          console.log(error.message);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    };
-    getProducts();
-  }, []);
+  // Client-side data fetching with SWR
+  const fetcher: Fetcher<Product[], string> = (args) =>
+    fetch(args)
+      .then((res) => res.json())
+      .then((res) => res.data);
+  const { data, error, isLoading } = useSWR<Product[]>(
+    process.env.NEXT_PUBLIC_API_URL + "/api/products",
+    fetcher
+  );
+  if (error) return <div>Failed to load Api</div>;
 
   return (
     <>
-      {loading ? <Loading isLoading={loading} /> : ""}
+      {isLoading ? <Loading isLoading={isLoading} /> : ""}
       <m.section
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -107,12 +96,14 @@ export default function FeaturesProducts() {
             modules={[Autoplay, Navigation, Pagination]}
             className={cn("py-10")}
           >
-            {products &&
-              products.map((item: Product, idx: number) => (
-                <SwiperSlide key={idx} className="relative [&>button:block]">
-                  <ProductCard item={item} />
-                </SwiperSlide>
-              ))}
+            {data &&
+              data
+                .filter((item: Product) => item.featured === true)
+                .map((item: Product, idx: number) => (
+                  <SwiperSlide key={idx} className="relative [&>button:block]">
+                    <ProductCard item={item} />
+                  </SwiperSlide>
+                ))}
           </Swiper>
         </Container>
       </m.section>

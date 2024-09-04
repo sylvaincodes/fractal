@@ -9,39 +9,25 @@ import axios from "axios";
 import { Slide } from "@/types";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useRouter } from "next/navigation";
+import useSWR, { Fetcher } from "swr";
 
 export default function CtaOne() {
-  const [slide, setSlide] = useState<Slide>();
-  const [loading, setLoading] = useState(false);
+
+  // Client-side data fetching with SWR
   const router = useRouter();
-
-  useEffect(() => {
-    const getSlide = async () => {
-      await axios
-        .get(process.env.NEXT_PUBLIC_API_URL + "/api/slides")
-        .then((response) => {
-          setSlide(
-            response.data.data.filter(
-              (item: Slide) => item.slug === "cta-home"
-            )[0]
-          );
-        })
-        .catch((error) => {
-          console.log(error.message);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    };
-
-    getSlide();
-  }, []);
+  const fetcher = (args: any) => fetch(args).then((res) => res.json());
+  const { data, error, isLoading } = useSWR(
+    process.env.NEXT_PUBLIC_API_URL + "/api/slides",
+    fetcher
+  );
+  const slide  = data?.filter((item: Slide) => item.slug === "cta-home")[0];
+  if (error) return <div>Failed to load Api</div>;
 
   return (
     <section className="my-20">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  items-center">
-          {loading ? (
+          {isLoading ? (
             <Skeleton className="h-[400px]" />
           ) : (
             <m.div
@@ -65,7 +51,7 @@ export default function CtaOne() {
             </m.div>
           )}
 
-          {loading ? (
+          {isLoading ? (
             <Skeleton className="h-[400px]" />
           ) : (
             <m.div
