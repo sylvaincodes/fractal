@@ -1,8 +1,15 @@
+## Introduction
+
+You are $${\color{green}new to React}$$  and ready  $${\color{yellow}to learn Next Js}$$. This course is definitely for you. I made everything easier to help you learn step by step all the frontend development with NextJs.
+
+You will start from the basics concepts of Nextjs then you will grow up by learning responsive design with TailwindCss and Nextjs from a Figma Design template and so much more.
+
+
 <img src="./public/assets/images/og.png"/>
 
-# Build, Test, Deploy A Front End Ecommerce With Next 14, React 18 Clerk, Redux Toolkit, Framer Motion, ShadCn.
+# Become a NextJs Frontend Developer with this full course.
 
-This is how it looks:
+This is how the project looks:
 
 <table>
   <tr>
@@ -20,16 +27,7 @@ This is how it looks:
 
 
 
-This is a frontend Nextjs ecommerce app with a beautiful and amazing design ui. 
-
-## Introduction
-
-You are new to React and ready to learn Next Js. This course is definitely for you. I made everything easier to help you learn step by step all the frontend development with NextJs.
-
-you will start from a Figma Design template and build, test and deploy a full frontend project from scratch.
-
-
-## What you will learn  
+## What skills you will learn  
 
 Throughout this course, you will improve your technical frontend skill set such as:
 
@@ -39,7 +37,7 @@ Throughout this course, you will improve your technical frontend skill set such 
 
 - Experience with server-side rendering (SSR), static site generation (SSG), client-side rendering, etc.;
 
-- Experience with RESTful APIs and efficient methods of requesting data from backend services such as SWR etc...;
+- Experience with RESTful APIs and efficient methods of requesting data from backend servicesetc...;
 
 - Experience with CSS Framework  (Tailwindcss) and the principles of responsive web design;
 
@@ -48,6 +46,7 @@ Throughout this course, you will improve your technical frontend skill set such 
 - Experience with testing frameworks (Jest,React testing library, Cypress) and experience with code quality tools;
 
 - Basic knowledge of web performance optimization techniques and the principles of an accessible web.
+
 
 ## Prerequisite knowledge
 
@@ -73,10 +72,7 @@ This tutorial assumes knowledge of HTML, CSS, JavaScript, and no knowledge of Re
 
 <img src="./public/assets/images/brand.png"/>
 
-```bash
 
-
-```
 
 ## Code organization and folder structure
 
@@ -221,10 +217,10 @@ Next.js provides a set of special files to create UI with specific behavior in n
 
 ### `layout.tsx`
 
-	That is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. 
-  You can define a layout by default exporting a React component from a layout.js file. The component should accept a children prop that will be populated with a child layout (if it exists) or a page during rendering
+That is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. 
+You can define a layout by default exporting a React component from a layout.js file. The component should accept a children prop that will be populated with a child layout (if it exists) or a page during rendering
 
-  By default, layouts are nested, which means they wrap child layouts via their children prop. 
+By default, layouts are nested, which means they wrap child layouts via their children prop. 
 
 
 ### `error.tsx`
@@ -237,14 +233,17 @@ unexpected errors that indicate bugs or issues that should not occur during the 
 
 in other words, Next.js uses error boundaries to handle unexpected exceptions. it catches errors and shows a fallback UI instead of the component tree that crashed.
 
+
 ### `globals.css`
 
 This is the main css file of the application. You can use this file to add CSS rules to all the routes in your application - such as CSS reset rules, site-wide styles for HTML elements like links, and more.
+
 
 ### `fonts.tsx`
 
 it allows you to create custom fonts with next/font.
 Next.js automatically optimizes fonts in the application when you use the next/font module. It downloads font files at build time there are no additional network requests for fonts which would increase performance.
+
 
 ### `loading.tsx`
 
@@ -255,7 +254,8 @@ it allows you to create fallback UI to show as a replacement while page content 
 ### Metadat files: `manifest.ts`, `robots.ts`, `sitemap.ts`
 
 Next has some special files like manifest, robot , sitemap .
- Each file convention can be defined using a static file (e.g. manifest.xml), or a dynamic variant that uses code to generate the file for example manifest.ts 
+Each file convention can be defined using a static file (e.g. manifest.xml), or a dynamic variant that uses code to generate the file for example manifest.ts 
+
 
 ### `(Website)` **directory**
 
@@ -268,6 +268,7 @@ This folder contains all the routes and javascript files needed to build fronten
 
 We have:
 
+
 ### `(auth)` **directory**:
 
 This group route is used to organize clerk authentification routes like sign-in and sign-up
@@ -276,6 +277,7 @@ This group route is used to organize clerk authentification routes like sign-in 
 ### `(pages)` **directory**:
 
 This group is used to organize all frontend routes
+
 
 ###  `components` **directory**
 
@@ -290,7 +292,8 @@ this folder contains react components  which are independent and reusable.
 This folders contains wrapper components:
 A wrapper components are components that surround unknown components and provide a default structure to display the child components.
 
-3. Ui  **directory**
+
+3. ui  **directory**
 
 This folders contains react components  which are  independent and reusable created by a third party like shadcn UI 
 
@@ -564,10 +567,11 @@ Use the ` git clone ` CLI to clone template directly  to your machine
   ```
   
   
-  - Setup colors
+  - Setup colors 
   
   ```bash
 
+      #inspirations website
       https://tailwindcss.com/docs/customizing-colors
 
       https://coolors.co
@@ -608,7 +612,8 @@ Use the ` git clone ` CLI to clone template directly  to your machine
 
 ## Questions
 
----
-Patreon: [Patreon](https://www.patreon.com/sylvaincodes)
-Youtube: [Youtube](https://www.youtube.com/@sylvaincodes593)
----
+Send me a message on:
+
+- Patreon: [Patreon](https://www.patreon.com/sylvaincodes)
+- Youtube: [Youtube](https://www.youtube.com/@sylvaincodes593)
+
