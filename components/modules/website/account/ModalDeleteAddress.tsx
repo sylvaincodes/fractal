@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import * as React from "react";
-import { useUser } from "@clerk/nextjs";
+import { useAuth, useUser } from "@clerk/nextjs";
 import Toast from "@/components/custom/Toast";
 import Loading from "@/components/custom/Loading";
 
@@ -24,12 +24,13 @@ export default function ModalDeleteAddress({ item }: { item: Address }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { user } = useUser();
+  const { getToken } = useAuth();
 
   const deleteAddress = async () => {
     if (loading) {
       return;
     }
-
+    const token = await getToken();
     const data = {
       user_id: user?.id,
       newAddress: item,
@@ -39,6 +40,7 @@ export default function ModalDeleteAddress({ item }: { item: Address }) {
     await axios
       .delete(process.env.NEXT_PUBLIC_API_URL + "/api/account/address", {
         data,
+        headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
         const data = response.data;

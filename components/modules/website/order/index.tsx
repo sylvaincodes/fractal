@@ -8,17 +8,22 @@ import { Order } from "@/types";
 import axios from "axios";
 import Container from "@/components/custom/Container";
 import Loading from "@/components/custom/Loading";
+import { useAuth } from "@clerk/nextjs";
 
 export default function OrderWrapper({ id }: { id: string }) {
   const [order, setOrder] = useState<Order>();
   const [loading, setLoading] = useState<boolean>(false);
 
+  const { getToken } = useAuth();
+
   useEffect(() => {
     const getOrder = async () => {
       setLoading(true);
+      const token = await getToken();
       await axios
         .get(process.env.NEXT_PUBLIC_API_URL + "/api/order", {
           params: { id: id },
+          headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
           setOrder(response.data.data);

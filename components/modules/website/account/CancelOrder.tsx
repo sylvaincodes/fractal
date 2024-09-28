@@ -16,16 +16,19 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import * as React from "react";
+import { useAuth } from "@clerk/nextjs";
 
 export function CancelOrder({ item }: { item: Order }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const { getToken } = useAuth();
 
   const handleCancelOrder = async () => {
     if (loading) {
       return;
     }
 
+    const token = await getToken();
     const data = {
       id: item._id,
       user: item.user,
@@ -33,7 +36,9 @@ export function CancelOrder({ item }: { item: Order }) {
 
     setLoading(true);
     await axios
-      .put(process.env.NEXT_PUBLIC_API_URL + "/api/account/order", data)
+      .put(process.env.NEXT_PUBLIC_API_URL + "/api/account/order", data, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then((response) => {
         const data = response.data;
         toast(data.message);

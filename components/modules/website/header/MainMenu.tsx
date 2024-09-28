@@ -89,7 +89,7 @@ export default function MainMenu() {
                 }}
                 className="grid grid-cols-4 justify-items-center grid-rows-auto
           fixed bg-white py-4 px-4 h-[560px] w-[1100px] z-[999999] 
-          right-[300px] top-[54px] gap-12 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-neutral-500"
+          right-[300px] top-[5px] gap-12 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-neutral-500"
               >
                 {categories &&
                   categories.slice(0, 8).map((item: Category, idx: number) => (

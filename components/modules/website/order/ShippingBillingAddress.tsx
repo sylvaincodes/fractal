@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { Order } from "@/types";
 import { Button } from "@/components/ui/button";
 import Toast from "@/components/custom/Toast";
-import { useUser } from "@clerk/nextjs";
+import { useAuth, useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
 export default function ShippingBillingAddress({
@@ -22,12 +22,14 @@ export default function ShippingBillingAddress({
   const { user } = useUser();
 
   const router = useRouter();
+  const { getToken } = useAuth();
 
   const handledelivered = async () => {
     if (loading) {
       return;
     }
-
+    
+    const token = await getToken();
     const data = {
       id: order?._id,
       status: order?.status,
@@ -36,7 +38,9 @@ export default function ShippingBillingAddress({
 
     setLoading(true);
     await axios
-      .put(process.env.NEXT_PUBLIC_API_URL + "/api/order", data)
+      .put(process.env.NEXT_PUBLIC_API_URL + "/api/order", data, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then((response) => {
         const data = response.data;
         const success = response.data.success;
@@ -56,9 +60,11 @@ export default function ShippingBillingAddress({
   };
 
   const handlecompleted = async () => {
+    
     if (loading) {
       return;
     }
+    const token = await getToken();
     const data = {
       id: order?._id,
       status: "completed",
@@ -67,7 +73,9 @@ export default function ShippingBillingAddress({
 
     setLoading(true);
     await axios
-      .put(process.env.NEXT_PUBLIC_API_URL + "/api/order", data)
+      .put(process.env.NEXT_PUBLIC_API_URL + "/api/order", data, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then((response) => {
         const data = response.data;
         const success = response.data.success;
