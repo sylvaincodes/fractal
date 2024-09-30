@@ -10,7 +10,7 @@ import { Address, Cart, Delivery, Payment } from "@/types";
 import { deliveries, payments } from "@/constants/index";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useAuth, useUser } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 import Toast from "@/components/custom/Toast";
 import Loading from "@/components/custom/Loading";
 import CurrencyFormat from "@/components/custom/CurrencyFomat";
@@ -85,8 +85,6 @@ export default function Adresses({
       .required("Address  is required"),
     country: yup.string().required("Country is required"),
   });
-  const [cart, setCart] = useState<Cart>();
-  const { getToken } = useAuth();
 
   const validateCoupon = yup.object().shape({
     coupon: yup
@@ -97,7 +95,7 @@ export default function Adresses({
   });
   const router = useRouter();
 
-  const placeOrderHandler = async () => {
+  const placeOrderHandler = () => {
     try {
       setLoading(true);
       if (
@@ -146,11 +144,9 @@ export default function Adresses({
           shippingPrice: selectedDelivery.price,
         };
       }
-      const token = await getToken();
-      await axios
-        .post(process.env.NEXT_PUBLIC_API_URL + "/api/order", data, {
-          headers: { Authorization: `Bearer ${token}` },
-        })
+
+      axios
+        .post(process.env.NEXT_PUBLIC_API_URL + "/api/order", data)
         .then((response) => {
           const data = response.data;
           router.push(`order/${data.order_id}`);
@@ -168,14 +164,14 @@ export default function Adresses({
     }
   };
 
+  const [cart, setCart] = useState<Cart>();
+
   useEffect(() => {
     setLoading(true);
-    const getCart = async () => {
-      const token = await getToken();
-      await axios
+    const getCart = () => {
+      axios
         .get(process.env.NEXT_PUBLIC_API_URL + "/api/cart", {
           params: { user_id: user?.id },
-          headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
           setCart(response.data.data);

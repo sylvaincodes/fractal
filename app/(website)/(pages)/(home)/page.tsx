@@ -7,12 +7,8 @@ import Payments from "@/components/modules/website/home/Payments";
 import FeaturesProducts from "@/components/modules/website/home/FeaturesProducts";
 import { Metadata } from "next";
 import { mergeOpenGraph } from "@/lib/mergeOpenGraph";
-import { auth } from "@clerk/nextjs/server";
 
-export default async function Home() {
-  const user = await auth();
-  console.log("log____", user);
-
+export default function Home() {
   return (
     <>
       <HomeSlide />
