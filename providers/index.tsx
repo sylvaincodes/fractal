@@ -16,7 +16,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
           layout: {
             socialButtonsVariant: "blockButton",
             socialButtonsPlacement: "bottom",
-            logoImageUrl: "/assets/images/logo.svg",
+            // logoImageUrl: "/assets/images/logo.svg",
           },
           // baseTheme: [neobrutalism],
           // variables: {
